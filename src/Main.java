@@ -14,7 +14,7 @@ public class Main {
         firDialog.show();
         //! Sundae x = new Sundae();
         System.out.print("main hello world");
-        XmlUtil.getInstance().setKey("TTT","哈哈");
-        System.out.print("======"+XmlUtil.getInstance().getKey("TTT"));
+//        XmlUtil.getInstance().setKey("TTT","哈哈");
+//        System.out.print("======"+XmlUtil.getInstance().getKey("TTT"));
     }
 }

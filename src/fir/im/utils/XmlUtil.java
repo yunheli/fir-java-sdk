@@ -28,7 +28,7 @@ public class XmlUtil {
     private DocumentBuilder builder = null;
     public static XmlUtil xmlUtil;
     private Document document;
-    private File xmlFile =  new File(Resource.getInstance().getResource("key.xml").getFile()) ;
+    private File xmlFile =  new File(Storage.getXmlPath()) ;
 
     public void readXml(){
         try {
@@ -64,6 +64,7 @@ public class XmlUtil {
     }
 
     public void setKey(String key, String val){
+        if(val == null) return;
         try {
             Boolean isFoundNode = false;
             NodeList nl = document.getElementsByTagName("VALUE");
@@ -90,7 +91,7 @@ public class XmlUtil {
                 valE.appendChild(vE);
                 nl.item(0).getParentNode().appendChild(valE);
             }
-            writeXml(document,Resource.getInstance().getResource("key.xml").getFile()) ;
+            writeXml(document,Storage.getXmlPath()) ;
         } catch (Exception e) {
             System.out.println("exception:" + e.getMessage());
         }
@@ -137,5 +138,6 @@ public class XmlUtil {
             return xmlUtil;
         }
     }
+
 
 }

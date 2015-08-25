@@ -1,5 +1,6 @@
 package fir.im.ui;
 import fir.im.utils.Resource;
+import fir.im.utils.XmlUtil;
 
 import javax.swing.*;
 import java.awt.*;
@@ -69,7 +70,9 @@ public class UploadUI extends JPanel implements ActionListener {
         if(e.getSource() == this.settingBtn){
             //TODO: 设置按钮
             JFrame frame = new JFrame("InputDialog Example #1");
-            String name = JOptionPane.showInputDialog(frame,"请输入api_token");
+
+            String name = JOptionPane.showInputDialog(frame,XmlUtil.getInstance().getKey("TTT"));
+            XmlUtil.getInstance().setKey("TTT",name);
             System.out.print("PPPPPPPPPPP"+name);
         }
         if(e.getSource() == this.closeBtn){
