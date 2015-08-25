@@ -1,6 +1,6 @@
 package fir.im.dialog;
 
-import fir.im.ui.LoginUI;
+import fir.im.config.Constants;
 import fir.im.ui.UploadUI;
 
 import javax.swing.*;
@@ -16,11 +16,10 @@ import java.awt.*;
 public class FirDialog extends JDialog{
     public FirDialog() {
         super();
-        this.setSize(322,518);
         this.setContentPane(new UploadUI());
         Toolkit tk = Toolkit.getDefaultToolkit();
         Dimension d = tk.getScreenSize();
-        this.setSize(322, 335);
+        this.setSize(Constants.DIALOG_WIDTH, Constants.getDIALOG_HEIGHT);
         this.setLocation((int) (d.getWidth() - this.getWidth()) / 2, (int) (d.getHeight() - this.getHeight()) / 2);
         this.setUndecorated(true);
     }
