@@ -10,4 +10,5 @@ package fir.im.config;
 public class Constants {
     public static final int DIALOG_WIDTH = 322;
     public static final int getDIALOG_HEIGHT = 518;
+    public static final String XML_PATH = "key.xml";
 }

@@ -1,4 +1,5 @@
 import fir.im.dialog.FirDialog;
+import fir.im.utils.XmlUtil;
 
 /**
  * Created with IntelliJ IDEA.
@@ -13,5 +14,7 @@ public class Main {
         firDialog.show();
         //! Sundae x = new Sundae();
         System.out.print("main hello world");
+        XmlUtil.getInstance().setKey("TTT","哈哈");
+        System.out.print("======"+XmlUtil.getInstance().getKey("TTT"));
     }
 }

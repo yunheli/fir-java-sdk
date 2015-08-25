@@ -7,15 +7,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/libs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fir/im/dialog/FirDialog.java" afterPath="$PROJECT_DIR$/src/fir/im/dialog/FirDialog.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/uploadSdk.iml" afterPath="$PROJECT_DIR$/uploadSdk.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fir/im/utils/KeyManager.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/fir/im/utils/XmlUtil.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/key.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fir/im/config/Constants.java" afterPath="$PROJECT_DIR$/src/fir/im/config/Constants.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="uploadSdk.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Main.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1440487246216" ignored="false" />
+    <file path="/Main.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1440511636580" ignored="false" />
     <file path="/LoginUI.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1440491899036" ignored="false" />
     <file path="/FirDialog.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1440493957494" ignored="false" />
     <file path="/fragment.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1440488832281" ignored="false" />
@@ -26,6 +27,10 @@
     <file path="/UploadURI.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1440492640302" ignored="false" />
     <file path="/Config.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1440493898561" ignored="false" />
     <file path="/Dummy.txt" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1440494246276" ignored="false" />
+    <file path="/KeyManager.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1440511988553" ignored="false" />
+    <file path="/XmlUtil.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1440511601703" ignored="false" />
+    <file path="/key.xml" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1440500924083" ignored="false" />
+    <file path="/Constants.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1440511295725" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +82,83 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <line_breakpoints>
+      <breakpoint url="file://$PROJECT_DIR$/src/fir/im/utils/XmlUtil.java" line="101" class="fir.im.utils.XmlUtil" package="fir.im.utils">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/fir/im/utils/XmlUtil.java" line="115" class="fir.im.utils.XmlUtil" package="fir.im.utils">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/fir/im/utils/XmlUtil.java" line="105" class="fir.im.utils.XmlUtil" package="fir.im.utils">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/fir/im/utils/XmlUtil.java" line="92" class="fir.im.utils.XmlUtil" package="fir.im.utils">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/fir/im/utils/XmlUtil.java" line="79" class="fir.im.utils.XmlUtil" package="fir.im.utils">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -89,8 +171,10 @@
       <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="24" selection-start="383" selection-end="383" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="16" column="41" selection-start="472" selection-end="475" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -120,7 +204,7 @@
       <file leaf-file-name="Resource.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fir/im/utils/Resource.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="16" selection-start="458" selection-end="466" vertical-scroll-proportion="0.0">
+            <state line="16" column="0" selection-start="397" selection-end="397" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -139,10 +223,48 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Constants.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Constants.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fir/im/config/Constants.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="40" selection-start="174" selection-end="174" vertical-scroll-proportion="0.23940149">
+            <state line="12" column="52" selection-start="352" selection-end="352" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="KeyManager.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/fir/im/utils/KeyManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="60" selection-start="564" selection-end="564" vertical-scroll-proportion="0.6666667">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="XmlUtil.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fir/im/utils/XmlUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="45" column="24" selection-start="1504" selection-end="1510" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AttributesImpl.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/org/xml/sax/helpers/AttributesImpl.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="15" selection-start="413" selection-end="413" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="key.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/images/key.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="55" selection-start="220" selection-end="220" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -166,19 +288,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/fir/im/ui/LoginUI.java" />
         <option value="$PROJECT_DIR$/src/fir/im/ui/UploadURI.java" />
         <option value="$PROJECT_DIR$/src/fir/im/ui/UploadUI.java" />
         <option value="$PROJECT_DIR$/src/fir/im/utils/Resource.java" />
         <option value="$PROJECT_DIR$/src/fir/im/config/Config.java" />
         <option value="$PROJECT_DIR$/src/fir/im/dialog/FirDialog.java" />
+        <option value="$PROJECT_DIR$/src/images/key.xml" />
         <option value="$PROJECT_DIR$/src/fir/im/config/Constants.java" />
+        <option value="$PROJECT_DIR$/src/fir/im/utils/XmlUtil.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/fir/im/utils/KeyManager.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="87" />
+    <option name="x" value="4" />
     <option name="y" value="23" />
     <option name="width" value="1260" />
     <option name="height" value="760" />
@@ -245,6 +370,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="uploadSdk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="uploadSdk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -515,15 +658,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="87" y="23" width="1260" height="760" extended-state="0" />
-    <editor active="true" />
+    <frame x="4" y="23" width="1260" height="760" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28125" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
@@ -611,35 +754,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="24" selection-start="383" selection-end="383" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/awt/Window.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="86" column="16" selection-start="3822" selection-end="3822" vertical-scroll-proportion="0.33247423">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fir/im/utils/Resource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="16" selection-start="458" selection-end="466" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fir/im/ui/UploadUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="81" selection-start="1391" selection-end="1391" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -661,9 +779,73 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/org/w3c/dom/Node.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="21" selection-start="1142" selection-end="1142" vertical-scroll-proportion="0.33333334">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fir/im/ui/UploadUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="81" selection-start="1391" selection-end="1391" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fir/im/utils/Resource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="0" selection-start="397" selection-end="397" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/org/xml/sax/helpers/AttributesImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="15" selection-start="413" selection-end="413" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/images/key.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="55" selection-start="220" selection-end="220" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fir/im/utils/XmlUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="24" selection-start="1504" selection-end="1510" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="41" selection-start="472" selection-end="475" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/fir/im/config/Constants.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="40" selection-start="174" selection-end="174" vertical-scroll-proportion="0.23940149">
+        <state line="12" column="52" selection-start="352" selection-end="352" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fir/im/utils/KeyManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="60" selection-start="564" selection-end="564" vertical-scroll-proportion="0.6666667">
           <folding />
         </state>
       </provider>
