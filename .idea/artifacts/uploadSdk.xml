@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="uploadSdk">
+    <output-path>$PROJECT_DIR$/out/artifacts/uploadSdk</output-path>
+    <root id="archive" name="unnamed.jar">
+      <element id="dir-copy" path="$PROJECT_DIR$/images" />
+      <element id="module-output" name="uploadSdk" />
+    </root>
+  </artifact>
+</component>
