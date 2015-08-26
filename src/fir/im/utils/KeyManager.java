@@ -24,6 +24,8 @@ public class KeyManager {
 
     public String apkPath;
     public KeyManager(){
+        apiToken = XmlUtil.getInstance().getKey(API_TOKEN);
+        apkPath =    XmlUtil.getInstance().getKey(APK_PATH);
         keyManager = this;
     }
 

@@ -48,8 +48,6 @@ public class XmlUtil {
         try {
             NodeList nl = document.getElementsByTagName("VALUE");
             for (int i = 0; i < nl.getLength(); i++) {
-                System.out.print("KEY:"+ document.getElementsByTagName("KEY").item(i).getFirstChild().getNodeValue());
-                System.out.println("VAL:"+ document.getElementsByTagName("VAL").item(i).getFirstChild().getNodeValue());
                 String xmlKey = document.getElementsByTagName("KEY").item(i).getFirstChild().getNodeValue();
                 String xmlVal = document.getElementsByTagName("VAL").item(i).getFirstChild().getNodeValue();
                 if(xmlKey.equals(key)){
@@ -64,13 +62,12 @@ public class XmlUtil {
     }
 
     public void setKey(String key, String val){
+        System.out.println("key:"+key+"#val:"+val);
         if(val == null) return;
         try {
             Boolean isFoundNode = false;
             NodeList nl = document.getElementsByTagName("VALUE");
             for (int i = 0; i < nl.getLength(); i++) {
-                System.out.print("KEY:" + document.getElementsByTagName("KEY").item(i).getFirstChild().getNodeValue());
-                System.out.println("VAL:"+ document.getElementsByTagName("VAL").item(i).getFirstChild().getNodeValue());
                 Node nodeKey =  document.getElementsByTagName("KEY").item(i).getFirstChild();
                 Node nodeVal =  document.getElementsByTagName("VAL").item(i).getFirstChild();
                 if(nodeKey.getNodeValue().equals(key)){

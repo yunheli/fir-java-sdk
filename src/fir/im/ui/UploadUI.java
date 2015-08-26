@@ -1,4 +1,5 @@
 package fir.im.ui;
+import fir.im.dialog.FirDialog;
 import fir.im.utils.Resource;
 import fir.im.utils.XmlUtil;
 
@@ -11,12 +12,21 @@ public class UploadUI extends JPanel implements ActionListener {
     private JButton uploadBtn;
     private JButton settingBtn;
     private JButton closeBtn;
+    private static UploadUI uploadUI;
     public UploadUI() {
         setLayout(null);
         this.setSize(322, 518);
         initUI();
         initAction();
+        uploadUI = this;
         // TODO Auto-generated constructor stub
+    }
+
+    public static UploadUI getInstance(){
+        if(uploadUI == null){
+            return new UploadUI();
+        }
+        return uploadUI;
     }
     public void initAction(){
         closeBtn.addActionListener(this);
@@ -37,7 +47,7 @@ public class UploadUI extends JPanel implements ActionListener {
         uploadBtn.setBorderPainted(false);
         add(uploadBtn);
 
-        settingBtn = new JButton("");
+        settingBtn = new JButton();
         ImageIcon settingImg = new ImageIcon(Resource.getInstance().getResource("setting.png"));
         settingBtn.setBounds(10, 6, 117, 29);
         settingBtn.setIcon(settingImg);
@@ -69,15 +79,12 @@ public class UploadUI extends JPanel implements ActionListener {
         // TODO Auto-generated method stub
         if(e.getSource() == this.settingBtn){
             //TODO: 设置按钮
-            JFrame frame = new JFrame("InputDialog Example #1");
-
-            String name = JOptionPane.showInputDialog(frame,XmlUtil.getInstance().getKey("TTT"));
-            XmlUtil.getInstance().setKey("TTT",name);
-            System.out.print("PPPPPPPPPPP"+name);
+            FirDialog.getInstance().setContentPane(SettingUI.getInstance());
         }
         if(e.getSource() == this.closeBtn){
             //TODO: 关闭按钮
             System.out.print(".........");
+            FirDialog.getInstance().setVisible(false);
         }
         if(e.getSource() == this.uploadBtn){
             //TODO: 上传按钮
