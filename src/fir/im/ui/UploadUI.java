@@ -2,6 +2,7 @@ package fir.im.ui;
 import fir.im.dialog.FirDialog;
 import fir.im.model.Binary;
 import fir.im.service.UploadService;
+import fir.im.swing.LinkLabel;
 import fir.im.utils.KeyManager;
 import fir.im.utils.Resource;
 import fir.im.utils.XmlUtil;
@@ -25,8 +26,9 @@ public class UploadUI extends JPanel implements ActionListener,  UploadService.U
     private String apkPath;
     private Binary binary;
     private JLabel shortTag;
-    private JLabel shortLabel;
+    private LinkLabel shortLabel;
     private JProgressBar progressBar;
+    private JButton editBtn ;
     public UploadUI() {
         setLayout(null);
         this.setSize(322, 518);
@@ -48,6 +50,7 @@ public class UploadUI extends JPanel implements ActionListener,  UploadService.U
         selectBtn.addActionListener(this);
         settingBtn.addActionListener(this);
         uploadBtn.addActionListener(this);
+        editBtn.addActionListener(this);
     }
     public void initUI(){
         JLabel lblNewLabel = new JLabel("fir.im upload");
@@ -106,17 +109,17 @@ public class UploadUI extends JPanel implements ActionListener,  UploadService.U
 
         pathLabel = new JLabel("");
         pathLabel.setForeground(Color.WHITE);
-        pathLabel.setBounds(92, 72, 199, 16);
+        pathLabel.setBounds(92, 72, 150, 16);
         pathLabel.setVisible(false);
         add(pathLabel);
 
         shortTag = new JLabel("地址:");
         shortTag.setForeground(Color.WHITE);
         shortTag.setBounds(10, 99, 61, 16);
-        pathLabel.setVisible(false);
+        shortTag.setVisible(false);
         add(shortTag);
 
-        shortLabel = new JLabel("");
+        shortLabel = new LinkLabel();
         shortLabel.setForeground(Color.WHITE);
         shortLabel.setBounds(92, 100, 188, 16);
         shortLabel.setVisible(false);
@@ -128,6 +131,11 @@ public class UploadUI extends JPanel implements ActionListener,  UploadService.U
         progressBar.setStringPainted(true);
         progressBar.setVisible(false);
         add(progressBar);
+
+        editBtn = new JButton("编辑");
+        editBtn.setBounds(241, 67, 61, 29);
+        editBtn.setVisible(false);
+        add(editBtn);
     }
 
     public void apkPanelShow(){
@@ -140,7 +148,7 @@ public class UploadUI extends JPanel implements ActionListener,  UploadService.U
         descTextField.setVisible(true);
         shortTag.setVisible(true);
         shortLabel.setVisible(true);
-        progressBar.setVisible(true);
+        editBtn.setVisible(true);
     }
 
     public void apkPanelHide(){
@@ -152,11 +160,11 @@ public class UploadUI extends JPanel implements ActionListener,  UploadService.U
         descTextField.setVisible(false);
         shortLabel.setVisible(false);
         shortTag.setVisible(false);
-        progressBar.setVisible(false);
+        editBtn.setVisible(false);
     }
 
     public void setShort(String s){
-        shortLabel.setText(s);
+        shortLabel.setUrl(s);
     }
 
     protected void paintComponent(Graphics g) {
@@ -179,42 +187,60 @@ public class UploadUI extends JPanel implements ActionListener,  UploadService.U
             System.out.print(".........");
             FirDialog.getInstance().setVisible(false);
         }
-        if(e.getSource() == this.selectBtn){
+        if(e.getSource() == this.selectBtn ){
             //TODO: 上传按钮
-            JFileChooser fileChooser = new JFileChooser();
-            FileNameExtensionFilter ff = new FileNameExtensionFilter( null, "apk");
-            fileChooser.setFileFilter(ff);
-            int option = fileChooser.showOpenDialog(null);
-            if(option == JFileChooser.APPROVE_OPTION){
-//获取基本信息
-                System.out.println("路径："+fileChooser.getSelectedFile().getPath());
-                System.out.println("绝对路径："+fileChooser.getSelectedFile().getAbsolutePath());
-                System.out.println("文件名称："+fileChooser.getSelectedFile().getName());
-                String path = fileChooser.getSelectedFile().getAbsolutePath();
-                if(path.endsWith(".apk")){
-                    apkPath = path;
-                    binary.initPath(path);
-                    apkPanelShow();
-                }
-
-            }
+            fileChoose() ;
         }
 
         if(e.getSource() == this.uploadBtn){
             //TODO: 上传文件
             System.out.println("开始上传");
+            uploadFile();
 
-            new UploadService().sendBuild(null, binary.filePath, KeyManager.getInstance().getToken(),
-                    binary,
-                    descTextField.getText(),
-                    UploadUI.this);
-            progressBar.setValue(0);
+        }
+
+        if(e.getSource() == this.editBtn){
+            fileChoose();
         }
     }
 
+    private void fileChoose(){
+        JFileChooser fileChooser = new JFileChooser();
+        FileNameExtensionFilter ff = new FileNameExtensionFilter( null, "apk");
+        fileChooser.setFileFilter(ff);
+        int option = fileChooser.showOpenDialog(null);
+        if(option == JFileChooser.APPROVE_OPTION){
+//获取基本信息
+            System.out.println("路径："+fileChooser.getSelectedFile().getPath());
+            System.out.println("绝对路径："+fileChooser.getSelectedFile().getAbsolutePath());
+            System.out.println("文件名称："+fileChooser.getSelectedFile().getName());
+            String path = fileChooser.getSelectedFile().getAbsolutePath();
+            if(path.endsWith(".apk")){
+                apkPath = path;
+                binary.initPath(path);
+                apkPanelShow();
+            }
+
+        }
+    }
+
+    private void uploadFile(){
+        new UploadService().sendBuild(null, binary.filePath, KeyManager.getInstance().getToken(),
+                binary,
+                descTextField.getText(),
+                UploadUI.this);
+        progressBar.setVisible(true);
+        progressBar.setValue(0);
+        uploadBtn.setText("上传中..");
+        uploadBtn.setEnabled(false);
+
+    }
     @Override
     public void onUploadFinished(boolean finishedSuccessful) {
-
+        uploadBtn.setText("上传");
+        uploadBtn.setEnabled(true);
+        progressBar.setValue(0);
+        progressBar.setVisible(false);
     }
 
     @Override
