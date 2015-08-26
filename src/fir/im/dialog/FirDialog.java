@@ -2,6 +2,8 @@ package fir.im.dialog;
 
 import com.sun.awt.AWTUtilities;
 import fir.im.config.Constants;
+import fir.im.model.Binary;
+import fir.im.service.UploadService;
 import fir.im.ui.SettingUI;
 import fir.im.ui.UploadUI;
 import fir.im.utils.KeyManager;
@@ -17,7 +19,7 @@ import java.awt.*;
  * Time: 下午3:19
  * To change this template use File | Settings | File Templates.
  */
-public class FirDialog extends JDialog{
+public class FirDialog extends JDialog {
 
     private static FirDialog firDialog;
     public FirDialog() {
@@ -33,6 +35,8 @@ public class FirDialog extends JDialog{
         firDialog = this;
         if(KeyManager.getInstance().getToken().isEmpty()){
             this.setContentPane(new SettingUI());
+        }else{
+            this.setContentPane(new UploadUI());
         }
 
         //TODO： 添加透明支持判断
@@ -50,4 +54,6 @@ public class FirDialog extends JDialog{
         }
         return firDialog;
     }
+
+
 }

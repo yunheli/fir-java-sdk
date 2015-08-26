@@ -1,7 +1,9 @@
 package fir.im.ui;
 
 import fir.im.dialog.FirDialog;
+import fir.im.utils.KeyManager;
 import fir.im.utils.Resource;
+import fir.im.utils.XmlUtil;
 
 import javax.swing.*;
 import java.awt.*;
@@ -18,11 +20,23 @@ import java.awt.event.ActionListener;
 public class SettingUI extends JPanel {
     JTextField textField ;
     JButton backBtn;
+    JButton saveBtn;
     private static  SettingUI settingUI;
     public SettingUI() {
         this.setSize(322, 518);
         setLayout(null);
 
+
+        initUI();
+        initAction();
+        settingUI = this;
+        initContent();
+    }
+
+    public void initContent(){
+        textField.setText(KeyManager.getInstance().getToken());
+    }
+    public void initUI(){
         JLabel label = new JLabel("设置");
         label.setForeground(Color.white);
         label.setBounds(136, 6, 61, 16);
@@ -33,10 +47,10 @@ public class SettingUI extends JPanel {
         lblApitokn.setBounds(6, 53, 82, 16);
         add(lblApitokn);
 
-        JButton tokenBtn = new JButton("保存");
-        tokenBtn.setBounds(172, 103, 117, 29);
+        saveBtn = new JButton("保存");
+        saveBtn.setBounds(172, 103, 117, 29);
 
-        add(tokenBtn);
+        add(saveBtn);
 
         textField = new JTextField();
         textField.setBounds(107, 47, 182, 28);
@@ -50,9 +64,6 @@ public class SettingUI extends JPanel {
         backBtn.setBorderPainted(false);
         backBtn.setBounds(-6, 1, 117, 29);
         add(backBtn);
-
-        initAction();
-        settingUI = this;
     }
     public static SettingUI getInstance(){
         if(settingUI == null){
@@ -67,6 +78,15 @@ public class SettingUI extends JPanel {
             public void actionPerformed(ActionEvent actionEvent) {
 
                 FirDialog.getInstance().setContentPane(UploadUI.getInstance());
+            }
+        });
+
+        saveBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                if(!textField.getText().isEmpty()) {
+                    KeyManager.getInstance().setToken(textField.getText());
+                }
             }
         });
     }

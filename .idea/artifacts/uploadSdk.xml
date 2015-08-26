@@ -4,6 +4,7 @@
     <root id="archive" name="unnamed.jar">
       <element id="dir-copy" path="$PROJECT_DIR$/images" />
       <element id="module-output" name="uploadSdk" />
+      <element id="library" level="project" name="libs" />
     </root>
   </artifact>
 </component>
