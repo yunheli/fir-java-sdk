@@ -64,6 +64,7 @@ public class UploadUI extends JPanel implements ActionListener,  UploadService.U
         selectBtn.setIcon(uploadImg);
         selectBtn.setSize(uploadImg.getIconWidth(), uploadImg.getIconHeight());
         selectBtn.setBorderPainted(false);
+        selectBtn.setToolTipText("选择文件上传");
         add(selectBtn);
 
         settingBtn = new JButton();
@@ -72,6 +73,7 @@ public class UploadUI extends JPanel implements ActionListener,  UploadService.U
         settingBtn.setIcon(settingImg);
         settingBtn.setSize(settingImg.getIconWidth(),settingImg.getIconHeight());
         settingBtn.setBorderPainted(false);
+        settingBtn.setToolTipText("设置apiToken");
 
         add(settingBtn);
 
@@ -94,6 +96,7 @@ public class UploadUI extends JPanel implements ActionListener,  UploadService.U
         descTag.setForeground(Color.WHITE);
         descTag.setBounds(10, 139, 61, 16);
         descTag.setVisible(false);
+        descTag.setToolTipText("填写更新日志");
         add(descTag);
 
         uploadBtn = new JButton("上传");
@@ -247,7 +250,6 @@ public class UploadUI extends JPanel implements ActionListener,  UploadService.U
     public void onPackageSizeComputed(final long totalSize) {
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
-                System.out.println("totalSize:"+totalSize);
                 progressBar.setMaximum((int) totalSize);
 
             }
@@ -258,7 +260,6 @@ public class UploadUI extends JPanel implements ActionListener,  UploadService.U
     public void onProgressChanged(final long progress) {
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
-                System.out.println("progress:"+progress);
                 progressBar.setValue((int) progress);
 
             }
