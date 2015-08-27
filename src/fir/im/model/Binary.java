@@ -41,9 +41,6 @@ public class Binary {
     }
 
     public void initPath(String url){
-//        if(this.filePath == url){
-//            return ;
-//        }
         this.filePath = url;
         if(this.filePath.isEmpty())  return;
         parseApk(this.filePath);
