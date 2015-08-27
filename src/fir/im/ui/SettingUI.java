@@ -62,7 +62,8 @@ public class SettingUI extends JPanel {
         backBtn.setSize(imBack.getIconWidth(),imBack.getIconHeight());
         backBtn.setIcon(imBack);
         backBtn.setBorderPainted(false);
-        backBtn.setBounds(-6, 1, 117, 29);
+        backBtn.setBounds(-36, 1, 117, 29);
+        backBtn.setToolTipText("返回上传页面");
         add(backBtn);
     }
     public static SettingUI getInstance(){
