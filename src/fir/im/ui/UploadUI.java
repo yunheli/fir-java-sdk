@@ -36,7 +36,6 @@ public class UploadUI extends JPanel implements ActionListener,  UploadService.U
         initAction();
         uploadUI = this;
         binary = Binary.getInstance();
-        // TODO Auto-generated constructor stub
     }
 
     public static UploadUI getInstance(){
@@ -180,23 +179,18 @@ public class UploadUI extends JPanel implements ActionListener,  UploadService.U
     }
     @Override
     public void actionPerformed(ActionEvent e) {
-        // TODO Auto-generated method stub
         if(e.getSource() == this.settingBtn){
-            //TODO: 设置按钮
             FirDialog.getInstance().setContentPane(SettingUI.getInstance());
         }
         if(e.getSource() == this.closeBtn){
-            //TODO: 关闭按钮
             System.out.print(".........");
             FirDialog.getInstance().setVisible(false);
         }
         if(e.getSource() == this.selectBtn ){
-            //TODO: 上传按钮
             fileChoose() ;
         }
 
         if(e.getSource() == this.uploadBtn){
-            //TODO: 上传文件
             System.out.println("开始上传");
             uploadFile();
 

@@ -39,7 +39,6 @@ public class FirDialog extends JDialog {
             this.setContentPane(new UploadUI());
         }
 
-        //TODO： 添加透明支持判断
         if(OsUtil.isTransparency())
         {
             AWTUtilities.setWindowOpaque(this, false);
