@@ -8,6 +8,8 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="libs" level="project" />
+    <orderEntry type="library" name="net.java.timingframework:timingframework-core:7.3.1" level="project" />
+    <orderEntry type="library" name="net.java.timingframework:timingframework-swing:7.3.1" level="project" />
   </component>
 </module>
 

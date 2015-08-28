@@ -12,6 +12,8 @@ public class Main {
     public static void main(String[] args) {
         FirDialog firDialog = new FirDialog();
         firDialog.show();
+
+
         //! Sundae x = new Sundae();
         System.out.print("main hello world");
 //        XmlUtil.getInstance().setKey("TTT","哈哈");
