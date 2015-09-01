@@ -8,6 +8,8 @@ package fir.im.utils;
  * To change this template use File | Settings | File Templates.
  */
 
+import javax.swing.*;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import java.io.*;
 
 public class FileOperate {
@@ -249,5 +251,21 @@ public class FileOperate {
         copyFolder(oldPath, newPath);
         delFolder(oldPath);
 
+    }
+
+    public String fileChoose(){
+        JFileChooser fileChooser = new JFileChooser();
+        FileNameExtensionFilter ff = new FileNameExtensionFilter( null, "apk");
+        fileChooser.setFileFilter(ff);
+        int option = fileChooser.showOpenDialog(null);
+        if(option == JFileChooser.APPROVE_OPTION){
+//获取基本信息
+            System.out.println("路径："+fileChooser.getSelectedFile().getPath());
+            System.out.println("绝对路径："+fileChooser.getSelectedFile().getAbsolutePath());
+            System.out.println("文件名称："+fileChooser.getSelectedFile().getName());
+            String path = fileChooser.getSelectedFile().getAbsolutePath();
+            return path;
+        }
+        return null;
     }
 }

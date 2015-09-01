@@ -1,6 +1,7 @@
 package fir.im.ui;
 
 import fir.im.dialog.FirDialog;
+import fir.im.model.Binary;
 import fir.im.swing.*;
 import fir.im.utils.Resource;
 
@@ -23,6 +24,8 @@ public class AppInfoUI extends JPanel implements ActionListener {
     private UploadJButton uploadBtn;
     private CloseButton closeButton;
 
+    private static AppInfoUI appInfoUI;
+    private Binary binary;
     public AppInfoUI() {
         setForeground(Color.WHITE);
         setBackground(Color.WHITE);
@@ -35,7 +38,26 @@ public class AppInfoUI extends JPanel implements ActionListener {
         setPosition();
         setupUI();
         initAction();
+
+        appInfoUI = this;
     }
+
+    public static AppInfoUI getInstance(){
+        if(appInfoUI == null) return  new AppInfoUI();
+        return appInfoUI;
+    }
+
+    public void initBinary(Binary binary){
+        this.binary = binary;
+        initVal();
+        FirDialog.getInstance().setContentPane(this);
+    }
+
+    private void initVal(){
+        nameDisplay.setText(binary.name);
+        versionDisplay.setText(""+binary.versionName+"( "+binary.versionCode+" )");
+    }
+
 
     private void initAction(){
         uploadBtn.addActionListener(this);
