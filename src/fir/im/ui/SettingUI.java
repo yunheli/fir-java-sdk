@@ -99,6 +99,7 @@ public class SettingUI extends JPanel {
         Image img = icon.getImage();
         g.drawImage(img, 0, 0, icon.getIconWidth(),
                 icon.getIconHeight(), icon.getImageObserver());
+
 //        setSize(icon.getIconWidth(), icon.getIconHeight());
 
     }

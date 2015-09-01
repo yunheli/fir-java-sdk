@@ -16,8 +16,12 @@ public class LinkLabel extends JLabel {
     private String text, url;
     private boolean isSupported;
 
-    public LinkLabel(String text, String url) {
-
+    public LinkLabel(String text) {
+        super();
+        this.text = text;
+        this.url = text;
+        initAction();
+        setText(false);
     }
 
     public void initAction(){
@@ -64,7 +68,7 @@ public class LinkLabel extends JLabel {
 
     private void setText(boolean b) {
         if (!b)
-            setText("<html><font color=white><u>" + text);
+            setText("<html><font color=black><u>" + text);
         else
             setText("<html><font color=red><u>" + text);
     }
