@@ -4,6 +4,7 @@ import com.sun.awt.AWTUtilities;
 import fir.im.config.Constants;
 import fir.im.ui.AppInfoUI;
 import fir.im.ui.AppUploadingUI;
+import fir.im.ui.LoginUI;
 import fir.im.utils.OsUtil;
 
 import javax.swing.*;
@@ -35,7 +36,7 @@ public class FirDialog extends JDialog {
 //        }else{
 //            this.setContentPane(new UploadUI());
 //        }
-        this.setContentPane(new AppInfoUI());
+        this.setContentPane(new LoginUI());
 
         if(OsUtil.isTransparency())
         {
