@@ -1,7 +1,9 @@
 package fir.im.ui;
 
 import fir.im.dialog.FirDialog;
+import fir.im.model.Binary;
 import fir.im.swing.CloseButton;
+import fir.im.utils.FileOperate;
 import fir.im.utils.KeyManager;
 import fir.im.utils.Resource;
 
@@ -108,6 +110,14 @@ public class LoginUI extends JPanel implements ActionListener{
             }else{
                 tokenDisplay.setText(response);
                 KeyManager.getInstance().setToken(response);
+            }
+        }
+
+        if(actionEvent.getSource() == selectBtn){
+            String path = FileOperate.getInstance().fileChoose();
+            if( path != null && path.endsWith(".apk")){
+                Binary.getInstance().initPath(path);
+                AppInfoUI.getInstance().initBinary(Binary.getInstance());
             }
         }
     }
