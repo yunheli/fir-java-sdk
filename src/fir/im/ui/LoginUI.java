@@ -22,6 +22,7 @@ public class LoginUI extends JPanel implements ActionListener{
     private JLabel tokenTag;
     private JLabel tokenDisplay;
     private JButton tokenSetting;
+    private JButton selectBtn;
 
     public LoginUI(){
         super();
@@ -39,17 +40,26 @@ public class LoginUI extends JPanel implements ActionListener{
         tokenTag = new JLabel("设置TOKEN");
         tokenTag.setForeground(Color.gray);
         tokenDisplay = new JLabel();
+
         tokenSetting = new JButton();
-        ImageIcon imBack = new ImageIcon(Resource.getInstance().getResource("tokenSet.png"));
-        tokenSetting.setIcon(imBack);
+        ImageIcon tokenSet = new ImageIcon(Resource.getInstance().getResource("tokenSet.png"));
+        tokenSetting.setIcon(tokenSet);
         tokenSetting.setBorderPainted(false);
         tokenSetting.setBounds(420, 150, 100, 100);
-        tokenSetting.setSize(imBack.getIconWidth(), imBack.getIconHeight());
+        tokenSetting.setSize(tokenSet.getIconWidth(), tokenSet.getIconHeight());
+
+        selectBtn = new JButton();
+        ImageIcon select = new ImageIcon(Resource.getInstance().getResource("select.png"));
+        selectBtn.setIcon(select);
+        selectBtn.setBorderPainted(false);
+        selectBtn.setBounds(200, 300, 100, 100);
+        selectBtn.setSize(select.getIconWidth(), select.getIconHeight());
     }
 
     private void initAction(){
         closeButton.addActionListener(this);
         tokenSetting.addActionListener(this);
+        selectBtn.addActionListener(this);
     }
 
     private void initPosition(){
@@ -62,6 +72,7 @@ public class LoginUI extends JPanel implements ActionListener{
         add(tokenTag);
         add(tokenDisplay);
         add(tokenSetting);
+        add(selectBtn);
     }
 
     private void initValue(){
