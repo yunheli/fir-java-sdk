@@ -7,15 +7,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/login.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fir/im/dialog/FirDialog.java" afterPath="$PROJECT_DIR$/src/fir/im/dialog/FirDialog.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/tokenSet.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fir/im/ui/LoginUI.java" afterPath="$PROJECT_DIR$/src/fir/im/ui/LoginUI.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="uploadSdk.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Main.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1440907598268" ignored="false" />
-    <file path="/LoginUI.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1441120292962" ignored="false" />
+    <file path="/LoginUI.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1441122314174" ignored="false" />
     <file path="/FirDialog.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1441120084309" ignored="false" />
     <file path="/fragment.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1440488832281" ignored="false" />
     <file path="$PROJECT_DIR$/../testUploadSDK/src/Main.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1440937850588" ignored="false" />
@@ -256,15 +255,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UploadUI.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fir/im/ui/UploadUI.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="62" selection-start="447" selection-end="472" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -277,7 +267,7 @@
       <file leaf-file-name="SettingUI.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fir/im/ui/SettingUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="41" selection-start="1519" selection-end="1831" vertical-scroll-proportion="0.0">
+            <state line="63" column="23" selection-start="1624" selection-end="1624" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -286,7 +276,7 @@
       <file leaf-file-name="AppInfoUI.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fir/im/ui/AppInfoUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="88" column="1" selection-start="2529" selection-end="2885" vertical-scroll-proportion="0.0">
+            <state line="96" column="48" selection-start="2885" selection-end="2885" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -295,7 +285,7 @@
       <file leaf-file-name="CloseButton.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fir/im/swing/CloseButton.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="84" selection-start="125" selection-end="125" vertical-scroll-proportion="0.0">
+            <state line="17" column="8" selection-start="322" selection-end="577" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -315,19 +305,10 @@
       <file leaf-file-name="LoginUI.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/fir/im/ui/LoginUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="4" selection-start="691" selection-end="691" vertical-scroll-proportion="0.39698493">
+            <state line="33" column="20" selection-start="807" selection-end="807" vertical-scroll-proportion="0.36683416">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AppUploadingUI.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fir/im/ui/AppUploadingUI.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="73" selection-start="1210" selection-end="1210" vertical-scroll-proportion="0.0">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -503,6 +484,10 @@
               <option name="myItemId" value="im" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="utils" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -566,7 +551,69 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="uploadSdk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="uploadSdk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="im" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="uploadSdk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="uploadSdk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="im" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="dialog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="uploadSdk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="uploadSdk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="im" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -880,11 +927,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/fir/im/utils/FunctionalUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="56" selection-start="1561" selection-end="1561" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/fir/im/config/Constants.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="50" selection-start="298" selection-end="298" vertical-scroll-proportion="0.0">
@@ -920,30 +962,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/fir/im/ui/AppUploadingUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="73" selection-start="1210" selection-end="1210" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="39" selection-start="317" selection-end="317" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fir/im/ui/UploadUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="62" selection-start="447" selection-end="472" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fir/im/swing/CloseButton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="84" selection-start="125" selection-end="125" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fir/im/swing/IconPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="6" selection-start="761" selection-end="761" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -957,16 +985,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fir/im/ui/SettingUI.java">
+    <entry file="file://$PROJECT_DIR$/src/fir/im/ui/AppInfoUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="41" selection-start="1519" selection-end="1831" vertical-scroll-proportion="0.0">
+        <state line="96" column="48" selection-start="2885" selection-end="2885" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fir/im/ui/AppInfoUI.java">
+    <entry file="file://$PROJECT_DIR$/src/fir/im/swing/CloseButton.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="1" selection-start="2529" selection-end="2885" vertical-scroll-proportion="0.0">
+        <state line="17" column="8" selection-start="322" selection-end="577" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fir/im/swing/IconPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="6" selection-start="761" selection-end="761" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fir/im/ui/SettingUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="23" selection-start="1624" selection-end="1624" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fir/im/ui/UploadUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="75" column="18" selection-start="2620" selection-end="2620" vertical-scroll-proportion="-1.2311558">
           <folding />
         </state>
       </provider>
@@ -978,16 +1027,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fir/im/ui/AppUploadingUI.java">
+    <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/javax/swing/JOptionPane.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="73" selection-start="1210" selection-end="1210" vertical-scroll-proportion="0.0">
+        <state line="55" column="35" selection-start="3076" selection-end="3076" vertical-scroll-proportion="0.33246753">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fir/im/ui/LoginUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="4" selection-start="691" selection-end="691" vertical-scroll-proportion="0.39698493">
+        <state line="33" column="20" selection-start="807" selection-end="807" vertical-scroll-proportion="0.36683416">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
