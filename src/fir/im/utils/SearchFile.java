@@ -19,7 +19,7 @@ public class SearchFile {
     public File iconFile;
     public ZipFile zipFile;
     private static SearchFile searchFile;
-
+    private String beforePath;
     public SearchFile(String url){
         this.url = url;
         searchFile = this;
@@ -101,8 +101,11 @@ public class SearchFile {
                 } else {
 
                     if (name.equals(zipEntry.getName())) {
-
-                        path =  Storage.getAppDataFolder().getPath() + "/ax.png";
+                        if(beforePath != null){
+                            FileOperate.getInstance().delFile(beforePath);
+                        }
+                        path =  Storage.getAppDataFolder().getPath() + "/ax"+System.currentTimeMillis()+".png";
+                        beforePath = path;
                         OutputStream outputStream = new FileOutputStream(path);
                         InputStream inputStream = zipFile.getInputStream(zipEntry);
                         while ((length = inputStream.read(b)) > 0)

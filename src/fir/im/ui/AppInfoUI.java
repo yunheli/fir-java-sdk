@@ -26,6 +26,7 @@ public class AppInfoUI extends JPanel implements ActionListener {
     private CloseButton closeButton;
 
     private static AppInfoUI appInfoUI;
+    private JButton selectBtn;
     private Binary binary;
     public AppInfoUI() {
         setForeground(Color.WHITE);
@@ -64,6 +65,7 @@ public class AppInfoUI extends JPanel implements ActionListener {
     private void initAction(){
         uploadBtn.addActionListener(this);
         closeButton.addActionListener(this);
+        selectBtn.addActionListener(this);
     }
 
     private void initSwing(){
@@ -87,6 +89,12 @@ public class AppInfoUI extends JPanel implements ActionListener {
         uploadBtn = new UploadJButton();
         iconPanel = new IconPanel();
         closeButton = new CloseButton();
+        selectBtn = new JButton();
+        ImageIcon select = new ImageIcon(Resource.getInstance().getResource("selectSmall.png"));
+        selectBtn.setIcon(select);
+        selectBtn.setBorderPainted(false);
+        selectBtn.setBounds(400, 168, 30, 30);
+        selectBtn.setSize(select.getIconWidth(),select.getIconHeight());
     }
     private void setPosition(){
         versionDisplay.setBounds(180, 40, 110, 16);
@@ -108,6 +116,7 @@ public class AppInfoUI extends JPanel implements ActionListener {
         add(uploadBtn);
         add(iconPanel);
         add(closeButton);
+        add(selectBtn);
     }
 
     public void setShortDisplay(String s){
@@ -134,5 +143,9 @@ public class AppInfoUI extends JPanel implements ActionListener {
         if(actionEvent.getSource() == closeButton){
             FirDialog.getInstance().setVisible(false);
         }
+        if(actionEvent.getSource() == selectBtn){
+            LoginUI.getInstance().selectApk();
+        }
+
     }
 }
