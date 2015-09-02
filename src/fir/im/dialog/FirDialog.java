@@ -2,11 +2,9 @@ package fir.im.dialog;
 
 import com.sun.awt.AWTUtilities;
 import fir.im.config.Constants;
-import fir.im.model.Binary;
-import fir.im.service.UploadService;
-import fir.im.ui.SettingUI;
-import fir.im.ui.UploadUI;
-import fir.im.utils.KeyManager;
+import fir.im.ui.AppInfoUI;
+import fir.im.ui.AppUploadingUI;
+import fir.im.ui.LoginUI;
 import fir.im.utils.OsUtil;
 
 import javax.swing.*;
@@ -33,11 +31,12 @@ public class FirDialog extends JDialog {
         this.setUndecorated(true);
 
         firDialog = this;
-        if(KeyManager.getInstance().getToken().isEmpty()){
-            this.setContentPane(new SettingUI());
-        }else{
-            this.setContentPane(new UploadUI());
-        }
+//        if(KeyManager.getInstance().getToken().isEmpty()){
+//            this.setContentPane(new SettingUI());
+//        }else{
+//            this.setContentPane(new UploadUI());
+//        }
+        this.setContentPane(new LoginUI());
 
         if(OsUtil.isTransparency())
         {

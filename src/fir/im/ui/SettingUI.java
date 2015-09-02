@@ -1,6 +1,7 @@
 package fir.im.ui;
 
 import fir.im.dialog.FirDialog;
+import fir.im.swing.FadingLabel;
 import fir.im.utils.KeyManager;
 import fir.im.utils.Resource;
 import fir.im.utils.XmlUtil;
@@ -37,10 +38,11 @@ public class SettingUI extends JPanel {
         textField.setText(KeyManager.getInstance().getToken());
     }
     public void initUI(){
-        JLabel label = new JLabel("设置");
+        FadingLabel label = new FadingLabel("设置");
         label.setForeground(Color.white);
         label.setBounds(136, 6, 61, 16);
         add(label);
+
 
         JLabel lblApitokn = new JLabel("api_token");
         lblApitokn.setForeground(Color.white);
@@ -97,6 +99,7 @@ public class SettingUI extends JPanel {
         Image img = icon.getImage();
         g.drawImage(img, 0, 0, icon.getIconWidth(),
                 icon.getIconHeight(), icon.getImageObserver());
+
 //        setSize(icon.getIconWidth(), icon.getIconHeight());
 
     }
