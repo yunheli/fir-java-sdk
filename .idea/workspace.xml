@@ -7,6 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/images/close.png" afterPath="$PROJECT_DIR$/src/images/close.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/images/jtextarea.png" afterPath="$PROJECT_DIR$/src/images/jtextarea.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/images/select.png" afterPath="$PROJECT_DIR$/src/images/select.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/images/selectSmall.png" afterPath="$PROJECT_DIR$/src/images/selectSmall.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/images/tokenSet.png" afterPath="$PROJECT_DIR$/src/images/tokenSet.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/images/tuploadbtn.png" afterPath="$PROJECT_DIR$/src/images/tuploadbtn.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fir/im/ui/AppInfoUI.java" afterPath="$PROJECT_DIR$/src/fir/im/ui/AppInfoUI.java" />
     </list>
     <ignored path="uploadSdk.iws" />
@@ -384,7 +390,7 @@
       <file leaf-file-name="AppInfoUI.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/fir/im/ui/AppInfoUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="163" column="72" selection-start="5204" selection-end="5204" vertical-scroll-proportion="0.8190955">
+            <state line="110" column="58" selection-start="3444" selection-end="3444" vertical-scroll-proportion="0.6381909">
               <folding />
             </state>
           </provider>
@@ -1141,7 +1147,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fir/im/ui/AppInfoUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="163" column="72" selection-start="5204" selection-end="5204" vertical-scroll-proportion="0.8190955">
+        <state line="110" column="58" selection-start="3444" selection-end="3444" vertical-scroll-proportion="0.6381909">
           <folding />
         </state>
       </provider>
