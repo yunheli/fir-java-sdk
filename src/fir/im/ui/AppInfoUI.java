@@ -4,6 +4,7 @@ import fir.im.dialog.FirDialog;
 import fir.im.model.Binary;
 import fir.im.swing.*;
 import fir.im.utils.Resource;
+import fir.im.utils.SearchFile;
 
 import javax.swing.*;
 import java.awt.*;
@@ -56,6 +57,7 @@ public class AppInfoUI extends JPanel implements ActionListener {
     private void initVal(){
         nameDisplay.setText(binary.name);
         versionDisplay.setText(""+binary.versionName+"( "+binary.versionCode+" )");
+        iconPanel.setIcon(SearchFile.getInstance().queryIcon(Binary.getInstance().icon));
     }
 
 
@@ -107,6 +109,9 @@ public class AppInfoUI extends JPanel implements ActionListener {
         add(iconPanel);
         add(closeButton);
     }
+
+
+
 
     protected void paintComponent(Graphics g) {
         ImageIcon icon = new ImageIcon(Resource.getInstance().getResource("tbg.png"));
