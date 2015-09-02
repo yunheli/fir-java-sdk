@@ -13,11 +13,18 @@ import java.io.File;
  */
 public class Storage {
 
-    private static File getAppDataFolder()
+    public static File getAppDataFolder()
     {
         String os = System.getProperty("os.name").toUpperCase();
         String dataFile = (os.contains("MAC")) ? "Library/Caches/fir.im" : ".firim";
 
+        return new File(System.getProperty("user.home"), dataFile);
+    }
+
+    public static File getTemIconFolder(){
+        String os = System.getProperty("os.name").toUpperCase();
+        String dataFile = (os.contains("MAC")) ? "Library/Caches/fir.im/temp" : ".firim/temp";
+        FileOperate.getInstance().newFolder(dataFile);
         return new File(System.getProperty("user.home"), dataFile);
     }
 

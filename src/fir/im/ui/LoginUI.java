@@ -6,6 +6,7 @@ import fir.im.swing.CloseButton;
 import fir.im.utils.FileOperate;
 import fir.im.utils.KeyManager;
 import fir.im.utils.Resource;
+import fir.im.utils.SearchFile;
 
 import javax.swing.*;
 import java.awt.*;
@@ -117,7 +118,9 @@ public class LoginUI extends JPanel implements ActionListener{
             String path = FileOperate.getInstance().fileChoose();
             if( path != null && path.endsWith(".apk")){
                 Binary.getInstance().initPath(path);
+                SearchFile.getInstance().initPath(path);
                 AppInfoUI.getInstance().initBinary(Binary.getInstance());
+                System.out.println(SearchFile.getInstance().queryIcon(Binary.getInstance().icon));
             }
         }
     }
