@@ -16,7 +16,7 @@ public class AppInfoUI extends JPanel implements ActionListener {
     private ChangeLogTextArea changeLogTextArea;
     private JLabel versionDisplay;
     private JLabel nameDisplay;
-    private JLabel shortDisplay;
+    private LinkLabel shortDisplay;
     private JLabel descDisplay;
 
     private JLabel shortTag;
@@ -24,8 +24,10 @@ public class AppInfoUI extends JPanel implements ActionListener {
 
     private UploadJButton uploadBtn;
     private CloseButton closeButton;
+    private JButton settingBtn;
 
     private static AppInfoUI appInfoUI;
+    private JButton selectBtn;
     private Binary binary;
     public AppInfoUI() {
         setForeground(Color.WHITE);
@@ -64,18 +66,22 @@ public class AppInfoUI extends JPanel implements ActionListener {
     private void initAction(){
         uploadBtn.addActionListener(this);
         closeButton.addActionListener(this);
+        selectBtn.addActionListener(this);
+        settingBtn.addActionListener(this);
     }
 
     private void initSwing(){
         versionDisplay = new JLabel("2.1.1  (345)");
         versionDisplay.setForeground(Color.LIGHT_GRAY);
         nameDisplay = new JLabel("高德地图");
+        nameDisplay.setForeground(Color.GRAY);
+
 
         shortTag = new JLabel("短地址");
         shortTag.setForeground(Color.GRAY);
         shortTag.setHorizontalAlignment(SwingConstants.RIGHT);
 
-        shortDisplay = new LinkLabel("http://fir.im/aabb");
+        shortDisplay = new LinkLabel("");
         shortDisplay.setForeground(Color.GRAY);
         shortDisplay.setHorizontalAlignment(SwingConstants.LEFT);
 
@@ -87,15 +93,29 @@ public class AppInfoUI extends JPanel implements ActionListener {
         uploadBtn = new UploadJButton();
         iconPanel = new IconPanel();
         closeButton = new CloseButton();
+        selectBtn = new JButton();
+        ImageIcon select = new ImageIcon(Resource.getInstance().getResource("selectSmall.png"));
+        selectBtn.setIcon(select);
+        selectBtn.setBorderPainted(false);
+        selectBtn.setBounds(400, 168, 30, 30);
+        selectBtn.setSize(select.getIconWidth(), select.getIconHeight());
+
+
+        settingBtn = new JButton();
+        ImageIcon setImg = new ImageIcon(Resource.getInstance().getResource("tokenSet.png"));
+        settingBtn.setIcon(setImg);
+        settingBtn.setBorderPainted(false);
+        settingBtn.setBounds(30, 18, 500, 29);
+        settingBtn.setSize(setImg.getIconWidth(), setImg.getIconHeight());
     }
     private void setPosition(){
-        versionDisplay.setBounds(180, 40, 110, 16);
-        nameDisplay.setBounds(180, 83, 61, 16);
-        shortTag.setBounds(70, 172, 61, 16);
-        shortDisplay.setBounds(180, 172, 200, 16);
+        versionDisplay.setBounds(180, 70, 110, 16);
+        nameDisplay.setBounds(180, 113, 200, 16);
+        shortTag.setBounds(70, 182, 61, 16);
+        shortDisplay.setBounds(180, 182, 200, 16);
         descTag.setBounds(70, 242, 61, 16);
         changeLogTextArea.setBounds(180, 242, 308, 153);
-        iconPanel.setBounds(50, 21, 80, 80);
+        iconPanel.setBounds(60, 60, 80, 80);
 
     }
     private void setupUI(){
@@ -108,9 +128,13 @@ public class AppInfoUI extends JPanel implements ActionListener {
         add(uploadBtn);
         add(iconPanel);
         add(closeButton);
+        add(selectBtn);
+        add(settingBtn);
     }
 
-
+    public void setShortDisplay(String s){
+        shortDisplay.setUrl(s);
+    }
 
 
     protected void paintComponent(Graphics g) {
@@ -127,10 +151,18 @@ public class AppInfoUI extends JPanel implements ActionListener {
     public void actionPerformed(ActionEvent actionEvent) {
         //To change body of implemented methods use File | Settings | File Templates.
         if(actionEvent.getSource() == uploadBtn){
-            FirDialog.getInstance().setContentPane(AppUploadingUI.getInstance());
+            AppUploadingUI.getInstance().upload(changeLogTextArea.getText());
         }
         if(actionEvent.getSource() == closeButton){
             FirDialog.getInstance().setVisible(false);
         }
+        if(actionEvent.getSource() == selectBtn){
+            LoginUI.getInstance().selectApk();
+        }
+
+        if(actionEvent.getSource() == settingBtn){
+            FirDialog.getInstance().setContentPane(LoginUI.getInstance());
+        }
+
     }
 }

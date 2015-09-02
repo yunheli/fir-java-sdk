@@ -27,6 +27,7 @@ public class LoginUI extends JPanel implements ActionListener{
     private JButton tokenSetting;
     private JButton selectBtn;
 
+    private static LoginUI loginUI;
     public LoginUI(){
         super();
         setLayout(null);
@@ -36,8 +37,12 @@ public class LoginUI extends JPanel implements ActionListener{
         initPosition();
         setUpUI();
         initValue();
+        loginUI = this;
     }
 
+    public static LoginUI getInstance(){
+        return loginUI;
+    }
     private void initSwing(){
         closeButton = new CloseButton();
         tokenTag = new JLabel("设置TOKEN");
@@ -115,13 +120,19 @@ public class LoginUI extends JPanel implements ActionListener{
         }
 
         if(actionEvent.getSource() == selectBtn){
-            String path = FileOperate.getInstance().fileChoose();
-            if( path != null && path.endsWith(".apk")){
-                Binary.getInstance().initPath(path);
-                SearchFile.getInstance().initPath(path);
-                AppInfoUI.getInstance().initBinary(Binary.getInstance());
-                System.out.println(SearchFile.getInstance().queryIcon(Binary.getInstance().icon));
-            }
+            selectApk();
+        }
+
+
+    }
+
+    public void selectApk(){
+        String path = FileOperate.getInstance().fileChoose();
+        if( path != null && path.endsWith(".apk")){
+            Binary.getInstance().initPath(path);
+            SearchFile.getInstance().initPath(path);
+            AppInfoUI.getInstance().initBinary(Binary.getInstance());
+            System.out.println(SearchFile.getInstance().queryIcon(Binary.getInstance().icon));
         }
     }
 }
