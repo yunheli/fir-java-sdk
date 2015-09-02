@@ -16,7 +16,7 @@ public class AppInfoUI extends JPanel implements ActionListener {
     private ChangeLogTextArea changeLogTextArea;
     private JLabel versionDisplay;
     private JLabel nameDisplay;
-    private JLabel shortDisplay;
+    private LinkLabel shortDisplay;
     private JLabel descDisplay;
 
     private JLabel shortTag;
@@ -75,7 +75,7 @@ public class AppInfoUI extends JPanel implements ActionListener {
         shortTag.setForeground(Color.GRAY);
         shortTag.setHorizontalAlignment(SwingConstants.RIGHT);
 
-        shortDisplay = new LinkLabel("http://fir.im/aabb");
+        shortDisplay = new LinkLabel("");
         shortDisplay.setForeground(Color.GRAY);
         shortDisplay.setHorizontalAlignment(SwingConstants.LEFT);
 
@@ -110,7 +110,9 @@ public class AppInfoUI extends JPanel implements ActionListener {
         add(closeButton);
     }
 
-
+    public void setShortDisplay(String s){
+        shortDisplay.setUrl(s);
+    }
 
 
     protected void paintComponent(Graphics g) {
@@ -127,7 +129,7 @@ public class AppInfoUI extends JPanel implements ActionListener {
     public void actionPerformed(ActionEvent actionEvent) {
         //To change body of implemented methods use File | Settings | File Templates.
         if(actionEvent.getSource() == uploadBtn){
-            FirDialog.getInstance().setContentPane(AppUploadingUI.getInstance());
+            AppUploadingUI.getInstance().upload(changeLogTextArea.getText());
         }
         if(actionEvent.getSource() == closeButton){
             FirDialog.getInstance().setVisible(false);

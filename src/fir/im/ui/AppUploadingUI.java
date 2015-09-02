@@ -1,7 +1,10 @@
 package fir.im.ui;
 
 import fir.im.dialog.FirDialog;
+import fir.im.model.Binary;
+import fir.im.service.UploadService;
 import fir.im.swing.CloseButton;
+import fir.im.utils.KeyManager;
 import fir.im.utils.Resource;
 
 import javax.swing.*;
@@ -16,15 +19,18 @@ import java.awt.event.ActionListener;
  * Time: 下午3:32
  * To change this template use File | Settings | File Templates.
  */
-public class AppUploadingUI extends JPanel implements ActionListener {
+public class AppUploadingUI extends JPanel implements ActionListener, UploadService.UploadServiceDelegate{
     private static AppUploadingUI appUploadingUI;
     JProgressBar progressBar;
     CloseButton closeButton;
+
     public AppUploadingUI(){
         setLayout(null);
         this.setSize(500,500);
         progressBar = new JProgressBar();
         progressBar.setBounds(40, 385, 422, 20);
+        progressBar.setStringPainted(true);
+
         add(progressBar);
         appUploadingUI = this;
         closeButton = new CloseButton();
@@ -47,11 +53,47 @@ public class AppUploadingUI extends JPanel implements ActionListener {
         return appUploadingUI;
     }
 
+    public void upload(String changeLogTextArea){
+        FirDialog.getInstance().setContentPane(this);
+
+        new UploadService().sendBuild(null, Binary.getInstance().filePath, KeyManager.getInstance().getToken(),
+                Binary.getInstance(),
+                changeLogTextArea,
+                this);
+        progressBar.setVisible(true);
+        progressBar.setValue(0);
+    }
+
     @Override
     public void actionPerformed(ActionEvent actionEvent) {
         //To change body of implemented methods use File | Settings | File Templates.
         if(actionEvent.getSource() == closeButton){
             FirDialog.getInstance().setVisible(false);
         }
+    }
+
+    @Override
+    public void onUploadFinished(boolean finishedSuccessful) {
+        FirDialog.getInstance().setContentPane(AppInfoUI.getInstance());
+    }
+
+    @Override
+    public void onPackageSizeComputed(final long totalSize) {
+        SwingUtilities.invokeLater(new Runnable() {
+            public void run() {
+                progressBar.setMaximum((int) totalSize);
+
+            }
+        });
+    }
+
+    @Override
+    public void onProgressChanged(final long progress) {
+        SwingUtilities.invokeLater(new Runnable() {
+            public void run() {
+                progressBar.setValue((int) progress);
+
+            }
+        });
     }
 }
