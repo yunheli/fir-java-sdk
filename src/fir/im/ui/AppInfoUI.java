@@ -102,7 +102,7 @@ public class AppInfoUI extends JPanel implements ActionListener {
 
 
         settingBtn = new JButton();
-        ImageIcon setImg = new ImageIcon(Resource.getInstance().getResource("tokenSet.png"));
+        ImageIcon setImg = new ImageIcon(Resource.getInstance().getResource("backBtn.png"));
         settingBtn.setIcon(setImg);
         settingBtn.setBorderPainted(false);
         settingBtn.setBounds(30, 18, 500, 29);
@@ -142,9 +142,6 @@ public class AppInfoUI extends JPanel implements ActionListener {
         Image img = icon.getImage();
         g.drawImage(img, 0, 0, icon.getIconWidth(),
                 icon.getIconHeight(), icon.getImageObserver());
-
-//        setSize(icon.getIconWidth(), icon.getIconHeight());
-
     }
 
     @Override
