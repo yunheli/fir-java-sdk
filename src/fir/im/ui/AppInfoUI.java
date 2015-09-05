@@ -33,7 +33,6 @@ public class AppInfoUI extends JPanel implements ActionListener {
         setForeground(Color.WHITE);
         setBackground(Color.WHITE);
 
-        // TODO Auto-generated constructor stub
         setSize(500,500);
         setLayout(null);
 
