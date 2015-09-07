@@ -2,6 +2,8 @@ package fir.im.utils;
 
 import com.sun.awt.AWTUtilities;
 
+import java.awt.*;
+
 /**
  * Created with IntelliJ IDEA.
  * User: will
@@ -32,5 +34,11 @@ public class OsUtil {
             _transparency = false;
         }
         return _transparency;
+    }
+
+    public static Dimension getScreenSize(){
+        Toolkit tk = Toolkit.getDefaultToolkit();
+        Dimension d = tk.getScreenSize();
+        return d;
     }
 }

@@ -1,5 +1,8 @@
 import fir.im.dialog.FirDialog;
+import fir.im.dialog.TipDialog;
 import fir.im.utils.XmlUtil;
+
+import java.util.TimerTask;
 
 /**
  * Created with IntelliJ IDEA.
@@ -10,8 +13,17 @@ import fir.im.utils.XmlUtil;
  */
 public class Main {
     public static void main(String[] args) {
-        FirDialog firDialog = new FirDialog();
-        firDialog.show();
+//        FirDialog firDialog = new FirDialog();
+//        firDialog.show();
+        final TipDialog tipDialog = TipDialog.getInstance();
+
+        tipDialog.fadeIn(1000);
+        new java.util.Timer().schedule(new TimerTask() {
+            public void run() {
+                tipDialog.fadeOut();
+            }
+        }, 5000);
+
 
 
         //! Sundae x = new Sundae();
