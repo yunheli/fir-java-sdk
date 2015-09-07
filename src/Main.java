@@ -1,5 +1,8 @@
 import fir.im.dialog.FirDialog;
+import fir.im.dialog.TipDialog;
 import fir.im.utils.XmlUtil;
+
+import java.util.TimerTask;
 
 /**
  * Created with IntelliJ IDEA.
