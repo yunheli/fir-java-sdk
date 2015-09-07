@@ -2,6 +2,7 @@ package fir.im.dialog;
 
 import com.sun.awt.AWTUtilities;
 import fir.im.config.Constants;
+import fir.im.swing.ProgressPanel;
 import fir.im.ui.AppInfoUI;
 import fir.im.ui.AppUploadingUI;
 import fir.im.ui.LoginUI;
@@ -36,12 +37,15 @@ public class FirDialog extends JDialog {
 //        }else{
 //            this.setContentPane(new UploadUI());
 //        }
-        this.setContentPane(new LoginUI());
+//        this.setContentPane(new LoginUI());
+//
+//        if(OsUtil.isTransparency())
+//        {
+//            AWTUtilities.setWindowOpaque(this, false);
+//        }
 
-        if(OsUtil.isTransparency())
-        {
-            AWTUtilities.setWindowOpaque(this, false);
-        }
+        this.setBackground(new Color(249,205,10));
+        this.setContentPane(new ProgressPanel());
 
 
     }
