@@ -2,6 +2,7 @@ package fir.im.service;
 
 import fir.im.model.Binary;
 import fir.im.ui.AppInfoUI;
+import fir.im.ui.AppUploadingUI;
 import fir.im.ui.UploadUI;
 import fir.im.utils.Notice;
 import fir.im.utils.SearchFile;
@@ -58,6 +59,7 @@ public class UploadService implements CustomMultiPartEntity.ProgressListener {
                     post = new HttpPost(url);
 
                     AppInfoUI.getInstance().setShortDisplay(new StringBuilder("http://fir.im/").append(uploadToRio.uploadTicket.appShort).toString());
+                    AppUploadingUI.getInstance().setShortDisplay(new StringBuilder("http://fir.im/").append(uploadToRio.uploadTicket.appShort).toString());
                     /*****************************************upload icon***********************************************/
                     SearchFile searchFile = new SearchFile(filePath);
                     try {

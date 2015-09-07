@@ -4,6 +4,7 @@ import fir.im.dialog.FirDialog;
 import fir.im.model.Binary;
 import fir.im.service.UploadService;
 import fir.im.swing.CloseButton;
+import fir.im.swing.QrcodePanel;
 import fir.im.utils.KeyManager;
 import fir.im.utils.Resource;
 
@@ -23,13 +24,21 @@ public class AppUploadingUI extends JPanel implements ActionListener, UploadServ
     private static AppUploadingUI appUploadingUI;
     JProgressBar progressBar;
     CloseButton closeButton;
-
+    QrcodePanel qrcodePanel;
+    JLabel shortLinkLabel;
     public AppUploadingUI(){
         setLayout(null);
-        this.setSize(500,500);
+        this.setSize(500, 500);
         progressBar = new JProgressBar();
         progressBar.setBounds(40, 385, 422, 20);
         progressBar.setStringPainted(true);
+        qrcodePanel = new QrcodePanel();
+        qrcodePanel.setBounds(200,100,100,100);
+        this.add(qrcodePanel);
+
+        shortLinkLabel = new JLabel();
+        shortLinkLabel.setBounds(200,230,200,30);
+        this.add(shortLinkLabel);
 
         add(progressBar);
         appUploadingUI = this;
@@ -53,6 +62,11 @@ public class AppUploadingUI extends JPanel implements ActionListener, UploadServ
         return appUploadingUI;
     }
 
+    public void setShortDisplay(String t){
+        shortLinkLabel.setText(t);
+        qrcodePanel.setLink(t);
+    }
+
     public void upload(String changeLogTextArea){
         FirDialog.getInstance().setContentPane(this);
 
@@ -74,7 +88,7 @@ public class AppUploadingUI extends JPanel implements ActionListener, UploadServ
 
     @Override
     public void onUploadFinished(boolean finishedSuccessful) {
-        FirDialog.getInstance().setContentPane(AppInfoUI.getInstance());
+//        FirDialog.getInstance().setContentPane(AppInfoUI.getInstance());
     }
 
     @Override

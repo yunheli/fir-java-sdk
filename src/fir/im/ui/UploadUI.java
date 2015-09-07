@@ -29,6 +29,7 @@ public class UploadUI extends JPanel implements ActionListener,  UploadService.U
     private LinkLabel shortLabel;
     private JProgressBar progressBar;
     private JButton editBtn ;
+
     public UploadUI() {
         setLayout(null);
         this.setSize(322, 518);
