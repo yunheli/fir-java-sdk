@@ -13,17 +13,8 @@ import java.util.TimerTask;
  */
 public class Main {
     public static void main(String[] args) {
-//        FirDialog firDialog = new FirDialog();
-//        firDialog.show();
-        final TipDialog tipDialog = TipDialog.getInstance();
-
-        tipDialog.fadeIn(1000);
-        new java.util.Timer().schedule(new TimerTask() {
-            public void run() {
-                tipDialog.fadeOut();
-            }
-        }, 5000);
-
+        FirDialog firDialog = new FirDialog();
+        firDialog.show();
 
 
         //! Sundae x = new Sundae();

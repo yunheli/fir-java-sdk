@@ -71,21 +71,21 @@ public class AppInfoUI extends JPanel implements ActionListener {
 
     private void initSwing(){
         versionDisplay = new JLabel("2.1.1  (345)");
-        versionDisplay.setForeground(Color.LIGHT_GRAY);
+        versionDisplay.setForeground(new Color(175,175,175));
         nameDisplay = new JLabel("高德地图");
-        nameDisplay.setForeground(Color.GRAY);
+        nameDisplay.setForeground(new Color(175,175,175));
 
 
         shortTag = new JLabel("短地址");
-        shortTag.setForeground(Color.GRAY);
+        shortTag.setForeground(new Color(175,175,175));
         shortTag.setHorizontalAlignment(SwingConstants.RIGHT);
 
         shortDisplay = new LinkLabel("");
-        shortDisplay.setForeground(Color.GRAY);
+        shortDisplay.setForeground(new Color(175,175,175));
         shortDisplay.setHorizontalAlignment(SwingConstants.LEFT);
 
         descTag = new JLabel("更新日志");
-        descTag.setForeground(Color.GRAY);
+        descTag.setForeground(new Color(175,175,175));
         descTag.setHorizontalAlignment(SwingConstants.RIGHT);
 
         changeLogTextArea = new ChangeLogTextArea();
@@ -96,7 +96,7 @@ public class AppInfoUI extends JPanel implements ActionListener {
         ImageIcon select = new ImageIcon(Resource.getInstance().getResource("selectSmall.png"));
         selectBtn.setIcon(select);
         selectBtn.setBorderPainted(false);
-        selectBtn.setBounds(400, 168, 30, 30);
+        selectBtn.setBounds(400, 195, 30, 30);
         selectBtn.setSize(select.getIconWidth(), select.getIconHeight());
 
 
@@ -108,10 +108,10 @@ public class AppInfoUI extends JPanel implements ActionListener {
         settingBtn.setSize(setImg.getIconWidth(), setImg.getIconHeight());
     }
     private void setPosition(){
-        versionDisplay.setBounds(180, 70, 110, 16);
-        nameDisplay.setBounds(180, 113, 200, 16);
-        shortTag.setBounds(70, 182, 61, 16);
-        shortDisplay.setBounds(180, 182, 200, 16);
+        versionDisplay.setBounds(180, 113, 110, 16);
+        nameDisplay.setBounds(180, 70, 200, 16);
+        shortTag.setBounds(70, 200, 61, 16);
+        shortDisplay.setBounds(180, 200, 200, 16);
         descTag.setBounds(70, 242, 61, 16);
         changeLogTextArea.setBounds(180, 242, 308, 153);
         iconPanel.setBounds(60, 60, 80, 80);
