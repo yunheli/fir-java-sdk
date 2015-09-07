@@ -7,17 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/images/backBtn.png" afterPath="$PROJECT_DIR$/src/images/backBtn.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/images/close.png" afterPath="$PROJECT_DIR$/src/images/close.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/images/jtextarea.png" afterPath="$PROJECT_DIR$/src/images/jtextarea.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/images/login.png" afterPath="$PROJECT_DIR$/src/images/login.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/images/select.png" afterPath="$PROJECT_DIR$/src/images/select.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/images/selectSmall.png" afterPath="$PROJECT_DIR$/src/images/selectSmall.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/images/tbg.png" afterPath="$PROJECT_DIR$/src/images/tbg.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/images/tuploadbtn.png" afterPath="$PROJECT_DIR$/src/images/tuploadbtn.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/images/uploadingbg.png" afterPath="$PROJECT_DIR$/src/images/uploadingbg.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fir/im/ui/AppInfoUI.java" afterPath="$PROJECT_DIR$/src/fir/im/ui/AppInfoUI.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fir/im/swing/LinkLabel.java" afterPath="$PROJECT_DIR$/src/fir/im/swing/LinkLabel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="uploadSdk.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,7 +22,7 @@
     <file path="/Resource.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1440492120729" ignored="false" />
     <file path="/UploadURI.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1440492640302" ignored="false" />
     <file path="/Config.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1440493898561" ignored="false" />
-    <file path="/Dummy.txt" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1441605933351" ignored="false" />
+    <file path="/Dummy.txt" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1441633893239" ignored="false" />
     <file path="/KeyManager.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1440554751233" ignored="false" />
     <file path="/XmlUtil.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1440544861550" ignored="false" />
     <file path="/key.xml" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1440500924083" ignored="false" />
@@ -337,9 +328,7 @@
         <entry file="file://$PROJECT_DIR$/src/fir/im/utils/OsUtil.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="41" column="17" selection-start="1299" selection-end="1299" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -371,10 +360,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AppInfoUI.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="AppInfoUI.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fir/im/ui/AppInfoUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="87" column="52" selection-start="2511" selection-end="2511" vertical-scroll-proportion="0.22018349">
+            <state line="120" column="28" selection-start="3858" selection-end="3858" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LinkLabel.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/fir/im/swing/LinkLabel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="71" column="43" selection-start="1743" selection-end="1743" vertical-scroll-proportion="0.79816514">
               <folding />
             </state>
           </provider>
@@ -398,7 +396,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/fir/im/swing/LinkLabel.java" />
         <option value="$PROJECT_DIR$/src/fir/im/swing/CloseButton.java" />
         <option value="$PROJECT_DIR$/src/fir/im/dialog/FirDialog.java" />
         <option value="$PROJECT_DIR$/src/fir/im/utils/FileOperate.java" />
@@ -414,11 +411,12 @@
         <option value="$PROJECT_DIR$/src/fir/im/dialog/TipDialog.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/fir/im/ui/AppInfoUI.java" />
+        <option value="$PROJECT_DIR$/src/fir/im/swing/LinkLabel.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="41" />
+    <option name="x" value="20" />
     <option name="y" value="23" />
     <option name="width" value="1260" />
     <option name="height" value="760" />
@@ -451,6 +449,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -606,7 +605,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -624,13 +622,13 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="MemberChooser.showClasses" value="true" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.searchVisible" value="true" />
     <property name="Downloaded.Files.Path" value="$PROJECT_DIR$/lib" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -677,19 +675,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -716,6 +701,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -819,7 +817,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="41" y="23" width="1260" height="760" extended-state="0" />
+    <frame x="20" y="23" width="1260" height="760" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32866043" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -915,13 +913,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/fir/im/swing/CloseButton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="34" selection-start="491" selection-end="507" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/fir/im/utils/QrCode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="7" selection-start="532" selection-end="532" vertical-scroll-proportion="0.0">
@@ -938,9 +929,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fir/im/service/CustomMultiPartEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="272" selection-end="272" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="11" column="13" selection-start="272" selection-end="272" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fir/im/service/UploadService.java">
@@ -1001,9 +990,7 @@
     <entry file="file://$PROJECT_DIR$/src/fir/im/utils/OsUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="41" column="17" selection-start="1299" selection-end="1299" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1030,7 +1017,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fir/im/ui/AppInfoUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="52" selection-start="2511" selection-end="2511" vertical-scroll-proportion="0.22018349">
+        <state line="120" column="28" selection-start="3858" selection-end="3858" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fir/im/swing/LinkLabel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="43" selection-start="1743" selection-end="1743" vertical-scroll-proportion="0.79816514">
           <folding />
         </state>
       </provider>
