@@ -10,6 +10,7 @@ import fir.im.utils.OsUtil;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.TimerTask;
 
 /**
  * Created with IntelliJ IDEA.
@@ -37,15 +38,13 @@ public class FirDialog extends JDialog {
 //        }else{
 //            this.setContentPane(new UploadUI());
 //        }
-//        this.setContentPane(new LoginUI());
-//
-//        if(OsUtil.isTransparency())
-//        {
-//            AWTUtilities.setWindowOpaque(this, false);
-//        }
+        this.setContentPane(new LoginUI());
 
-        this.setBackground(new Color(249,205,10));
-        this.setContentPane(new ProgressPanel());
+        if(OsUtil.isTransparency())
+        {
+            AWTUtilities.setWindowOpaque(this, false);
+        }
+
 
 
     }
