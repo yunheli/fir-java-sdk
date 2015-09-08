@@ -14,26 +14,45 @@ import java.awt.geom.RoundRectangle2D;
  * To change this template use File | Settings | File Templates.
  */
 public class ProgressPanel extends JPanel{
+    ImageIcon iconw = new ImageIcon(Resource.getInstance().getResource("toumingw.png"));
+    ImageIcon icon = new ImageIcon(Resource.getInstance().getResource("touming.png"));
+
+
+    int draw_width = -400;
+    Boolean draw_bool = false;
     public ProgressPanel(){
         super();
-        this.setSize(400,30);
+        this.setSize(400,20);
+
+
     }
     public void paint(Graphics g){
-        RoundRectangle2D.Double rect=new RoundRectangle2D.Double(0, 0, 400, 20, 20, 20);
-        g.setClip(rect);
         super.paint(g);
+//
+        RoundRectangle2D.Double rect=new RoundRectangle2D.Double(0, 0, 400, 15, 15, 15);
+        g.setClip(rect);
 
 //        setBackground(Color.red);
+//
+//
+        if (draw_bool == false)
+        {
+            Image img = icon.getImage();
+            g.drawImage(img, 0, 0,400,15, this);
+            draw_bool = true;
+        }
 
 
-        ImageIcon icon = new ImageIcon(Resource.getInstance().getResource("touming.png"));
-        Image img = icon.getImage();
-        g.drawImage(img, 0, 0,400,20, this);
-
-        ImageIcon iconw = new ImageIcon(Resource.getInstance().getResource("toumingw.png"));
         Image imgw = icon.getImage();
-        g.drawImage(imgw, 0, 0,400,20, this);
+        g.drawImage(imgw, draw_width, 0,400,15, this);
+
+    }
 
 
+
+    public void setPercent(double x){
+         draw_width = (int)(400 * x) - 400;
+         System.out.println("draw_width#"+draw_width);
+         repaint();
     }
 }
