@@ -62,41 +62,41 @@ public class UploadService implements CustomMultiPartEntity.ProgressListener {
                     AppUploadingUI.getInstance().setShortDisplay(new StringBuilder("http://fir.im/").append(uploadToRio.uploadTicket.appShort).toString());
                     /*****************************************upload icon***********************************************/
                     SearchFile searchFile = new SearchFile(filePath);
-                    try {
-                        if(!binary.icon.isEmpty()){
-                            InputStreamBody iconToUpload = searchFile.query(binary.icon);
-                            CustomMultiPartEntity iconMultipartEntity = new CustomMultiPartEntity(UploadService.this);
-                            // set the api token
-                            iconMultipartEntity.addPart("key", new StringBody(uploadToRio.uploadTicket.iconKey));
-                            iconMultipartEntity.addPart("token", new StringBody(uploadToRio.uploadTicket.iconToken));
-                            iconMultipartEntity.addPart("file", iconToUpload);
-
-                            if (uploadServiceDelegate != null){
-                                // send the full package size
-//                                uploadServiceDelegate.onPackageSizeComputed(iconMultipartEntity.getContentLength());
-                            }
-
-                            post.setEntity(iconMultipartEntity);
-
-                            // POST the build
-                            HttpResponse iconResponse = client.execute(post);
-                            HttpEntity iconEntity = iconResponse.getEntity();
-                            String iconResponseString = EntityUtils.toString(iconEntity, "UTF-8");
-                            System.out.println(iconResponseString);
-
-                            JSONObject iconJsonObject = new JSONObject(iconResponseString);
-
-                            if (iconResponse.getStatusLine().getStatusCode() == 200) {
-                                if (uploadServiceDelegate != null) {
-                                    // send success upload status
-                                }
-
-                            }
-                            searchFile.zipFile.close();
-                        }
-                    }catch (Exception e) {
-                        Notice.postErrorNoticeTOSlack(e);
-                    }
+//                    try {
+//                        if(!binary.icon.isEmpty()){
+//                            InputStreamBody iconToUpload = searchFile.query(binary.icon);
+//                            CustomMultiPartEntity iconMultipartEntity = new CustomMultiPartEntity(UploadService.this);
+//                            // set the api token
+//                            iconMultipartEntity.addPart("key", new StringBody(uploadToRio.uploadTicket.iconKey));
+//                            iconMultipartEntity.addPart("token", new StringBody(uploadToRio.uploadTicket.iconToken));
+//                            iconMultipartEntity.addPart("file", iconToUpload);
+//
+//                            if (uploadServiceDelegate != null){
+//                                // send the full package size
+////                                uploadServiceDelegate.onPackageSizeComputed(iconMultipartEntity.getContentLength());
+//                            }
+//
+//                            post.setEntity(iconMultipartEntity);
+//
+//                            // POST the build
+//                            HttpResponse iconResponse = client.execute(post);
+//                            HttpEntity iconEntity = iconResponse.getEntity();
+//                            String iconResponseString = EntityUtils.toString(iconEntity, "UTF-8");
+//                            System.out.println(iconResponseString);
+//
+//                            JSONObject iconJsonObject = new JSONObject(iconResponseString);
+//
+//                            if (iconResponse.getStatusLine().getStatusCode() == 200) {
+//                                if (uploadServiceDelegate != null) {
+//                                    // send success upload status
+//                                }
+//
+//                            }
+//                            searchFile.zipFile.close();
+//                        }
+//                    }catch (Exception e) {
+//                        Notice.postErrorNoticeTOSlack(e);
+//                    }
 
                     /*****************************************upload file***********************************************/
                     // get the apk file
