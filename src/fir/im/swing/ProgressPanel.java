@@ -4,6 +4,7 @@ import fir.im.utils.Resource;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.geom.AffineTransform;
 import java.awt.geom.RoundRectangle2D;
 
 /**
@@ -24,27 +25,29 @@ public class ProgressPanel extends JPanel{
         super();
         this.setSize(400,20);
 
-
     }
     public void paint(Graphics g){
         super.paint(g);
 //
-        RoundRectangle2D.Double rect=new RoundRectangle2D.Double(0, 0, 400, 15, 15, 15);
-        g.setClip(rect);
+        Graphics2D  w = (Graphics2D)g;
 
-//        setBackground(Color.red);
+        RoundRectangle2D.Double rect=new RoundRectangle2D.Double(0, 0, 400, 15, 15, 15);
+        w.setClip(rect);
+
+
+//       setBackground(Color.red);
 //
 //
         if (draw_bool == false)
         {
             Image img = icon.getImage();
-            g.drawImage(img, 0, 0,400,15, this);
+            w.drawImage(img, 0, 0,400,15, this);
             draw_bool = true;
         }
 
 
         Image imgw = icon.getImage();
-        g.drawImage(imgw, draw_width, 0,400,15, this);
+        w.drawImage(imgw, draw_width, 0,400,15, this);
 
     }
 
