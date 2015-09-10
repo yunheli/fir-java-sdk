@@ -12,9 +12,14 @@ public class KeyManager {
     public final String API_TOKEN = "API_TOKEN";
     public final String APK_PATH = "APK_PATH";
     public String apiToken;
+    public Boolean isEclipse = false;
 
     public String getApkPath() {
         return apkPath;
+    }
+
+    public void isEclipseFuc(Boolean flag){
+       isEclipse = flag;
     }
 
     public void setApkPath(String apkPath) {

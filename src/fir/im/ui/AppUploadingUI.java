@@ -52,7 +52,7 @@ public class AppUploadingUI extends JPanel implements ActionListener, UploadServ
         appUploadingUI = this;
         closeButton = new CloseButton();
         add(closeButton);
-        closeButton.addActionListener(this);
+//        closeButton.addActionListener(this);
 
         progressPanel = new ProgressPanel();
         add(progressPanel);

@@ -2,7 +2,10 @@ package fir.im.ui;
 
 import fir.im.dialog.FirDialog;
 import fir.im.model.Binary;
+import fir.im.service.UploadService;
 import fir.im.swing.*;
+import fir.im.utils.KeyManager;
+import fir.im.utils.OsUtil;
 import fir.im.utils.Resource;
 import fir.im.utils.SearchFile;
 
@@ -11,13 +14,15 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class AppInfoUI extends JPanel implements ActionListener {
+public class AppInfoUI extends JPanel implements ActionListener , UploadService.UploadServiceDelegate {
     private IconPanel iconPanel;
     private ChangeLogTextArea changeLogTextArea;
     private JLabel versionDisplay;
     private JLabel nameDisplay;
     private LinkLabel shortDisplay;
     private JLabel descDisplay;
+    ProgressPanel progressPanel;
+
 
     private JLabel shortTag;
     private JLabel descTag;
@@ -25,10 +30,15 @@ public class AppInfoUI extends JPanel implements ActionListener {
     private UploadJButton uploadBtn;
     private CloseButton closeButton;
     private JButton settingBtn;
+    private JProgressBar progressBar;
 
     private static AppInfoUI appInfoUI;
     private JButton selectBtn;
     private Binary binary;
+    private String shortLink;
+    JLabel percentLabel;
+    JLabel percentLabelEclipse;
+
     public AppInfoUI() {
         setForeground(Color.WHITE);
         setBackground(Color.WHITE);
@@ -42,6 +52,41 @@ public class AppInfoUI extends JPanel implements ActionListener {
         initAction();
 
         appInfoUI = this;
+
+        progressPanel = new ProgressPanel();
+        add(progressPanel);
+        progressPanel.setBounds(50,460,400,15);
+        progressPanel.setVisible(false);
+
+        percentLabel = new JLabel("当前进度: 0%");
+        percentLabel.setForeground(Color.white);
+        add(percentLabel);
+        percentLabel.setBounds(50,440,400,15);
+        percentLabel.setVisible(false);
+
+        percentLabelEclipse = new JLabel("正在上传...(0%)");
+        percentLabelEclipse.setForeground(Color.white);
+        add(percentLabelEclipse);
+        percentLabelEclipse.setBounds(50,450,400,20);
+        percentLabelEclipse.setHorizontalAlignment(SwingConstants.CENTER);
+
+        percentLabelEclipse.setFont(new   java.awt.Font("Dialog",   1,   20));
+
+        percentLabelEclipse.setVisible(false);
+
+
+        progressBar = new JProgressBar();
+        progressBar.setBounds(40, 385, 422, 20);
+        progressBar.setStringPainted(true);
+        progressBar.setVisible(false);
+
+    }
+
+    public void setPercentLabel(double x){
+        int m = (int)(x * 100);
+        percentLabel.setText("当前进度: "+m+"%");
+
+        percentLabelEclipse.setText("正在上传...("+m+"%)");
     }
 
     public static AppInfoUI getInstance(){
@@ -64,7 +109,6 @@ public class AppInfoUI extends JPanel implements ActionListener {
 
     private void initAction(){
         uploadBtn.addActionListener(this);
-        closeButton.addActionListener(this);
         selectBtn.addActionListener(this);
         settingBtn.addActionListener(this);
     }
@@ -74,6 +118,7 @@ public class AppInfoUI extends JPanel implements ActionListener {
         versionDisplay.setForeground(new Color(175,175,175));
         nameDisplay = new JLabel("高德地图");
         nameDisplay.setForeground(new Color(175,175,175));
+
 
 
         shortTag = new JLabel("短地址");
@@ -132,9 +177,33 @@ public class AppInfoUI extends JPanel implements ActionListener {
     }
 
     public void setShortDisplay(String s){
+        shortLink = s;
         shortDisplay.setUrl(s);
     }
 
+
+
+    public void upload(String changeLogTextArea){
+        //上传按钮隐藏 进度条显示
+        uploadBtn.setVisible(false);
+        if (KeyManager.getInstance().isEclipse) {
+            percentLabelEclipse.setVisible(true);
+
+        }else{
+            progressPanel.setVisible(true);
+            percentLabel.setVisible(true);
+        }
+
+        //======================
+
+
+        new UploadService().sendBuild(null, Binary.getInstance().filePath, KeyManager.getInstance().getToken(),
+                Binary.getInstance(),
+                changeLogTextArea,
+                this);
+        progressBar.setVisible(false);
+        progressBar.setValue(0);
+    }
 
     protected void paintComponent(Graphics g) {
         ImageIcon icon = new ImageIcon(Resource.getInstance().getResource("tbg.png"));
@@ -147,7 +216,8 @@ public class AppInfoUI extends JPanel implements ActionListener {
     public void actionPerformed(ActionEvent actionEvent) {
         //To change body of implemented methods use File | Settings | File Templates.
         if(actionEvent.getSource() == uploadBtn){
-            AppUploadingUI.getInstance().upload(changeLogTextArea.getText());
+//            AppUploadingUI.getInstance().upload(changeLogTextArea.getText());
+            upload(changeLogTextArea.getText()) ;
         }
         if(actionEvent.getSource() == closeButton){
             FirDialog.getInstance().setVisible(false);
@@ -161,4 +231,41 @@ public class AppInfoUI extends JPanel implements ActionListener {
         }
 
     }
+
+    @Override
+    public void onUploadFinished(boolean finishedSuccessful) {
+        //上传按钮显示 进度条隐藏
+        uploadBtn.setVisible(true);
+        if(KeyManager.getInstance().isEclipse){
+            percentLabelEclipse.setVisible(false);
+        } else{
+            progressPanel.setVisible(false);
+            percentLabel.setVisible(false);
+        }
+
+        //======================
+
+        OsUtil.openUrlInBrowser(shortLink);
+    }
+
+    @Override
+    public void onPackageSizeComputed(final long totalSize) {
+        SwingUtilities.invokeLater(new Runnable() {
+            public void run() {
+                progressBar.setMaximum((int) totalSize);
+
+            }
+        });
+    }
+
+    @Override
+    public void onProgressChanged(final long progress) {
+        SwingUtilities.invokeLater(new Runnable() {
+            public void run() {
+                progressBar.setValue((int) progress);
+//                System.out.println(progressBar.getPercentComplete());
+                progressPanel.setPercent(progressBar.getPercentComplete());
+                setPercentLabel(progressBar.getPercentComplete());
+            }
+        });    }
 }

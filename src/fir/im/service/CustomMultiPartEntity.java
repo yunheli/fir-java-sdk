@@ -17,6 +17,10 @@ public class CustomMultiPartEntity extends MultipartEntity {
         super();
         this.listener = listener;
     }
+    public CustomMultiPartEntity() {
+        super();
+        listener = null;
+    }
 
     public CustomMultiPartEntity(final HttpMultipartMode mode, final ProgressListener listener) {
         super(mode);
