@@ -22,11 +22,11 @@ import java.awt.event.MouseListener;
  * Time: 下午6:31
  * To change this template use File | Settings | File Templates.
  */
-public class LoginUI extends JPanel implements ActionListener{
+public class LoginUI extends JPanel implements ActionListener, MouseListener{
     private CloseButton closeButton;
     private JLabel tokenTag;
     private JLabel tokenDisplay;
-    private JButton tokenSetting;
+    private JLabel tokenSetting;
     private JButton selectBtn;
 
     private static LoginUI loginUI;
@@ -51,10 +51,9 @@ public class LoginUI extends JPanel implements ActionListener{
         tokenTag.setForeground(Color.gray);
         tokenDisplay = new JLabel();
 
-        tokenSetting = new JButton();
+        tokenSetting = new JLabel();
         ImageIcon tokenSet = new ImageIcon(Resource.getInstance().getResource("tokenSet.png"));
         tokenSetting.setIcon(tokenSet);
-        tokenSetting.setBorderPainted(false);
         tokenSetting.setBounds(420, 150, 100, 100);
         tokenSetting.setSize(tokenSet.getIconWidth(), tokenSet.getIconHeight());
 
@@ -68,33 +67,8 @@ public class LoginUI extends JPanel implements ActionListener{
 
     private void initAction(){
 //        closeButton.addActionListener(this);
-        closeButton.addMouseListener(new MouseListener() {
-            @Override
-            public void mouseClicked(MouseEvent mouseEvent) {
-                FirDialog.getInstance().setVisible(false);
-            }
-
-            @Override
-            public void mousePressed(MouseEvent mouseEvent) {
-                //To change body of implemented methods use File | Settings | File Templates.
-            }
-
-            @Override
-            public void mouseReleased(MouseEvent mouseEvent) {
-                //To change body of implemented methods use File | Settings | File Templates.
-            }
-
-            @Override
-            public void mouseEntered(MouseEvent mouseEvent) {
-                //To change body of implemented methods use File | Settings | File Templates.
-            }
-
-            @Override
-            public void mouseExited(MouseEvent mouseEvent) {
-                //To change body of implemented methods use File | Settings | File Templates.
-            }
-        });
-        tokenSetting.addActionListener(this);
+        closeButton.addMouseListener(this);
+        tokenSetting.addMouseListener(this);
         selectBtn.addActionListener(this);
     }
 
@@ -162,5 +136,46 @@ public class LoginUI extends JPanel implements ActionListener{
             AppInfoUI.getInstance().initBinary(Binary.getInstance());
             System.out.println(SearchFile.getInstance().queryIcon(Binary.getInstance().icon));
         }
+    }
+
+    @Override
+    public void mouseClicked(MouseEvent mouseEvent) {
+        if(mouseEvent.getSource() == closeButton){
+            FirDialog.getInstance().setVisible(false);
+        }
+        if(mouseEvent.getSource() == tokenSetting){
+            System.out.println(".........");
+            String response = JOptionPane.showInputDialog(null,
+                    "请输入您的API_TOKEN",
+                    "请输入您的API_TOKEN",
+                    JOptionPane.QUESTION_MESSAGE);
+            System.out.println(response);
+            if(response == null){
+
+            }else{
+                tokenDisplay.setText(response);
+                KeyManager.getInstance().setToken(response);
+            }
+        }
+    }
+
+    @Override
+    public void mousePressed(MouseEvent mouseEvent) {
+        //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    @Override
+    public void mouseReleased(MouseEvent mouseEvent) {
+        //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    @Override
+    public void mouseEntered(MouseEvent mouseEvent) {
+        //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    @Override
+    public void mouseExited(MouseEvent mouseEvent) {
+        //To change body of implemented methods use File | Settings | File Templates.
     }
 }
