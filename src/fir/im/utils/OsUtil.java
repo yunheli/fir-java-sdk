@@ -41,4 +41,12 @@ public class OsUtil {
         Dimension d = tk.getScreenSize();
         return d;
     }
+
+    public static void openUrlInBrowser(String url){
+        try {
+            Desktop.getDesktop().browse(
+                    new java.net.URI(url));
+        } catch (Exception ex) {
+        }
+    }
 }

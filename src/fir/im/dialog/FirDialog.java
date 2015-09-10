@@ -6,6 +6,7 @@ import fir.im.swing.ProgressPanel;
 import fir.im.ui.AppInfoUI;
 import fir.im.ui.AppUploadingUI;
 import fir.im.ui.LoginUI;
+import fir.im.utils.KeyManager;
 import fir.im.utils.OsUtil;
 
 import javax.swing.*;
@@ -47,6 +48,10 @@ public class FirDialog extends JDialog {
 
 
 
+    }
+
+    public void setIdeEnvironmentEclipse(Boolean flag){
+        KeyManager.getInstance().isEclipseFuc(true);
     }
 
     public  static FirDialog getInstance(){
