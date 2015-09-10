@@ -7,14 +7,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fir/im/swing/ProgressPanel.java" afterPath="$PROJECT_DIR$/src/fir/im/swing/ProgressPanel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/images/tbg.png" afterPath="$PROJECT_DIR$/src/images/tbg.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fir/im/ui/AppInfoUI.java" afterPath="$PROJECT_DIR$/src/fir/im/ui/AppInfoUI.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fir/im/service/CustomMultiPartEntity.java" afterPath="$PROJECT_DIR$/src/fir/im/service/CustomMultiPartEntity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fir/im/dialog/FirDialog.java" afterPath="$PROJECT_DIR$/src/fir/im/dialog/FirDialog.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fir/im/utils/KeyManager.java" afterPath="$PROJECT_DIR$/src/fir/im/utils/KeyManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fir/im/utils/OsUtil.java" afterPath="$PROJECT_DIR$/src/fir/im/utils/OsUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fir/im/swing/UploadJButton.java" afterPath="$PROJECT_DIR$/src/fir/im/swing/UploadJButton.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fir/im/service/UploadService.java" afterPath="$PROJECT_DIR$/src/fir/im/service/UploadService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="uploadSdk.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Main.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1441680875665" ignored="false" />
+    <file path="/Main.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1441869574691" ignored="false" />
     <file path="/LoginUI.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1441164550887" ignored="false" />
-    <file path="/FirDialog.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1441681630765" ignored="false" />
+    <file path="/FirDialog.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1441869221378" ignored="false" />
     <file path="/fragment.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1440488832281" ignored="false" />
     <file path="$PROJECT_DIR$/../testUploadSDK/src/Main.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1440937850588" ignored="false" />
     <file path="$PROJECT_DIR$/../testUploadSDK/.idea/misc.xml" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1440489854036" ignored="false" />
@@ -22,8 +30,8 @@
     <file path="/Resource.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1440492120729" ignored="false" />
     <file path="/UploadURI.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1440492640302" ignored="false" />
     <file path="/Config.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1440493898561" ignored="false" />
-    <file path="/Dummy.txt" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1441783904193" ignored="false" />
-    <file path="/KeyManager.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1440554751233" ignored="false" />
+    <file path="/Dummy.txt" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1441865031626" ignored="false" />
+    <file path="/KeyManager.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1441869229128" ignored="false" />
     <file path="/XmlUtil.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1440544861550" ignored="false" />
     <file path="/key.xml" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1440500924083" ignored="false" />
     <file path="/Constants.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1440511295725" ignored="false" />
@@ -33,8 +41,8 @@
     <file path="/FileOperate.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1441123081227" ignored="false" />
     <file path="$PROJECT_DIR$/out/artifacts/uploadSdk/unnamed.jar!/images/key.xml" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1440519328641" ignored="false" />
     <file path="/SettingUI.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1440986819829" ignored="false" />
-    <file path="/OsUtil.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1441609380299" ignored="false" />
-    <file path="/CustomMultiPartEntity.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1440571579122" ignored="false" />
+    <file path="/OsUtil.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1441868353067" ignored="false" />
+    <file path="/CustomMultiPartEntity.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1441868725624" ignored="false" />
     <file path="/UploadTicket.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1440571790338" ignored="false" />
     <file path="/Binary.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1441463417369" ignored="false" />
     <file path="/Notice.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1440571943203" ignored="false" />
@@ -106,7 +114,7 @@
     <file path="/ChangeLogTextArea.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1441085416316" ignored="false" />
     <file path="/UploadJButton.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1441089969938" ignored="false" />
     <file path="/AppUploadingUI.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1441685098933" ignored="false" />
-    <file path="/AppInfoUI.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1441625340188" ignored="false" />
+    <file path="/AppInfoUI.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1441869511734" ignored="false" />
     <file path="/CloseButton.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1441094050671" ignored="false" />
     <file path="/QrCode.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1441378595611" ignored="false" />
     <file path="$USER_HOME$/job/FIRUP/FIR_plugin/src/ro/catalin/prata/firuploader/Model/Binary.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1441463422840" ignored="false" />
@@ -256,7 +264,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/fir/im/ui/AppInfoUI.java" line="60" class="fir.im.ui.AppInfoUI" package="fir.im.ui">
+      <breakpoint url="file://$PROJECT_DIR$/src/fir/im/ui/AppInfoUI.java" line="105" class="fir.im.ui.AppInfoUI" package="fir.im.ui">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -329,25 +337,7 @@
       <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="14" selection-start="429" selection-end="429" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FirDialog.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fir/im/dialog/FirDialog.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="78" selection-start="1448" selection-end="1448" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TipDialog.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fir/im/dialog/TipDialog.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="94" column="18" selection-start="2573" selection-end="2736" vertical-scroll-proportion="0.0">
+            <state line="25" column="39" selection-start="675" selection-end="749" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -356,36 +346,70 @@
       <file leaf-file-name="AppUploadingUI.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fir/im/ui/AppUploadingUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="97" column="19" selection-start="3019" selection-end="3019" vertical-scroll-proportion="0.0">
+            <state line="46" column="41" selection-start="1360" selection-end="1430" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AppInfoUI.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="FirDialog.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fir/im/dialog/FirDialog.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="53" column="30" selection-start="1408" selection-end="1408" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="KeyManager.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fir/im/utils/KeyManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="28" selection-start="484" selection-end="496" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AppInfoUI.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/fir/im/ui/AppInfoUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="102" column="8" selection-start="3090" selection-end="3412" vertical-scroll-proportion="0.0">
+            <state line="63" column="35" selection-start="1707" selection-end="1707" vertical-scroll-proportion="0.62015504">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProgressPanel.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/fir/im/swing/ProgressPanel.java">
+      <file leaf-file-name="OsUtil.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fir/im/utils/OsUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="16" selection-start="1117" selection-end="1117" vertical-scroll-proportion="0.59322035">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="44" column="39" selection-start="1330" selection-end="1346" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FadingLabel.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fir/im/swing/FadingLabel.java">
+      <file leaf-file-name="LinkLabel.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fir/im/swing/LinkLabel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="29" selection-start="1704" selection-end="1717" vertical-scroll-proportion="0.0">
+            <state line="47" column="16" selection-start="1191" selection-end="1371" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UploadJButton.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fir/im/swing/UploadJButton.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="50" selection-start="502" selection-end="502" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProgressPanel.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fir/im/swing/ProgressPanel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="13" selection-start="337" selection-end="337" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -394,25 +418,7 @@
       <file leaf-file-name="UploadService.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fir/im/service/UploadService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="67" selection-start="2354" selection-end="2354" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IconPanel.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fir/im/swing/IconPanel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="1" selection-start="612" selection-end="823" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UploadUI.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fir/im/ui/UploadUI.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="4" selection-start="983" selection-end="983" vertical-scroll-proportion="0.0">
+            <state line="67" column="44" selection-start="2569" selection-end="2569" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -436,22 +442,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/fir/im/swing/IconPanel.java" />
-        <option value="$PROJECT_DIR$/src/fir/im/ui/LoginUI.java" />
-        <option value="$PROJECT_DIR$/src/fir/im/utils/SearchFile.java" />
         <option value="$PROJECT_DIR$/src/fir/im/utils/QrCode.java" />
         <option value="$PROJECT_DIR$/src/fir/im/model/Binary.java" />
-        <option value="$PROJECT_DIR$/src/fir/im/utils/OsUtil.java" />
         <option value="$PROJECT_DIR$/src/fir/im/dialog/TipDialog.java" />
-        <option value="$PROJECT_DIR$/src/fir/im/ui/AppInfoUI.java" />
         <option value="$PROJECT_DIR$/src/fir/im/swing/LinkLabel.java" />
         <option value="$PROJECT_DIR$/src/fir/im/ui/UploadUI.java" />
         <option value="$PROJECT_DIR$/src/fir/im/swing/QrcodePanel.java" />
-        <option value="$PROJECT_DIR$/src/fir/im/service/UploadService.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/fir/im/dialog/FirDialog.java" />
         <option value="$PROJECT_DIR$/src/fir/im/ui/AppUploadingUI.java" />
         <option value="$PROJECT_DIR$/src/fir/im/swing/ProgressPanel.java" />
+        <option value="$PROJECT_DIR$/src/fir/im/swing/UploadJButton.java" />
+        <option value="$PROJECT_DIR$/src/fir/im/utils/OsUtil.java" />
+        <option value="$PROJECT_DIR$/src/fir/im/service/CustomMultiPartEntity.java" />
+        <option value="$PROJECT_DIR$/src/fir/im/service/UploadService.java" />
+        <option value="$PROJECT_DIR$/src/fir/im/utils/KeyManager.java" />
+        <option value="$PROJECT_DIR$/src/fir/im/dialog/FirDialog.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/fir/im/ui/AppInfoUI.java" />
       </list>
     </option>
   </component>
@@ -489,8 +495,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -540,6 +544,28 @@
               <option name="myItemId" value="im" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="utils" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="uploadSdk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="uploadSdk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="im" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -559,7 +585,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="swing" />
+              <option name="myItemId" value="service" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -579,6 +605,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -596,13 +624,13 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="MemberChooser.showClasses" value="true" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.searchVisible" value="true" />
     <property name="Downloaded.Files.Path" value="$PROJECT_DIR$/lib" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -649,19 +677,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -688,6 +703,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -887,83 +915,14 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/fir/im/utils/OsUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="17" selection-start="1299" selection-end="1299" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fir/im/swing/LinkLabel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="18" selection-start="507" selection-end="507" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fir/im/swing/QrcodePanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="19" selection-start="576" selection-end="576" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fir/im/ui/UploadUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="4" selection-start="983" selection-end="983" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/javax/swing/JProgressBar.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="18" selection-start="1652" selection-end="1652" vertical-scroll-proportion="0.3325" />
-      </provider>
-    </entry>
-    <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/awt/Graphics.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="93" column="37" selection-start="3542" selection-end="3551" vertical-scroll-proportion="0.3325" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="14" selection-start="429" selection-end="429" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/awt/Component.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="241" column="16" selection-start="9232" selection-end="9232" vertical-scroll-proportion="0.3325" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fir/im/dialog/FirDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="78" selection-start="1448" selection-end="1448" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fir/im/service/UploadService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="67" selection-start="2354" selection-end="2354" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/fir/im/swing/IconPanel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="1" selection-start="612" selection-end="823" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fir/im/ui/AppInfoUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="102" column="8" selection-start="3090" selection-end="3412" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fir/im/ui/AppUploadingUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="97" column="19" selection-start="3019" selection-end="3019" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -982,12 +941,87 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/javax/swing/JProgressBar.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="13" selection-start="154" selection-end="154" vertical-scroll-proportion="0.14184397">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fir/im/service/CustomMultiPartEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="24" selection-start="570" selection-end="570" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fir/im/service/UploadService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="67" column="44" selection-start="2569" selection-end="2569" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/fir/im/swing/ProgressPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="16" selection-start="1117" selection-end="1117" vertical-scroll-proportion="0.59322035">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="16" column="13" selection-start="337" selection-end="337" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fir/im/swing/LinkLabel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="16" selection-start="1191" selection-end="1371" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fir/im/swing/UploadJButton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="50" selection-start="502" selection-end="502" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fir/im/utils/OsUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="39" selection-start="1330" selection-end="1346" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fir/im/utils/KeyManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="28" selection-start="484" selection-end="496" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="39" selection-start="675" selection-end="749" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fir/im/dialog/FirDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="30" selection-start="1408" selection-end="1408" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fir/im/ui/AppUploadingUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="41" selection-start="1360" selection-end="1430" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fir/im/ui/AppInfoUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="35" selection-start="1707" selection-end="1707" vertical-scroll-proportion="0.62015504">
+          <folding />
         </state>
       </provider>
     </entry>
