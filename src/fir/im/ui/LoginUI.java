@@ -12,6 +12,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
 /**
  * Created with IntelliJ IDEA.
@@ -65,7 +67,33 @@ public class LoginUI extends JPanel implements ActionListener{
     }
 
     private void initAction(){
-        closeButton.addActionListener(this);
+//        closeButton.addActionListener(this);
+        closeButton.addMouseListener(new MouseListener() {
+            @Override
+            public void mouseClicked(MouseEvent mouseEvent) {
+                FirDialog.getInstance().setVisible(false);
+            }
+
+            @Override
+            public void mousePressed(MouseEvent mouseEvent) {
+                //To change body of implemented methods use File | Settings | File Templates.
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent mouseEvent) {
+                //To change body of implemented methods use File | Settings | File Templates.
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent mouseEvent) {
+                //To change body of implemented methods use File | Settings | File Templates.
+            }
+
+            @Override
+            public void mouseExited(MouseEvent mouseEvent) {
+                //To change body of implemented methods use File | Settings | File Templates.
+            }
+        });
         tokenSetting.addActionListener(this);
         selectBtn.addActionListener(this);
     }

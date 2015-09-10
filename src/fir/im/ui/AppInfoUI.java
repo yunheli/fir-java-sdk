@@ -109,7 +109,6 @@ public class AppInfoUI extends JPanel implements ActionListener , UploadService.
 
     private void initAction(){
         uploadBtn.addActionListener(this);
-        closeButton.addActionListener(this);
         selectBtn.addActionListener(this);
         settingBtn.addActionListener(this);
     }
@@ -119,6 +118,7 @@ public class AppInfoUI extends JPanel implements ActionListener , UploadService.
         versionDisplay.setForeground(new Color(175,175,175));
         nameDisplay = new JLabel("高德地图");
         nameDisplay.setForeground(new Color(175,175,175));
+
 
 
         shortTag = new JLabel("短地址");
