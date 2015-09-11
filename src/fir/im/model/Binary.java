@@ -52,11 +52,11 @@ public class Binary {
             apkParser = new ApkParser(new File(url));
             ApkMeta apkMeta = apkParser.getApkMeta();
 
-            System.out.println(apkMeta.getLabel());
-            System.out.println(apkMeta.getPackageName());
-            System.out.println(apkMeta.getVersionCode());
-            System.out.println(apkMeta.getLabel());
-            System.out.println(apkMeta.getIcon().getPath());
+//            System.out.println(apkMeta.getLabel());
+//            System.out.println(apkMeta.getPackageName());
+//            System.out.println(apkMeta.getVersionCode());
+//            System.out.println(apkMeta.getLabel());
+//            System.out.println(apkMeta.getIcon().getPath());
 
             this.versionName = apkMeta.getVersionName();
             this.versionCode = apkMeta.getVersionCode().toString();

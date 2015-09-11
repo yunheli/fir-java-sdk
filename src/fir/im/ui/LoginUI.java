@@ -47,9 +47,11 @@ public class LoginUI extends JPanel implements ActionListener, MouseListener{
     }
     private void initSwing(){
         closeButton = new CloseButton();
-        tokenTag = new JLabel("设置TOKEN");
+        tokenTag = new JLabel("设置api_token");
         tokenTag.setForeground(Color.gray);
         tokenDisplay = new JLabel();
+        tokenDisplay.setForeground(new Color(175,175,175));
+
 
         tokenSetting = new JLabel();
         ImageIcon tokenSet = new ImageIcon(Resource.getInstance().getResource("tokenSet.png"));
@@ -71,7 +73,7 @@ public class LoginUI extends JPanel implements ActionListener, MouseListener{
     }
 
     private void initPosition(){
-        tokenTag.setBounds(80,150,70,30);
+        tokenTag.setBounds(80,150,150,30);
         tokenDisplay.setBounds(200,150,200,30);
     }
 
@@ -110,9 +112,9 @@ public class LoginUI extends JPanel implements ActionListener, MouseListener{
                     "请输入您的API_TOKEN",
                     "请输入您的API_TOKEN",
                     JOptionPane.QUESTION_MESSAGE);
-            System.out.println(response);
-            if(response == null){
-
+            System.out.println("xxxxxxxxxxx"+response);
+            if(response == null || response.isEmpty()){
+               System.out.println("nnnnnnnnnnnnnnnnn");
             }else{
                 tokenDisplay.setText(response);
                 KeyManager.getInstance().setToken(response);
@@ -132,7 +134,7 @@ public class LoginUI extends JPanel implements ActionListener, MouseListener{
             Binary.getInstance().initPath(path);
             SearchFile.getInstance().initPath(path);
             AppInfoUI.getInstance().initBinary(Binary.getInstance());
-            System.out.println(SearchFile.getInstance().queryIcon(Binary.getInstance().icon));
+//            System.out.println(SearchFile.getInstance().queryIcon(Binary.getInstance().icon));
         }
     }
 
@@ -142,20 +144,24 @@ public class LoginUI extends JPanel implements ActionListener, MouseListener{
             FirDialog.getInstance().setVisible(false);
         }
         if(mouseEvent.getSource() == tokenSetting){
-            System.out.println(".........");
+//            System.out.println(".........");
             String response = JOptionPane.showInputDialog(null,
                     "请输入您的API_TOKEN",
                     "请输入您的API_TOKEN",
                     JOptionPane.QUESTION_MESSAGE);
-            System.out.println(response);
-            if(response == null){
-
+//            System.out.println(response);
+            if(response == null || response.isEmpty()){
+                JOptionPane.showMessageDialog(null,"请填写正确的api_token");
             }else{
                 tokenDisplay.setText(response);
                 KeyManager.getInstance().setToken(response);
             }
         }
         if(mouseEvent.getSource() == selectBtn){
+            if(KeyManager.getInstance().getToken() == null || KeyManager.getInstance().getToken().isEmpty()) {
+                JOptionPane.showMessageDialog(null,"请填写api_token");
+                return;
+            }
             selectApk();
         }
     }

@@ -35,7 +35,7 @@ public class AppInfoUI extends JPanel implements ActionListener ,MouseListener, 
     private JProgressBar progressBar;
 
     private static AppInfoUI appInfoUI;
-    private JButton selectBtn;
+    private JLabel selectBtn;
     private Binary binary;
     private String shortLink;
     JLabel percentLabel;
@@ -139,10 +139,9 @@ public class AppInfoUI extends JPanel implements ActionListener ,MouseListener, 
         uploadBtn = new UploadJButton();
         iconPanel = new IconPanel();
         closeButton = new CloseButton();
-        selectBtn = new JButton();
+        selectBtn = new JLabel();
         ImageIcon select = new ImageIcon(Resource.getInstance().getResource("selectSmall.png"));
         selectBtn.setIcon(select);
-        selectBtn.setBorderPainted(false);
         selectBtn.setBounds(400, 195, 30, 30);
         selectBtn.setSize(select.getIconWidth(), select.getIconHeight());
 
