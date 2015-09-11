@@ -112,9 +112,9 @@ public class LoginUI extends JPanel implements ActionListener, MouseListener{
                     "请输入您的API_TOKEN",
                     "请输入您的API_TOKEN",
                     JOptionPane.QUESTION_MESSAGE);
-            System.out.println("xxxxxxxxxxx"+response);
+//            System.out.println("xxxxxxxxxxx"+response);
             if(response == null || response.isEmpty()){
-               System.out.println("nnnnnnnnnnnnnnnnn");
+//               System.out.println("nnnnnnnnnnnnnnnnn");
             }else{
                 tokenDisplay.setText(response);
                 KeyManager.getInstance().setToken(response);

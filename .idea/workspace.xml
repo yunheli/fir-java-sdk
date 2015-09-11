@@ -7,11 +7,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fir/im/ui/AppInfoUI.java" afterPath="$PROJECT_DIR$/src/fir/im/ui/AppInfoUI.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fir/im/model/Binary.java" afterPath="$PROJECT_DIR$/src/fir/im/model/Binary.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/images/login1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/images/selectSmall1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/images/tbg11.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/images/tbg2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/images/tokenSet1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/images/touming1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/images/toumingw1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/images/upload.button1.png" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fir/im/utils/FileOperate.java" afterPath="$PROJECT_DIR$/src/fir/im/utils/FileOperate.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fir/im/ui/LoginUI.java" afterPath="$PROJECT_DIR$/src/fir/im/ui/LoginUI.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fir/im/swing/ProgressPanel.java" afterPath="$PROJECT_DIR$/src/fir/im/swing/ProgressPanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fir/im/service/UploadService.java" afterPath="$PROJECT_DIR$/src/fir/im/service/UploadService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fir/im/utils/Storage.java" afterPath="$PROJECT_DIR$/src/fir/im/utils/Storage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fir/im/utils/UploadToRio.java" afterPath="$PROJECT_DIR$/src/fir/im/utils/UploadToRio.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fir/im/ui/UploadUI.java" afterPath="$PROJECT_DIR$/src/fir/im/ui/UploadUI.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fir/im/utils/XmlUtil.java" afterPath="$PROJECT_DIR$/src/fir/im/utils/XmlUtil.java" />
     </list>
     <ignored path="uploadSdk.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,7 +40,7 @@
     <file path="/key.xml" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1440500924083" ignored="false" />
     <file path="/Constants.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1440511295725" ignored="false" />
     <file path="/UploadUI.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1441634329098" ignored="false" />
-    <file path="/a.dummy" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1441941318171" ignored="false" />
+    <file path="/a.dummy" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1441942312546" ignored="false" />
     <file path="/Storage.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1441161283695" ignored="false" />
     <file path="/FileOperate.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1441123081227" ignored="false" />
     <file path="$PROJECT_DIR$/out/artifacts/uploadSdk/unnamed.jar!/images/key.xml" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1440519328641" ignored="false" />
@@ -329,10 +338,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="LoginUI.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="LoginUI.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fir/im/ui/LoginUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="37" selection-start="2254" selection-end="2254" vertical-scroll-proportion="0.5813953">
+            <state line="134" column="40" selection-start="4159" selection-end="4159" vertical-scroll-proportion="-3.1153846">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SearchFile.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fir/im/utils/SearchFile.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="35" column="16" selection-start="822" selection-end="822" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FileOperate.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/fir/im/utils/FileOperate.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="264" column="20" selection-start="7333" selection-end="7511" vertical-scroll-proportion="0.38297874">
               <folding />
             </state>
           </provider>
@@ -347,46 +374,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AppUploadingUI.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fir/im/ui/AppUploadingUI.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="120" column="49" selection-start="3763" selection-end="3774" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AppInfoUI.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fir/im/ui/AppInfoUI.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="121" column="50" selection-start="3504" selection-end="3563" vertical-scroll-proportion="-10.615385">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ProgressPanel.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fir/im/swing/ProgressPanel.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="57" column="0" selection-start="1303" selection-end="1303" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CloseButton.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fir/im/swing/CloseButton.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="19" selection-start="724" selection-end="724" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OsUtil.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fir/im/utils/OsUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="39" selection-start="1330" selection-end="1346" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -404,7 +395,16 @@
       <file leaf-file-name="XmlUtil.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fir/im/utils/XmlUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="90" column="35" selection-start="3377" selection-end="3377" vertical-scroll-proportion="0.0">
+            <state line="92" column="12" selection-start="3444" selection-end="3444" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UploadUI.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fir/im/ui/UploadUI.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="213" column="20" selection-start="6862" selection-end="7040" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -413,7 +413,16 @@
       <file leaf-file-name="Storage.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fir/im/utils/Storage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="28" selection-start="814" selection-end="814" vertical-scroll-proportion="0.0">
+            <state line="35" column="10" selection-start="1187" selection-end="1187" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UploadToRio.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fir/im/utils/UploadToRio.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="83" column="14" selection-start="2889" selection-end="2889" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -437,11 +446,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/fir/im/swing/LinkLabel.java" />
-        <option value="$PROJECT_DIR$/src/fir/im/ui/UploadUI.java" />
-        <option value="$PROJECT_DIR$/src/fir/im/swing/QrcodePanel.java" />
-        <option value="$PROJECT_DIR$/src/fir/im/utils/OsUtil.java" />
-        <option value="$PROJECT_DIR$/src/fir/im/service/CustomMultiPartEntity.java" />
         <option value="$PROJECT_DIR$/src/fir/im/utils/KeyManager.java" />
         <option value="$PROJECT_DIR$/src/fir/im/dialog/FirDialog.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
@@ -452,7 +456,12 @@
         <option value="$PROJECT_DIR$/src/fir/im/swing/ProgressPanel.java" />
         <option value="$PROJECT_DIR$/src/fir/im/model/Binary.java" />
         <option value="$PROJECT_DIR$/src/fir/im/service/UploadService.java" />
+        <option value="$PROJECT_DIR$/src/fir/im/ui/UploadUI.java" />
+        <option value="$PROJECT_DIR$/src/fir/im/utils/Storage.java" />
+        <option value="$PROJECT_DIR$/src/fir/im/utils/UploadToRio.java" />
+        <option value="$PROJECT_DIR$/src/fir/im/utils/XmlUtil.java" />
         <option value="$PROJECT_DIR$/src/fir/im/ui/LoginUI.java" />
+        <option value="$PROJECT_DIR$/src/fir/im/utils/FileOperate.java" />
       </list>
     </option>
   </component>
@@ -812,7 +821,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32866043" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296875" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.553125" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28125" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -829,8 +838,8 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="FIR.im" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294893" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24958813" sideWeight="0.725" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.275" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24958813" sideWeight="0.446875" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.275" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -902,34 +911,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/fir/im/service/CustomMultiPartEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="24" selection-start="570" selection-end="570" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="39" selection-start="675" selection-end="749" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fir/im/swing/LinkLabel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="16" selection-start="1191" selection-end="1371" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fir/im/dialog/FirDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="30" selection-start="1408" selection-end="1408" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/fir/im/utils/KeyManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="28" selection-start="484" selection-end="496" vertical-scroll-proportion="0.0">
@@ -954,20 +935,6 @@
     <entry file="file://$PROJECT_DIR$/src/fir/im/utils/OsUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="44" column="39" selection-start="1330" selection-end="1346" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fir/im/utils/XmlUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="35" selection-start="3377" selection-end="3377" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fir/im/utils/Storage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="28" selection-start="814" selection-end="814" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1007,9 +974,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/fir/im/ui/UploadUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="213" column="20" selection-start="6862" selection-end="7040" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fir/im/utils/Storage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="10" selection-start="1187" selection-end="1187" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fir/im/utils/UploadToRio.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="83" column="14" selection-start="2889" selection-end="2889" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fir/im/utils/XmlUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="92" column="12" selection-start="3444" selection-end="3444" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/fir/im/ui/LoginUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="37" selection-start="2254" selection-end="2254" vertical-scroll-proportion="0.5813953">
+        <state line="134" column="40" selection-start="4159" selection-end="4159" vertical-scroll-proportion="-3.1153846">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fir/im/utils/SearchFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="16" selection-start="822" selection-end="822" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fir/im/utils/FileOperate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="264" column="20" selection-start="7333" selection-end="7511" vertical-scroll-proportion="0.38297874">
           <folding />
         </state>
       </provider>
