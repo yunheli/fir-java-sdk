@@ -27,7 +27,7 @@ public class LoginUI extends JPanel implements ActionListener, MouseListener{
     private JLabel tokenTag;
     private JLabel tokenDisplay;
     private JLabel tokenSetting;
-    private JButton selectBtn;
+    private JLabel selectBtn;
 
     private static LoginUI loginUI;
     public LoginUI(){
@@ -57,19 +57,17 @@ public class LoginUI extends JPanel implements ActionListener, MouseListener{
         tokenSetting.setBounds(420, 150, 100, 100);
         tokenSetting.setSize(tokenSet.getIconWidth(), tokenSet.getIconHeight());
 
-        selectBtn = new JButton();
+        selectBtn = new JLabel();
         ImageIcon select = new ImageIcon(Resource.getInstance().getResource("select.png"));
         selectBtn.setIcon(select);
-        selectBtn.setBorderPainted(false);
         selectBtn.setBounds(200, 300, 100, 100);
         selectBtn.setSize(select.getIconWidth(), select.getIconHeight());
     }
 
     private void initAction(){
 //        closeButton.addActionListener(this);
-        closeButton.addMouseListener(this);
         tokenSetting.addMouseListener(this);
-        selectBtn.addActionListener(this);
+        selectBtn.addMouseListener(this);
     }
 
     private void initPosition(){
@@ -156,6 +154,9 @@ public class LoginUI extends JPanel implements ActionListener, MouseListener{
                 tokenDisplay.setText(response);
                 KeyManager.getInstance().setToken(response);
             }
+        }
+        if(mouseEvent.getSource() == selectBtn){
+            selectApk();
         }
     }
 
