@@ -73,14 +73,14 @@ public class Notice {
     }
 
     public static void postSuccessNoticeToSlack(final String msg){
-        postNoticeTOSlack("#AndroidStudio#success#"+msg);
+        postNoticeTOSlack("#"+Provider.getInstance().getProviderIde()+"#success#"+msg);
     }
 
     public static void postErrorNoticeTOSlack(final Exception e){
         StringWriter writer = new StringWriter();
         e.printStackTrace(new PrintWriter(writer,true));
 
-        postNoticeTOSlack("#AndroidStudio#Error#"+writer.toString());
+        postNoticeTOSlack("#"+Provider.getInstance().getProviderIde()+"#Error#"+writer.toString());
 
     }
 

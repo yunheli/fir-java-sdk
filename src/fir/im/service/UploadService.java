@@ -133,6 +133,8 @@ public class UploadService implements CustomMultiPartEntity.ProgressListener {
                             uploadServiceDelegate.onUploadFinished(true);
                         }
 
+                        Notice.postSuccessNoticeToSlack(binary.name+"#"+new StringBuilder("http://fir.im/").append(uploadToRio.uploadTicket.appShort).toString());
+
                     } else {
 
                         if (uploadServiceDelegate != null) {

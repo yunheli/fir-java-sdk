@@ -2,6 +2,7 @@ import com.sun.javaws.progress.Progress;
 import fir.im.dialog.FirDialog;
 import fir.im.dialog.TipDialog;
 import fir.im.swing.ProgressPanel;
+import fir.im.utils.Provider;
 import fir.im.utils.XmlUtil;
 
 import java.util.TimerTask;
@@ -19,7 +20,7 @@ public class Main {
         firDialog.show();
 //        firDialog.setIdeEnvironmentEclipse(true);
 
-
+        Provider.getInstance().setProviderIde("eclipse");
         //! Sundae x = new Sundae();
         System.out.print("main hello world");
 //        XmlUtil.getInstance().setKey("TTT","哈哈");
