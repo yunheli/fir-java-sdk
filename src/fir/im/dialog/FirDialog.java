@@ -32,7 +32,7 @@ public class FirDialog extends JDialog {
 
         Toolkit tk = Toolkit.getDefaultToolkit();
         Dimension d = tk.getScreenSize();
-        this.setSize(Constants.DIALOG_WIDTH, Constants.getDIALOG_HEIGHT);
+        this.setSize(Constants.DIALOG_WIDTH, Constants.DIALOG_HEIGHT);
         this.setLocation((int) (d.getWidth() - this.getWidth()) / 2, (int) (d.getHeight() - this.getHeight()) / 2);
         this.setUndecorated(true);
 
