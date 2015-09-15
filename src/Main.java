@@ -18,7 +18,7 @@ public class Main {
     public static void main(String[] args) {
         FirDialog firDialog = new FirDialog();
         firDialog.show();
-//        firDialog.setIdeEnvironmentEclipse(true);
+        firDialog.setIdeEnvironmentEclipse(true);
 
         Provider.getInstance().setProviderIde("eclipse");
         //! Sundae x = new Sundae();

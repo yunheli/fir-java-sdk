@@ -238,9 +238,11 @@ public class AppInfoUI extends JPanel implements ActionListener ,MouseListener, 
         uploadBtn.setVisible(true);
         if(KeyManager.getInstance().isEclipse){
             percentLabelEclipse.setVisible(false);
+            percentLabelEclipse.setText("正在上传...(0%)");
         } else{
             progressPanel.setVisible(false);
             percentLabel.setVisible(false);
+            percentLabel.setText("当前进度: 0%");
         }
 
         //======================
