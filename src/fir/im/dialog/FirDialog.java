@@ -2,12 +2,15 @@ package fir.im.dialog;
 
 import com.sun.awt.AWTUtilities;
 import fir.im.config.Constants;
+import fir.im.model.Binary;
 import fir.im.swing.ProgressPanel;
 import fir.im.ui.AppInfoUI;
 import fir.im.ui.AppUploadingUI;
 import fir.im.ui.LoginUI;
+import fir.im.utils.FileOperate;
 import fir.im.utils.KeyManager;
 import fir.im.utils.OsUtil;
+import fir.im.utils.SearchFile;
 
 import javax.swing.*;
 import java.awt.*;
@@ -39,7 +42,18 @@ public class FirDialog extends JDialog {
 //        }else{
 //            this.setContentPane(new UploadUI());
 //        }
-        this.setContentPane(new LoginUI());
+
+
+        if(KeyManager.getInstance().getApkPath() != null && !KeyManager.getInstance().getApkPath().isEmpty() && FileOperate.getInstance().isExist(KeyManager.getInstance().getApkPath())){
+            String path =  KeyManager.getInstance().getApkPath();
+            Binary.getInstance().initPath(path);
+            SearchFile.getInstance().initPath(path);
+            AppInfoUI.getInstance().initBinary(Binary.getInstance());
+            KeyManager.getInstance().setApkPath(path);
+        }else{
+            this.setContentPane(new LoginUI());
+        }
+
 
         if(OsUtil.isTransparency())
         {
