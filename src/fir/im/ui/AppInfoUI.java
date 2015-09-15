@@ -13,8 +13,10 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
-public class AppInfoUI extends JPanel implements ActionListener , UploadService.UploadServiceDelegate {
+public class AppInfoUI extends JPanel implements ActionListener ,MouseListener, UploadService.UploadServiceDelegate {
     private IconPanel iconPanel;
     private ChangeLogTextArea changeLogTextArea;
     private JLabel versionDisplay;
@@ -29,11 +31,11 @@ public class AppInfoUI extends JPanel implements ActionListener , UploadService.
 
     private UploadJButton uploadBtn;
     private CloseButton closeButton;
-    private JButton settingBtn;
+    private JLabel settingBtn;
     private JProgressBar progressBar;
 
     private static AppInfoUI appInfoUI;
-    private JButton selectBtn;
+    private JLabel selectBtn;
     private Binary binary;
     private String shortLink;
     JLabel percentLabel;
@@ -108,9 +110,9 @@ public class AppInfoUI extends JPanel implements ActionListener , UploadService.
 
 
     private void initAction(){
-        uploadBtn.addActionListener(this);
-        selectBtn.addActionListener(this);
-        settingBtn.addActionListener(this);
+        uploadBtn.addMouseListener(this);
+        selectBtn.addMouseListener(this);
+        settingBtn.addMouseListener(this);
     }
 
     private void initSwing(){
@@ -137,18 +139,16 @@ public class AppInfoUI extends JPanel implements ActionListener , UploadService.
         uploadBtn = new UploadJButton();
         iconPanel = new IconPanel();
         closeButton = new CloseButton();
-        selectBtn = new JButton();
+        selectBtn = new JLabel();
         ImageIcon select = new ImageIcon(Resource.getInstance().getResource("selectSmall.png"));
         selectBtn.setIcon(select);
-        selectBtn.setBorderPainted(false);
         selectBtn.setBounds(400, 195, 30, 30);
         selectBtn.setSize(select.getIconWidth(), select.getIconHeight());
 
 
-        settingBtn = new JButton();
+        settingBtn = new JLabel();
         ImageIcon setImg = new ImageIcon(Resource.getInstance().getResource("backBtn.png"));
         settingBtn.setIcon(setImg);
-        settingBtn.setBorderPainted(false);
         settingBtn.setBounds(30, 18, 500, 29);
         settingBtn.setSize(setImg.getIconWidth(), setImg.getIconHeight());
     }
@@ -268,4 +268,41 @@ public class AppInfoUI extends JPanel implements ActionListener , UploadService.
                 setPercentLabel(progressBar.getPercentComplete());
             }
         });    }
+
+    @Override
+    public void mouseClicked(MouseEvent actionEvent) {
+        if(actionEvent.getSource() == uploadBtn){
+//            AppUploadingUI.getInstance().upload(changeLogTextArea.getText());
+            upload(changeLogTextArea.getText()) ;
+        }
+        if(actionEvent.getSource() == closeButton){
+            FirDialog.getInstance().setVisible(false);
+        }
+        if(actionEvent.getSource() == selectBtn){
+            LoginUI.getInstance().selectApk();
+        }
+
+        if(actionEvent.getSource() == settingBtn){
+            FirDialog.getInstance().setContentPane(LoginUI.getInstance());
+        }    }
+
+    @Override
+    public void mousePressed(MouseEvent mouseEvent) {
+        //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    @Override
+    public void mouseReleased(MouseEvent mouseEvent) {
+        //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    @Override
+    public void mouseEntered(MouseEvent mouseEvent) {
+        //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    @Override
+    public void mouseExited(MouseEvent mouseEvent) {
+        //To change body of implemented methods use File | Settings | File Templates.
+    }
 }

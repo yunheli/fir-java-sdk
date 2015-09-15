@@ -54,8 +54,11 @@ public class CustomMultiPartEntity extends MultipartEntity {
 
         public void write(byte[] b, int off, int len) throws IOException {
             out.write(b, off, len);
-            this.transferred += len;
-            this.listener.transferred(this.transferred);
+            if( this.listener != null)
+            {
+                this.transferred += len;
+                this.listener.transferred(this.transferred);
+            }
         }
 
         public void write(int b) throws IOException {
