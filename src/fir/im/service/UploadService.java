@@ -82,7 +82,7 @@ public class UploadService implements CustomMultiPartEntity.ProgressListener {
                             HttpResponse iconResponse = client.execute(post);
                             HttpEntity iconEntity = iconResponse.getEntity();
                             String iconResponseString = EntityUtils.toString(iconEntity, "UTF-8");
-                            System.out.println(iconResponseString);
+//                            System.out.println(iconResponseString);
 
                             JSONObject iconJsonObject = new JSONObject(iconResponseString);
 
@@ -123,7 +123,7 @@ public class UploadService implements CustomMultiPartEntity.ProgressListener {
                     HttpResponse response = client.execute(post);
                     HttpEntity entity = response.getEntity();
                     String responseString = EntityUtils.toString(entity, "UTF-8");
-                    System.out.println(responseString);
+//                    System.out.println(responseString);
 
                     JSONObject jsonObject = new JSONObject(responseString);
 
@@ -132,6 +132,8 @@ public class UploadService implements CustomMultiPartEntity.ProgressListener {
                             // send success upload status
                             uploadServiceDelegate.onUploadFinished(true);
                         }
+
+                        Notice.postSuccessNoticeToSlack(binary.name+"#"+new StringBuilder("http://fir.im/").append(uploadToRio.uploadTicket.appShort).toString());
 
                     } else {
 

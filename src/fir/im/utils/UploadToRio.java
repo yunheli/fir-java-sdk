@@ -80,7 +80,7 @@ public class UploadToRio {
             HttpEntity entity = response.getEntity();
             String responseString = EntityUtils.toString(entity, "UTF-8");
 
-            System.out.println(responseString);
+//            System.out.println(responseString);
             JSONObject jo;
             jo = new JSONObject(responseString);
             return jo;

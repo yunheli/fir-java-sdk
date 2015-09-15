@@ -62,7 +62,7 @@ public class XmlUtil {
     }
 
     public void setKey(String key, String val){
-        System.out.println("key:"+key+"#val:"+val);
+//        System.out.println("key:"+key+"#val:"+val);
         if(val == null) return;
         try {
             Boolean isFoundNode = false;
@@ -75,7 +75,7 @@ public class XmlUtil {
                     isFoundNode = true;
                 }
             }
-            System.out.println("0");
+//            System.out.println("0");
             if(!isFoundNode){
                 Element valE= document.createElement("VALUE");
                 Element keyE= document.createElement("KEY");

@@ -32,7 +32,7 @@ public class Storage {
         String folderPath =  getAppDataFolder().getPath();
         FileOperate.getInstance().newFolder(folderPath);
         String path = new StringBuilder().append(folderPath).append("/").append(Constants.XML_PATH).toString();
-        System.out.println("file path#"+path);
+//        System.out.println("file path#"+path);
         if(FileOperate.getInstance().isExist(path)){
             return path;
         }

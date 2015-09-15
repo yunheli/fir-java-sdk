@@ -55,7 +55,6 @@ public class ProgressPanel extends JPanel{
 
     public void setPercent(double x){
          draw_width = (int)(400 * x) - 400;
-         System.out.println("draw_width#"+draw_width);
          repaint();
     }
 }
