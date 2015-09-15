@@ -40,9 +40,11 @@ public class LoginUI extends JPanel implements ActionListener, MouseListener{
         setUpUI();
         initValue();
         loginUI = this;
+
     }
 
     public static LoginUI getInstance(){
+        if(loginUI == null) return new LoginUI();
         return loginUI;
     }
     private void initSwing(){
@@ -131,11 +133,16 @@ public class LoginUI extends JPanel implements ActionListener, MouseListener{
     public void selectApk(){
         String path = FileOperate.getInstance().fileChoose();
         if( path != null && path.endsWith(".apk")){
-            Binary.getInstance().initPath(path);
-            SearchFile.getInstance().initPath(path);
-            AppInfoUI.getInstance().initBinary(Binary.getInstance());
+            initPath(path);
 //            System.out.println(SearchFile.getInstance().queryIcon(Binary.getInstance().icon));
         }
+    }
+
+    public void initPath(String path){
+        Binary.getInstance().initPath(path);
+        SearchFile.getInstance().initPath(path);
+        AppInfoUI.getInstance().initBinary(Binary.getInstance());
+        KeyManager.getInstance().setApkPath(path);
     }
 
     @Override
