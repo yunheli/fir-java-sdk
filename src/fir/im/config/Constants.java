@@ -11,4 +11,5 @@ public class Constants {
     public static final int DIALOG_WIDTH = 500;
     public static final int getDIALOG_HEIGHT = 500;
     public static final String XML_PATH = "key.xml";
+    public static final String JAR_VERSION = "1.0";
 }
