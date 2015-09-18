@@ -11,7 +11,19 @@ public class KeyManager {
     public static KeyManager keyManager;
     public final String API_TOKEN = "API_TOKEN";
     public final String APK_PATH = "APK_PATH";
+    public final String BROWSER_STATE = "BROWSER_STATE" ;
     public String apiToken;
+
+    public String getBrowserState() {
+        return browserState;
+    }
+
+    public void setBrowserState(String browserState) {    //open or close
+        this.browserState = browserState;
+        XmlUtil.getInstance().setKey(BROWSER_STATE,  browserState);
+    }
+
+    public String browserState;
     public Boolean isEclipse = false;
 
     public String getApkPath() {
@@ -31,6 +43,7 @@ public class KeyManager {
     public KeyManager(){
         apiToken = XmlUtil.getInstance().getKey(API_TOKEN);
         apkPath =    XmlUtil.getInstance().getKey(APK_PATH);
+        browserState = XmlUtil.getInstance().getKey(BROWSER_STATE);
         keyManager = this;
     }
 

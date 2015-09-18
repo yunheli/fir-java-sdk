@@ -28,6 +28,11 @@ public class LoginUI extends JPanel implements ActionListener, MouseListener{
     private JLabel tokenDisplay;
     private JLabel tokenSetting;
     private JLabel selectBtn;
+    private JLabel openBrowser;
+    private JLabel openBrowserOption;
+    private JLabel closeBrowserOption;
+    ImageIcon openBrowserOptionImg = new ImageIcon(Resource.getInstance().getResource("browser_radio_button_on.png"));
+    ImageIcon closeBrowserOptionImg = new ImageIcon(Resource.getInstance().getResource("browser_radio_button_off.png"));
 
     private static LoginUI loginUI;
     public LoginUI(){
@@ -50,7 +55,7 @@ public class LoginUI extends JPanel implements ActionListener, MouseListener{
     private void initSwing(){
         closeButton = new CloseButton();
         tokenTag = new JLabel("设置api_token");
-        tokenTag.setForeground(Color.gray);
+        tokenTag.setForeground(new Color(175,175,175));
         tokenDisplay = new JLabel();
         tokenDisplay.setForeground(new Color(175,175,175));
 
@@ -66,12 +71,41 @@ public class LoginUI extends JPanel implements ActionListener, MouseListener{
         selectBtn.setIcon(select);
         selectBtn.setBounds(200, 300, 100, 100);
         selectBtn.setSize(select.getIconWidth(), select.getIconHeight());
+
+        openBrowser = new JLabel("浏览器开关");
+        openBrowser.setForeground(new Color(175,175,175));
+        openBrowser.setBounds(80,180,100,30);
+        openBrowser.setToolTipText("上传完成之后是否直接打开浏览器设置");
+
+        openBrowserOption = new JLabel();
+        openBrowserOption.setIcon(openBrowserOptionImg);
+        openBrowserOption.setBounds(200,185,50,50);
+        openBrowserOption.setSize(openBrowserOptionImg.getIconWidth(), openBrowserOptionImg.getIconHeight());
+        openBrowserOption.setToolTipText("当前是选中状态，上传完成之后会直接打开浏览器");
+
+        closeBrowserOption = new JLabel();
+        closeBrowserOption.setIcon(closeBrowserOptionImg);
+        closeBrowserOption.setBounds(200,185,50,50);
+        closeBrowserOption.setSize(closeBrowserOptionImg.getIconWidth(), closeBrowserOptionImg.getIconHeight());
+        closeBrowserOption.setToolTipText("当前是取消选中状态，上传完成之后不直接打开浏览器");
+
+        if(KeyManager.getInstance().getBrowserState() == null || KeyManager.getInstance().getBrowserState().isEmpty()) {
+            KeyManager.getInstance().setBrowserState("open");
+            closeBrowserOption.setVisible(false);
+        }else if(KeyManager.getInstance().getBrowserState().equals("open")){
+            closeBrowserOption.setVisible(false);
+        }else if(KeyManager.getInstance().getBrowserState().equals("close")){
+            openBrowserOption.setVisible(false);
+        }
     }
 
     private void initAction(){
 //        closeButton.addActionListener(this);
         tokenSetting.addMouseListener(this);
         selectBtn.addMouseListener(this);
+        openBrowserOption.addMouseListener(this);
+        closeBrowserOption.addMouseListener(this);
+
     }
 
     private void initPosition(){
@@ -85,6 +119,9 @@ public class LoginUI extends JPanel implements ActionListener, MouseListener{
         add(tokenDisplay);
         add(tokenSetting);
         add(selectBtn);
+        add(openBrowser);
+        add(openBrowserOption);
+        add(closeBrowserOption);
     }
 
     private void initValue(){
@@ -170,6 +207,18 @@ public class LoginUI extends JPanel implements ActionListener, MouseListener{
                 return;
             }
             selectApk();
+        }
+
+        if(mouseEvent.getSource() == openBrowserOption){
+            openBrowserOption.setVisible(false);
+            closeBrowserOption.setVisible(true);
+            KeyManager.getInstance().setBrowserState("close");
+        }
+
+        if(mouseEvent.getSource() == closeBrowserOption){
+            openBrowserOption.setVisible(true);
+            closeBrowserOption.setVisible(false);
+            KeyManager.getInstance().setBrowserState("open");
         }
     }
 
