@@ -41,14 +41,17 @@ public class TipDialog extends JDialog{
 
     public void addPanel(){
         JPanel jPanel = new JPanel();
-        JLabel tipLabel = new JLabel("应用上传成功");
+        jPanel.setLayout(null);
+        JLabel tipLabel = new JLabel("应用上传成功:-) ");
+        tipLabel.setBounds(52,13,100,30);
         tipLabel.setForeground(Color.white);
+
         jPanel.add(tipLabel);
         this.add(jPanel);
     }
 
     public void init(){
-        this.setSize(200, 50);
+        this.setSize(200, 60);
         this.setUndecorated(true);
         this.setBackground(Color.black);
         initAnimator();
@@ -62,7 +65,7 @@ public class TipDialog extends JDialog{
 
     public void setAlpha(float alpha) {
         this.alpha = alpha;
-        System.out.println("alpha#"+alpha);
+//        System.out.println("alpha#"+alpha);
         AWTUtilities.setWindowOpacity(TipDialog.this, alpha);
         repaint();
 
@@ -93,6 +96,11 @@ public class TipDialog extends JDialog{
                 TipDialog.this.fadeOut();
             }
         }, delay);
+    }
+
+    public void tip(){
+        fadeIn(0);
+        fadeOut(3000);
     }
 
     public void fadeIn() {
