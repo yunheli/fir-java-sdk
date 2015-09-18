@@ -1,6 +1,7 @@
 package fir.im.ui;
 
 import fir.im.dialog.FirDialog;
+import fir.im.dialog.TipDialog;
 import fir.im.model.Binary;
 import fir.im.service.UploadService;
 import fir.im.swing.*;
@@ -234,6 +235,12 @@ public class AppInfoUI extends JPanel implements ActionListener ,MouseListener, 
 
     @Override
     public void onUploadFinished(boolean finishedSuccessful) {
+//       TipDialog.getInstance().fadeIn(1000);
+        if(KeyManager.getInstance().getBrowserState().equals("close") )
+        {
+            TipDialog.getInstance().tip();
+        }
+
         //上传按钮显示 进度条隐藏
         uploadBtn.setVisible(true);
         if(KeyManager.getInstance().isEclipse){
@@ -246,8 +253,12 @@ public class AppInfoUI extends JPanel implements ActionListener ,MouseListener, 
         }
 
         //======================
-
-        OsUtil.openUrlInBrowser(shortLink);
+        if(KeyManager.getInstance().getBrowserState() == null ||KeyManager.getInstance().getBrowserState().isEmpty() ){
+             KeyManager.getInstance().setBrowserState("open");
+        }else if( KeyManager.getInstance().getBrowserState().equals("open")){
+            OsUtil.openUrlInBrowser(shortLink);
+        }
+//
     }
 
     @Override
