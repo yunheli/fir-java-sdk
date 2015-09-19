@@ -194,6 +194,7 @@ public class AppInfoUI extends JPanel implements ActionListener ,MouseListener, 
             progressPanel.setVisible(true);
             percentLabel.setVisible(true);
         }
+        settingBtn.setVisible(false);
 
         //======================
 
@@ -258,6 +259,8 @@ public class AppInfoUI extends JPanel implements ActionListener ,MouseListener, 
         }else if( KeyManager.getInstance().getBrowserState().equals("open")){
             OsUtil.openUrlInBrowser(shortLink);
         }
+
+        settingBtn.setVisible(true);
 //
     }
 
