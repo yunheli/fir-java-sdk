@@ -45,7 +45,8 @@ public class TipDialog extends JDialog{
         JLabel tipLabel = new JLabel("应用上传成功:-) ");
         tipLabel.setBounds(52,13,100,30);
         tipLabel.setForeground(Color.white);
-
+        jPanel.setBackground(Color.BLACK);
+        jPanel.setSize(200,60);
         jPanel.add(tipLabel);
         this.add(jPanel);
     }
