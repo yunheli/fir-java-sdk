@@ -31,8 +31,9 @@ public class TimerScanTask extends TimerTask {
         System.out.println("本次执行该线程的时间为：2" + date);
         String md5 = OsUtil.getMd5(path);
         if(!md5.equals(KeyManager.getInstance().getMd5())) {
-            if("yes".equals(KeyManager.getInstance().getAutoUpload())){
+            if("open".equals(KeyManager.getInstance().getAutoUpload())){
                 System.out.println("自动检测上传");
+                //FIXME: 上传添加锁
                 //自动检测上传
                 return;
             }

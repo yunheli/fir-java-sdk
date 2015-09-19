@@ -3,10 +3,7 @@ package fir.im.ui;
 import fir.im.dialog.FirDialog;
 import fir.im.model.Binary;
 import fir.im.swing.CloseButton;
-import fir.im.utils.FileOperate;
-import fir.im.utils.KeyManager;
-import fir.im.utils.Resource;
-import fir.im.utils.SearchFile;
+import fir.im.utils.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -215,6 +212,7 @@ public class LoginUI extends JPanel implements ActionListener, MouseListener{
         SearchFile.getInstance().initPath(path);
         AppInfoUI.getInstance().initBinary(Binary.getInstance());
         KeyManager.getInstance().setApkPath(path);
+        KeyManager.getInstance().setMd5(OsUtil.getMd5(Binary.getInstance().filePath));
     }
 
     @Override
