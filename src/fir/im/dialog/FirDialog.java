@@ -7,10 +7,7 @@ import fir.im.swing.ProgressPanel;
 import fir.im.ui.AppInfoUI;
 import fir.im.ui.AppUploadingUI;
 import fir.im.ui.LoginUI;
-import fir.im.utils.FileOperate;
-import fir.im.utils.KeyManager;
-import fir.im.utils.OsUtil;
-import fir.im.utils.SearchFile;
+import fir.im.utils.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -43,6 +40,7 @@ public class FirDialog extends JDialog {
 //            this.setContentPane(new UploadUI());
 //        }
 
+        new TimerScan();
 
         if(KeyManager.getInstance().getApkPath() != null && !KeyManager.getInstance().getApkPath().isEmpty() && FileOperate.getInstance().isExist(KeyManager.getInstance().getApkPath())){
             String path =  KeyManager.getInstance().getApkPath();
