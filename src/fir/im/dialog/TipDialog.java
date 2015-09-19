@@ -25,6 +25,7 @@ public class TipDialog extends JDialog{
     protected Animator _animator;
     private boolean _alreadyHidden = false;
     float alpha = 1.0f;
+    JLabel tipLabel;
     public TipDialog() {
         super();
         addPanel();
@@ -32,6 +33,14 @@ public class TipDialog extends JDialog{
         jDialog = this;
         this.setVisible(true);
 
+    }
+
+    public TipDialog(String tip) {
+        super();
+        addPanel();
+        init();
+        jDialog = this;
+        this.setVisible(true);
     }
 
     public static TipDialog getInstance(){
@@ -42,7 +51,7 @@ public class TipDialog extends JDialog{
     public void addPanel(){
         JPanel jPanel = new JPanel();
         jPanel.setLayout(null);
-        JLabel tipLabel = new JLabel("应用上传成功:-) ");
+        tipLabel = new JLabel("应用上传成功:-) ");
         tipLabel.setBounds(52,13,100,30);
         tipLabel.setForeground(Color.white);
         jPanel.setBackground(Color.BLACK);
@@ -56,7 +65,7 @@ public class TipDialog extends JDialog{
         this.setUndecorated(true);
         this.setBackground(Color.black);
         initAnimator();
-        this.setLocation(OsUtil.getScreenSize().width-200,100);
+        this.setLocation(OsUtil.getScreenSize().width-200,20);
         AWTUtilities.setWindowOpacity(TipDialog.this, 0.0f);
     }
 
