@@ -48,6 +48,8 @@ public class FirDialog extends JDialog {
             SearchFile.getInstance().initPath(path);
             AppInfoUI.getInstance().initBinary(Binary.getInstance());
             KeyManager.getInstance().setApkPath(path);
+            KeyManager.getInstance().setMd5(OsUtil.getMd5(Binary.getInstance().filePath));
+            KeyManager.getInstance().setAppId(Binary.getInstance().bundleId);
         }else{
             this.setContentPane(new LoginUI());
         }

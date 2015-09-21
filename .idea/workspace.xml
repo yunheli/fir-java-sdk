@@ -7,13 +7,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fir/im/ui/AppInfoUI.java" afterPath="$PROJECT_DIR$/src/fir/im/ui/AppInfoUI.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fir/im/dialog/FirDialog.java" afterPath="$PROJECT_DIR$/src/fir/im/dialog/FirDialog.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fir/im/ui/LoginUI.java" afterPath="$PROJECT_DIR$/src/fir/im/ui/LoginUI.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/fir/im/utils/TimerScanTask.java" afterPath="$PROJECT_DIR$/src/fir/im/utils/TimerScanTask.java" />
     </list>
     <ignored path="uploadSdk.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Main.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1442330604573" ignored="false" />
-    <file path="/LoginUI.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1442677671421" ignored="false" />
+    <file path="/LoginUI.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1442845274144" ignored="false" />
     <file path="/FirDialog.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1442676982138" ignored="false" />
     <file path="/fragment.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1440488832281" ignored="false" />
     <file path="$PROJECT_DIR$/../testUploadSDK/src/Main.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1440937850588" ignored="false" />
@@ -22,8 +24,8 @@
     <file path="/Resource.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1440492120729" ignored="false" />
     <file path="/UploadURI.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1440492640302" ignored="false" />
     <file path="/Config.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1440493898561" ignored="false" />
-    <file path="/Dummy.txt" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1442658207985" ignored="false" />
-    <file path="/KeyManager.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1442675928529" ignored="false" />
+    <file path="/Dummy.txt" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1442844770698" ignored="false" />
+    <file path="/KeyManager.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1442845072960" ignored="false" />
     <file path="/XmlUtil.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1440544861550" ignored="false" />
     <file path="/key.xml" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1440500924083" ignored="false" />
     <file path="/Constants.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1442317232939" ignored="false" />
@@ -106,7 +108,7 @@
     <file path="/ChangeLogTextArea.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1441085416316" ignored="false" />
     <file path="/UploadJButton.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1441939243892" ignored="false" />
     <file path="/AppUploadingUI.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1441685098933" ignored="false" />
-    <file path="/AppInfoUI.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1442658703202" ignored="false" />
+    <file path="/AppInfoUI.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1442845517806" ignored="false" />
     <file path="/CloseButton.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1441939570109" ignored="false" />
     <file path="/QrCode.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1441378595611" ignored="false" />
     <file path="$USER_HOME$/job/FIRUP/FIR_plugin/src/ro/catalin/prata/firuploader/Model/Binary.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1441463422840" ignored="false" />
@@ -123,7 +125,7 @@
     <file path="$USER_HOME$/job/FIRUP/FIR_plugin/src/ro/catalin/prata/firuploader/view/Main.form" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1442330173793" ignored="false" />
     <file path="/Document.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1442330534610" ignored="false" />
     <file path="/TimeScan.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1442675491834" ignored="false" />
-    <file path="/TimerScanTask.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1442677916278" ignored="false" />
+    <file path="/TimerScanTask.java" changelist="b2fcc76a-84b5-47a1-9f75-e9214cccf9dc" time="1442846242115" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -309,7 +311,7 @@
       <file leaf-file-name="FirDialog.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fir/im/dialog/FirDialog.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="8" selection-start="1170" selection-end="1170" vertical-scroll-proportion="0.0">
+            <state line="65" column="87" selection-start="2015" selection-end="2015" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -336,7 +338,7 @@
       <file leaf-file-name="LoginUI.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fir/im/ui/LoginUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="214" column="16" selection-start="8047" selection-end="8134" vertical-scroll-proportion="0.0">
+            <state line="214" column="7" selection-start="8054" selection-end="8207" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -345,7 +347,7 @@
       <file leaf-file-name="TimerScan.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fir/im/utils/TimerScan.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="21" selection-start="290" selection-end="290" vertical-scroll-proportion="0.0">
+            <state line="19" column="31" selection-start="377" selection-end="377" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -354,16 +356,7 @@
       <file leaf-file-name="AppInfoUI.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fir/im/ui/AppInfoUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="297" column="47" selection-start="9556" selection-end="9556" vertical-scroll-proportion="-0.5769231">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AppUploadingUI.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fir/im/ui/AppUploadingUI.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="13" selection-start="559" selection-end="559" vertical-scroll-proportion="0.0">
+            <state line="192" column="22" selection-start="5773" selection-end="5779" vertical-scroll-proportion="-7.3461537">
               <folding />
             </state>
           </provider>
@@ -381,7 +374,7 @@
       <file leaf-file-name="TimerScanTask.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/fir/im/utils/TimerScanTask.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="30" selection-start="1037" selection-end="1037" vertical-scroll-proportion="0.7384988">
+            <state line="36" column="40" selection-start="1213" selection-end="1213" vertical-scroll-proportion="0.61">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -389,10 +382,19 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="KeyManager.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fir/im/utils/KeyManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="87" column="18" selection-start="2290" selection-end="2290" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Binary.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fir/im/model/Binary.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="18" selection-start="543" selection-end="543" vertical-scroll-proportion="0.0">
+            <state line="17" column="13" selection-start="352" selection-end="352" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -423,14 +425,14 @@
         <option value="$PROJECT_DIR$/src/fir/im/service/UploadService.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/fir/im/config/Constants.java" />
-        <option value="$PROJECT_DIR$/src/fir/im/ui/AppInfoUI.java" />
         <option value="$PROJECT_DIR$/src/fir/im/dialog/TipDialog.java" />
         <option value="$PROJECT_DIR$/src/fir/im/utils/TimeScan.java" />
         <option value="$PROJECT_DIR$/src/fir/im/utils/OsUtil.java" />
-        <option value="$PROJECT_DIR$/src/fir/im/utils/KeyManager.java" />
-        <option value="$PROJECT_DIR$/src/fir/im/dialog/FirDialog.java" />
         <option value="$PROJECT_DIR$/src/fir/im/utils/TimerScan.java" />
+        <option value="$PROJECT_DIR$/src/fir/im/utils/KeyManager.java" />
         <option value="$PROJECT_DIR$/src/fir/im/ui/LoginUI.java" />
+        <option value="$PROJECT_DIR$/src/fir/im/ui/AppInfoUI.java" />
+        <option value="$PROJECT_DIR$/src/fir/im/dialog/FirDialog.java" />
         <option value="$PROJECT_DIR$/src/fir/im/utils/TimerScanTask.java" />
       </list>
     </option>
@@ -469,6 +471,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -518,10 +522,6 @@
               <option name="myItemId" value="im" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="utils" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -562,26 +562,8 @@
               <option name="myItemId" value="im" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="uploadSdk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="uploadSdk" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="im" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dialog" />
+              <option name="myItemId" value="swing" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -601,8 +583,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -946,13 +926,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fir/im/utils/KeyManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="61" selection-start="1941" selection-end="1941" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/fir/im/ui/AppUploadingUI.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="13" selection-start="559" selection-end="559" vertical-scroll-proportion="0.0">
@@ -967,9 +940,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/fir/im/utils/KeyManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="87" column="18" selection-start="2290" selection-end="2290" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/fir/im/model/Binary.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="18" selection-start="543" selection-end="543" vertical-scroll-proportion="0.0">
+        <state line="17" column="13" selection-start="352" selection-end="352" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fir/im/utils/TimerScan.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="31" selection-start="377" selection-end="377" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -988,37 +975,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fir/im/dialog/FirDialog.java">
+    <entry file="file://$PROJECT_DIR$/src/fir/im/ui/LoginUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="8" selection-start="1170" selection-end="1170" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fir/im/utils/TimerScan.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="21" selection-start="290" selection-end="290" vertical-scroll-proportion="0.0">
+        <state line="214" column="7" selection-start="8054" selection-end="8207" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fir/im/ui/AppInfoUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="297" column="47" selection-start="9556" selection-end="9556" vertical-scroll-proportion="-0.5769231">
+        <state line="192" column="22" selection-start="5773" selection-end="5779" vertical-scroll-proportion="-7.3461537">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fir/im/ui/LoginUI.java">
+    <entry file="file://$PROJECT_DIR$/src/fir/im/dialog/FirDialog.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="214" column="16" selection-start="8047" selection-end="8134" vertical-scroll-proportion="0.0">
+        <state line="65" column="87" selection-start="2015" selection-end="2015" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fir/im/utils/TimerScanTask.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="30" selection-start="1037" selection-end="1037" vertical-scroll-proportion="0.7384988">
+        <state line="36" column="40" selection-start="1213" selection-end="1213" vertical-scroll-proportion="0.61">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

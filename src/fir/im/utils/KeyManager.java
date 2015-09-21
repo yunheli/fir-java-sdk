@@ -14,7 +14,19 @@ public class KeyManager {
     public final String BROWSER_STATE = "BROWSER_STATE" ;
     public final String MD5 = "MD5";
     public final String AUTO_UPLOAD = "AUTO_UPLOAD";
+    public final String APP_ID = "APP_ID";
     public String apiToken;
+
+    public String getAppId() {
+        return appId;
+    }
+
+    public void setAppId(String appId) {
+        this.appId = appId;
+        XmlUtil.getInstance().setKey(APP_ID,  appId);
+    }
+
+    public String appId;
 
     public String getAutoUpload() {
         return autoUpload;
@@ -70,6 +82,7 @@ public class KeyManager {
         browserState = XmlUtil.getInstance().getKey(BROWSER_STATE);
         md5 = XmlUtil.getInstance().getKey(MD5);
         autoUpload = XmlUtil.getInstance().getKey(AUTO_UPLOAD);
+        appId = XmlUtil.getInstance().getKey(APP_ID);
         keyManager = this;
     }
 

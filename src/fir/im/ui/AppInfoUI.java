@@ -26,6 +26,12 @@ public class AppInfoUI extends JPanel implements ActionListener ,MouseListener, 
     private JLabel descDisplay;
     ProgressPanel progressPanel;
 
+    public String getState() {
+        return state;
+    }
+
+    private String state = "free"; //uploading free
+
 
     private JLabel shortTag;
     private JLabel descTag;
@@ -196,6 +202,8 @@ public class AppInfoUI extends JPanel implements ActionListener ,MouseListener, 
         }
         settingBtn.setVisible(false);
 
+        state = "uploading";
+
         //======================
 
 
@@ -236,6 +244,7 @@ public class AppInfoUI extends JPanel implements ActionListener ,MouseListener, 
 
     @Override
     public void onUploadFinished(boolean finishedSuccessful) {
+        state = "free";
 //       TipDialog.getInstance().fadeIn(1000);
         if(KeyManager.getInstance().getBrowserState().equals("close") )
         {
