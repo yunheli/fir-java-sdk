@@ -213,6 +213,7 @@ public class LoginUI extends JPanel implements ActionListener, MouseListener{
         AppInfoUI.getInstance().initBinary(Binary.getInstance());
         KeyManager.getInstance().setApkPath(path);
         KeyManager.getInstance().setMd5(OsUtil.getMd5(Binary.getInstance().filePath));
+        KeyManager.getInstance().setAppId(Binary.getInstance().bundleId);
     }
 
     @Override
