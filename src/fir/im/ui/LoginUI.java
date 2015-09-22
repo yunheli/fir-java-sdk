@@ -100,12 +100,14 @@ public class LoginUI extends JPanel implements ActionListener, MouseListener{
         openAutoUploadOption.setBounds(200,215,50,50);
         openAutoUploadOption.setSize(openBrowserOptionImg.getIconWidth(), openBrowserOptionImg.getIconHeight());
         openAutoUploadOption.setToolTipText("当前是选中状态，发现文件改变会自动上传");
+        openAutoUploadOption.setVisible(false);
 
         closeAutoUploadOption = new JLabel();
         closeAutoUploadOption.setIcon(closeBrowserOptionImg);
         closeAutoUploadOption.setBounds(200,215,50,50);
         closeAutoUploadOption.setSize(closeBrowserOptionImg.getIconWidth(), closeBrowserOptionImg.getIconHeight());
         closeAutoUploadOption.setToolTipText("当前是取消选中状态，发现文件改变取消自动上传");
+        closeAutoUploadOption.setVisible(false);
 
         if(KeyManager.getInstance().getBrowserState() == null || KeyManager.getInstance().getBrowserState().isEmpty()) {
             KeyManager.getInstance().setBrowserState("open");
@@ -118,12 +120,12 @@ public class LoginUI extends JPanel implements ActionListener, MouseListener{
 
 
         if(KeyManager.getInstance().getAutoUpload() == null || KeyManager.getInstance().getAutoUpload().isEmpty()) {
-            KeyManager.getInstance().setAutoUpload("open");
-            closeAutoUploadOption.setVisible(false);
-        }else if(KeyManager.getInstance().getAutoUpload().equals("open")){
-            closeAutoUploadOption.setVisible(false);
+            KeyManager.getInstance().setAutoUpload("close");
+            closeAutoUploadOption.setVisible(true);
         }else if(KeyManager.getInstance().getAutoUpload().equals("close")){
-            openAutoUploadOption.setVisible(false);
+            closeAutoUploadOption.setVisible(true);
+        }else if(KeyManager.getInstance().getAutoUpload().equals("open")){
+            openAutoUploadOption.setVisible(true);
         }
     }
 
