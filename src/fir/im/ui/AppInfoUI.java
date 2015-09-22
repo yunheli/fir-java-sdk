@@ -107,6 +107,7 @@ public class AppInfoUI extends JPanel implements ActionListener ,MouseListener, 
         this.binary = binary;
         initVal();
         FirDialog.getInstance().setContentPane(this);
+        shortDisplay.setUrl("");
     }
 
     private void initVal(){
@@ -270,6 +271,8 @@ public class AppInfoUI extends JPanel implements ActionListener ,MouseListener, 
         }
 
         settingBtn.setVisible(true);
+        changeLogTextArea.setText("");
+
 //
     }
 

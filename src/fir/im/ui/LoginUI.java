@@ -4,6 +4,9 @@ import fir.im.dialog.FirDialog;
 import fir.im.model.Binary;
 import fir.im.swing.CloseButton;
 import fir.im.utils.*;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.DefaultHttpClient;
 
 import javax.swing.*;
 import java.awt.*;
@@ -185,12 +188,17 @@ public class LoginUI extends JPanel implements ActionListener, MouseListener{
                     "请输入您的API_TOKEN",
                     "请输入您的API_TOKEN",
                     JOptionPane.QUESTION_MESSAGE);
+
 //            System.out.println("xxxxxxxxxxx"+response);
             if(response == null || response.isEmpty()){
 //               System.out.println("nnnnnnnnnnnnnnnnn");
             }else{
-                tokenDisplay.setText(response);
-                KeyManager.getInstance().setToken(response);
+                if(validate_token(response)){
+                    tokenDisplay.setText(response);
+                    KeyManager.getInstance().setToken(response);
+                }else{
+                    JOptionPane.showMessageDialog(null,"请填写正确的api_token");
+                }
             }
         }
 
@@ -201,6 +209,24 @@ public class LoginUI extends JPanel implements ActionListener, MouseListener{
 
     }
 
+    public Boolean validate_token(String token){
+        String url = "http://api.fir.im/apps?api_token="+token;
+
+        HttpGet request = new HttpGet(url);
+
+        try {
+
+            HttpResponse response = new DefaultHttpClient().execute(request);
+
+            if(response.getStatusLine().getStatusCode()==200){
+                  return true;
+            }
+
+        }catch (Exception e){
+             return false;
+        }
+        return false;
+    }
     public void selectApk(){
         String path = FileOperate.getInstance().fileChoose();
         if( path != null && path.endsWith(".apk")){
@@ -216,6 +242,7 @@ public class LoginUI extends JPanel implements ActionListener, MouseListener{
         KeyManager.getInstance().setApkPath(path);
         KeyManager.getInstance().setMd5(OsUtil.getMd5(Binary.getInstance().filePath));
         KeyManager.getInstance().setAppId(Binary.getInstance().bundleId);
+
     }
 
     @Override
@@ -233,8 +260,12 @@ public class LoginUI extends JPanel implements ActionListener, MouseListener{
             if(response == null || response.isEmpty()){
                 JOptionPane.showMessageDialog(null,"请填写正确的api_token");
             }else{
-                tokenDisplay.setText(response);
-                KeyManager.getInstance().setToken(response);
+                if(validate_token(response)){
+                    tokenDisplay.setText(response);
+                    KeyManager.getInstance().setToken(response);
+                }else{
+                    JOptionPane.showMessageDialog(null,"请填写正确的api_token");
+                }
             }
         }
         if(mouseEvent.getSource() == selectBtn){
