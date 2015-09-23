@@ -8,6 +8,8 @@ package fir.im.utils;
  * To change this template use File | Settings | File Templates.
  */
 
+import fir.im.model.Binary;
+
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import java.io.*;
@@ -254,7 +256,7 @@ public class FileOperate {
     }
 
     public String fileChoose(){
-        JFileChooser fileChooser = new JFileChooser();
+        JFileChooser fileChooser = new JFileChooser(Binary.getInstance().filePath);
         FileNameExtensionFilter ff = new FileNameExtensionFilter( null, "apk");
         fileChooser.setFileFilter(ff);
         int option = fileChooser.showOpenDialog(null);

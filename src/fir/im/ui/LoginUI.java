@@ -251,14 +251,11 @@ public class LoginUI extends JPanel implements ActionListener, MouseListener{
             FirDialog.getInstance().setVisible(false);
         }
         if(mouseEvent.getSource() == tokenSetting){
-//            System.out.println(".........");
             String response = JOptionPane.showInputDialog(null,
                     "请输入您的API_TOKEN",
                     "请输入您的API_TOKEN",
                     JOptionPane.QUESTION_MESSAGE);
-//            System.out.println(response);
-            if(response == null || response.isEmpty()){
-                JOptionPane.showMessageDialog(null,"请填写正确的api_token");
+            if(response == null){
             }else{
                 if(validate_token(response)){
                     tokenDisplay.setText(response);

@@ -31,7 +31,7 @@ public class TimerScanTask extends TimerTask {
         path = Binary.getInstance().filePath;
 //        System.out.println("本次执行该线程的时间为：2" + date);
         String md5 = OsUtil.getMd5(path);
-        if(!md5.equals(KeyManager.getInstance().getMd5()) && Binary.getInstance().bundleId.equals(KeyManager.getInstance().getAppId())) {
+        if(md5 != null && !md5.equals(KeyManager.getInstance().getMd5()) && Binary.getInstance().bundleId.equals(KeyManager.getInstance().getAppId())) {
             if("open".equals(KeyManager.getInstance().getAutoUpload()) && AppInfoUI.getInstance().getState().equals("free")){
 //                System.out.println("自动检测上传");
                 AppInfoUI.getInstance().upload("这个家伙很懒");
