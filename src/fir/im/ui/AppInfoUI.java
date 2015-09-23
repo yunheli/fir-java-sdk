@@ -2,6 +2,7 @@ package fir.im.ui;
 
 import fir.im.dialog.FirDialog;
 import fir.im.dialog.TipDialog;
+import fir.im.dialog.WarningDialog;
 import fir.im.model.Binary;
 import fir.im.service.UploadService;
 import fir.im.swing.*;
@@ -47,6 +48,7 @@ public class AppInfoUI extends JPanel implements ActionListener ,MouseListener, 
     private String shortLink;
     JLabel percentLabel;
     JLabel percentLabelEclipse;
+    public int tip_times = 0;
 
     public AppInfoUI() {
         setForeground(Color.WHITE);
@@ -278,8 +280,12 @@ public class AppInfoUI extends JPanel implements ActionListener ,MouseListener, 
         settingBtn.setVisible(true);
         changeLogTextArea.setText("");
         if(!finishedSuccessful){
-            JOptionPane.showMessageDialog(null,"上传失败，请检查你的网络或api_token是否正确");
+            WarningDialog.getInstance().tip();
+            tip_times ++;
+        }else{
+            tip_times = 0;
         }
+
 //
     }
 
