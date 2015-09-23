@@ -79,8 +79,8 @@ public class UploadToRio {
             response = httpClient.execute(post) ;
             HttpEntity entity = response.getEntity();
             String responseString = EntityUtils.toString(entity, "UTF-8");
-
-//            System.out.println(responseString);
+            System.out.println("iconResponse.getStatusLine().getStatusCode()"+response.getStatusLine().getStatusCode());
+            System.out.println(responseString);
             JSONObject jo;
             jo = new JSONObject(responseString);
             return jo;
