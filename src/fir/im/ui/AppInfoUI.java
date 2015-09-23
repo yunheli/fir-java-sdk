@@ -25,6 +25,7 @@ public class AppInfoUI extends JPanel implements ActionListener ,MouseListener, 
     private JLabel nameDisplay;
     private LinkLabel shortDisplay;
     private JLabel descDisplay;
+    CustomJScrollPanel jScrollPane;
     ProgressPanel progressPanel;
 
     public String getState() {
@@ -146,6 +147,7 @@ public class AppInfoUI extends JPanel implements ActionListener ,MouseListener, 
         descTag.setHorizontalAlignment(SwingConstants.RIGHT);
 
         changeLogTextArea = new ChangeLogTextArea();
+        jScrollPane = new CustomJScrollPanel(changeLogTextArea);
         uploadBtn = new UploadJButton();
         iconPanel = new IconPanel();
         closeButton = new CloseButton();
@@ -168,7 +170,8 @@ public class AppInfoUI extends JPanel implements ActionListener ,MouseListener, 
         shortTag.setBounds(70, 200, 61, 16);
         shortDisplay.setBounds(180, 200, 200, 16);
         descTag.setBounds(70, 242, 61, 16);
-        changeLogTextArea.setBounds(180, 242, 308, 153);
+//        changeLogTextArea.setBounds(180, 242, 251, 153);
+        jScrollPane.setBounds(180, 242, 251, 163);
         iconPanel.setBounds(60, 60, 80, 80);
 
     }
@@ -178,7 +181,8 @@ public class AppInfoUI extends JPanel implements ActionListener ,MouseListener, 
         add(shortTag);
         add(shortDisplay) ;
         add(descTag);
-        add(changeLogTextArea) ;
+//        add(changeLogTextArea) ;
+        add(jScrollPane);
         add(uploadBtn);
         add(iconPanel);
         add(closeButton);
@@ -193,7 +197,9 @@ public class AppInfoUI extends JPanel implements ActionListener ,MouseListener, 
 
 
 
-    public void upload(String changeLogTextArea){
+    public void upload(String changeLogTextAreaStr){
+        changeLogTextArea.setEnabled(false);
+        selectBtn.setVisible(false);
         //上传按钮隐藏 进度条显示
         uploadBtn.setVisible(false);
         if (KeyManager.getInstance().isEclipse) {
@@ -212,7 +218,7 @@ public class AppInfoUI extends JPanel implements ActionListener ,MouseListener, 
 
         new UploadService().sendBuild(null, Binary.getInstance().filePath, KeyManager.getInstance().getToken(),
                 Binary.getInstance(),
-                changeLogTextArea,
+                changeLogTextAreaStr,
                 this);
         progressBar.setVisible(false);
         progressBar.setValue(0);
@@ -279,6 +285,8 @@ public class AppInfoUI extends JPanel implements ActionListener ,MouseListener, 
 
         settingBtn.setVisible(true);
         changeLogTextArea.setText("");
+        changeLogTextArea.setEnabled(true);
+        selectBtn.setVisible(true);
         if(!finishedSuccessful){
             WarningDialog.getInstance().tip();
             tip_times ++;
