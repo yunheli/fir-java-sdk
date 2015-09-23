@@ -245,9 +245,12 @@ public class AppInfoUI extends JPanel implements ActionListener ,MouseListener, 
 
     @Override
     public void onUploadFinished(boolean finishedSuccessful) {
+
+
+
         state = "free";
 //       TipDialog.getInstance().fadeIn(1000);
-        if(KeyManager.getInstance().getBrowserState().equals("close") )
+        if(finishedSuccessful && KeyManager.getInstance().getBrowserState().equals("close") )
         {
             TipDialog.getInstance().tip();
         }
@@ -264,15 +267,19 @@ public class AppInfoUI extends JPanel implements ActionListener ,MouseListener, 
         }
 
         //======================
-        if(KeyManager.getInstance().getBrowserState() == null ||KeyManager.getInstance().getBrowserState().isEmpty() ){
-             KeyManager.getInstance().setBrowserState("open");
-        }else if( KeyManager.getInstance().getBrowserState().equals("open")){
-            OsUtil.openUrlInBrowser(shortLink);
+        if (finishedSuccessful)  {
+            if(KeyManager.getInstance().getBrowserState() == null ||KeyManager.getInstance().getBrowserState().isEmpty() ){
+                KeyManager.getInstance().setBrowserState("open");
+            }else if( KeyManager.getInstance().getBrowserState().equals("open")){
+                OsUtil.openUrlInBrowser(shortLink);
+            }
         }
 
         settingBtn.setVisible(true);
         changeLogTextArea.setText("");
-
+        if(!finishedSuccessful){
+            JOptionPane.showMessageDialog(null,"上传失败，请检查你的网络或api_token是否正确");
+        }
 //
     }
 
