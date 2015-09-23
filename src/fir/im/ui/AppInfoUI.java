@@ -2,6 +2,7 @@ package fir.im.ui;
 
 import fir.im.dialog.FirDialog;
 import fir.im.dialog.TipDialog;
+import fir.im.dialog.WarningDialog;
 import fir.im.model.Binary;
 import fir.im.service.UploadService;
 import fir.im.swing.*;
@@ -47,6 +48,7 @@ public class AppInfoUI extends JPanel implements ActionListener ,MouseListener, 
     private String shortLink;
     JLabel percentLabel;
     JLabel percentLabelEclipse;
+    public int tip_times = 0;
 
     public AppInfoUI() {
         setForeground(Color.WHITE);
@@ -107,6 +109,7 @@ public class AppInfoUI extends JPanel implements ActionListener ,MouseListener, 
         this.binary = binary;
         initVal();
         FirDialog.getInstance().setContentPane(this);
+        shortDisplay.setUrl("");
     }
 
     private void initVal(){
@@ -244,9 +247,12 @@ public class AppInfoUI extends JPanel implements ActionListener ,MouseListener, 
 
     @Override
     public void onUploadFinished(boolean finishedSuccessful) {
+
+
+
         state = "free";
 //       TipDialog.getInstance().fadeIn(1000);
-        if(KeyManager.getInstance().getBrowserState().equals("close") )
+        if(finishedSuccessful && KeyManager.getInstance().getBrowserState().equals("close") )
         {
             TipDialog.getInstance().tip();
         }
@@ -263,13 +269,23 @@ public class AppInfoUI extends JPanel implements ActionListener ,MouseListener, 
         }
 
         //======================
-        if(KeyManager.getInstance().getBrowserState() == null ||KeyManager.getInstance().getBrowserState().isEmpty() ){
-             KeyManager.getInstance().setBrowserState("open");
-        }else if( KeyManager.getInstance().getBrowserState().equals("open")){
-            OsUtil.openUrlInBrowser(shortLink);
+        if (finishedSuccessful)  {
+            if(KeyManager.getInstance().getBrowserState() == null ||KeyManager.getInstance().getBrowserState().isEmpty() ){
+                KeyManager.getInstance().setBrowserState("open");
+            }else if( KeyManager.getInstance().getBrowserState().equals("open")){
+                OsUtil.openUrlInBrowser(shortLink);
+            }
         }
 
         settingBtn.setVisible(true);
+        changeLogTextArea.setText("");
+        if(!finishedSuccessful){
+            WarningDialog.getInstance().tip();
+            tip_times ++;
+        }else{
+            tip_times = 0;
+        }
+
 //
     }
 
