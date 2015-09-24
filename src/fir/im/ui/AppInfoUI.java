@@ -28,6 +28,7 @@ public class AppInfoUI extends JPanel implements ActionListener ,MouseListener, 
     private JLabel descDisplay;
     CustomJScrollPanel jScrollPane;
     ProgressPanel progressPanel;
+    public Boolean tipFlag = false;
 
     public String getState() {
         return state;
@@ -289,13 +290,15 @@ public class AppInfoUI extends JPanel implements ActionListener ,MouseListener, 
         changeLogTextArea.setText("");
         changeLogTextArea.setEnabled(true);
         selectBtn.setVisible(true);
-        if(!finishedSuccessful){
+        if(!finishedSuccessful && !tipFlag){
 //            WarningDialog.getInstance().tip();
-            CustomTipDialog.warnTip("上传失败::>_<::");
+            CustomTipDialog.warnTip("上传失败::>_<::, 请检查token或网络");
             tip_times ++;
         }else{
             tip_times = 0;
         }
+
+        if(tipFlag)tipFlag = false;
 
 //
     }

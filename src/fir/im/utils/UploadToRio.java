@@ -1,6 +1,8 @@
 package fir.im.utils;
 
+import fir.im.dialog.CustomTipDialog;
 import fir.im.model.UploadTicket;
+import fir.im.ui.AppInfoUI;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
@@ -46,7 +48,7 @@ public class UploadToRio {
     public String appOid;
     public UploadTicket uploadTicket;
 
-    public UploadToRio(String appId,String token,String appName,String versionName,String versionCode,String changeLog){
+    public UploadToRio(String appId,String token,String appName,String versionName,String versionCode,String changeLog) throws Exception{
         this.appId = appId;
         this.appName = appName;
         this.versionCode = versionCode;
@@ -62,8 +64,7 @@ public class UploadToRio {
      * 获取上传token
      * @return   JSONObject
      */
-    public JSONObject getUploadToken(){
-        try {
+    public JSONObject getUploadToken() throws Exception{
             HttpClient httpClient = new DefaultHttpClient() ;
             String url = FIR_BASE_URL + "/apps" ;
             String type = "android";
@@ -79,23 +80,19 @@ public class UploadToRio {
             response = httpClient.execute(post) ;
             HttpEntity entity = response.getEntity();
             String responseString = EntityUtils.toString(entity, "UTF-8");
-            System.out.println("iconResponse.getStatusLine().getStatusCode()"+response.getStatusLine().getStatusCode());
-            System.out.println(responseString);
+            if(response.getStatusLine().getStatusCode() == 401){
+                CustomTipDialog.warnTip("token无效,请重设token ::>_<::");
+                AppInfoUI.getInstance().tipFlag = true;
+            }
+            if(responseString.indexOf("Locked forbidden")>=0){
+                CustomTipDialog.warnTip("您的帐号被锁定::>_<::，请联系dev@fir.im");
+                AppInfoUI.getInstance().tipFlag = true;
+            }
+
             JSONObject jo;
             jo = new JSONObject(responseString);
             return jo;
 
-        } catch (UnsupportedEncodingException e) {
-            Notice.postErrorNoticeTOSlack(e);
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        }  catch (IOException e) {
-            Notice.postErrorNoticeTOSlack(e);
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        }  catch (JSONException e) {
-            Notice.postErrorNoticeTOSlack(e);
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        }
-        return new JSONObject();
     }
 
     /**

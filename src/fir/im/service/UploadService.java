@@ -49,10 +49,11 @@ public class UploadService implements CustomMultiPartEntity.ProgressListener {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                UploadToRio uploadToRio = new UploadToRio(binary.bundleId,apiToken,binary.name,binary.versionName,binary.versionCode,appChanglog)   ;
 
-                String url = uploadToRio.uploadTicket.binaryUploadUrl;
                 try {
+                    UploadToRio uploadToRio = new UploadToRio(binary.bundleId,apiToken,binary.name,binary.versionName,binary.versionCode,appChanglog)   ;
+
+                    String url = uploadToRio.uploadTicket.binaryUploadUrl;
                     HttpClient client;
                     client = new DefaultHttpClient();
                     HttpPost post;

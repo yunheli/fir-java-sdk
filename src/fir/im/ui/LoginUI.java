@@ -260,6 +260,7 @@ public class LoginUI extends JPanel implements ActionListener, MouseListener{
             if(response == null){
             }else{
                 if(validate_token(response)){
+                    CustomTipDialog.infoTip("token配置成功^_^");
                     tokenDisplay.setText(response);
                     KeyManager.getInstance().setToken(response);
                 }else{
