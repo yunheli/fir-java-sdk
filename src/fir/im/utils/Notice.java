@@ -44,28 +44,25 @@ public class Notice {
             public void run() {
                 HttpClient httpClient = new DefaultHttpClient() ;
                 String postUrl = "https://hooks.slack.com/services/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"  ;
+
                 HttpPost httppost = new HttpPost(postUrl);
                 HttpResponse response = null;
                 try {
                     ArrayList<BasicNameValuePair> postParameters = new ArrayList<BasicNameValuePair>();
                     JSONObject obj = new JSONObject();
                     obj.append("text",msg) ;
-                    postParameters.add(new BasicNameValuePair("payload", obj.toString()));
+                    obj.append("username","webhookbot") ;
+                    obj.append("icon_emoji",":ghost:") ;
+                    postParameters.add(new BasicNameValuePair("payload", obj.toString().replace("[","").replace("]","")));
                     httppost.setEntity(new UrlEncodedFormEntity(postParameters,"UTF-8"));
-                } catch (UnsupportedEncodingException e) {
-                    Notice.postErrorNoticeTOSlack(e);
-                    e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-                } catch (JSONException e) {
-                    Notice.postErrorNoticeTOSlack(e);
-                    e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-                }
-                try {
+
                     response = httpClient.execute(httppost);
                     HttpEntity entity = response.getEntity();
                     String responseString = EntityUtils.toString(entity, "UTF-8");
 
                 } catch (IOException e) {
-                    Notice.postErrorNoticeTOSlack(e);
+                    e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+                } catch (JSONException e) {
                     e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
                 }
             }

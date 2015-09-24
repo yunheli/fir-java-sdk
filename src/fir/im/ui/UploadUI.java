@@ -215,7 +215,11 @@ public class UploadUI extends JPanel implements ActionListener,  UploadService.U
             String path = fileChooser.getSelectedFile().getAbsolutePath();
             if(path.endsWith(".apk")){
                 apkPath = path;
-                binary.initPath(path);
+                try {
+                    binary.initPath(path);
+                } catch (Exception e) {
+                    e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+                }
                 apkPanelShow();
             }
 

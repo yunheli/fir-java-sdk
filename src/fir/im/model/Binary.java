@@ -1,6 +1,7 @@
 package fir.im.model;
 
 
+import fir.im.dialog.CustomTipDialog;
 import fir.im.utils.Notice;
 import net.dongliu.apk.parser.ApkParser;
 import net.dongliu.apk.parser.bean.ApkMeta;
@@ -29,7 +30,7 @@ public class Binary {
         binary = this;
     }
 
-    public Binary(String url){
+    public Binary(String url) throws Exception{
         binary = this;
         this.filePath = url;
         parseApk(url);
@@ -40,17 +41,17 @@ public class Binary {
         return binary;
     }
 
-    public void initPath(String url){
+    public void initPath(String url) throws Exception{
         this.filePath = url;
         if(this.filePath.isEmpty())  return;
         parseApk(this.filePath);
     }
 
-    public void parseApk(String url){
+    public void parseApk(String url) throws Exception{
         ApkParser apkParser = null;
-        try {
-            apkParser = new ApkParser(new File(url));
-            ApkMeta apkMeta = apkParser.getApkMeta();
+
+        apkParser = new ApkParser(new File(url));
+        ApkMeta apkMeta = apkParser.getApkMeta();
 
 //            System.out.println(apkMeta.getLabel());
 //            System.out.println(apkMeta.getPackageName());
@@ -58,16 +59,11 @@ public class Binary {
 //            System.out.println(apkMeta.getLabel());
 //            System.out.println(apkMeta.getIcon().getPath());
 
-            this.versionName = apkMeta.getVersionName();
-            this.versionCode = apkMeta.getVersionCode().toString();
-            this.bundleId = apkMeta.getPackageName();
-            this.name = apkMeta.getLabel();
-            this.icon = apkMeta.getIcon().getPath();
-            apkParser.close();
-        } catch (IOException e) {
-
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-            Notice.postErrorNoticeTOSlack(e);
-        }
+        this.versionName = apkMeta.getVersionName()!= null ? apkMeta.getVersionName().toString(): "1.0";
+        this.versionCode = apkMeta.getVersionCode()!= null ? apkMeta.getVersionCode().toString(): "1.0";
+        this.bundleId = apkMeta.getPackageName();
+        this.name = apkMeta.getLabel();
+        this.icon = apkMeta.getIcon().getPath();
+        apkParser.close();
     }
 }
