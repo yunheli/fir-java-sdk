@@ -1,5 +1,6 @@
 package fir.im.ui;
 
+import fir.im.dialog.CustomTipDialog;
 import fir.im.dialog.FirDialog;
 import fir.im.dialog.TipDialog;
 import fir.im.dialog.WarningDialog;
@@ -27,6 +28,7 @@ public class AppInfoUI extends JPanel implements ActionListener ,MouseListener, 
     private JLabel descDisplay;
     CustomJScrollPanel jScrollPane;
     ProgressPanel progressPanel;
+    public Boolean tipFlag = false;
 
     public String getState() {
         return state;
@@ -260,7 +262,8 @@ public class AppInfoUI extends JPanel implements ActionListener ,MouseListener, 
 //       TipDialog.getInstance().fadeIn(1000);
         if(finishedSuccessful && KeyManager.getInstance().getBrowserState().equals("close") )
         {
-            TipDialog.getInstance().tip();
+//            TipDialog.getInstance().tip();
+            CustomTipDialog.successTip("应用上传成功^_^");
         }
 
         //上传按钮显示 进度条隐藏
@@ -287,12 +290,15 @@ public class AppInfoUI extends JPanel implements ActionListener ,MouseListener, 
         changeLogTextArea.setText("");
         changeLogTextArea.setEnabled(true);
         selectBtn.setVisible(true);
-        if(!finishedSuccessful){
-            WarningDialog.getInstance().tip();
+        if(!finishedSuccessful && !tipFlag){
+//            WarningDialog.getInstance().tip();
+            CustomTipDialog.warnTip("上传失败::>_<::, 请检查token或网络");
             tip_times ++;
         }else{
             tip_times = 0;
         }
+
+        if(tipFlag)tipFlag = false;
 
 //
     }

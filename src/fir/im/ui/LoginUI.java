@@ -1,5 +1,6 @@
 package fir.im.ui;
 
+import fir.im.dialog.CustomTipDialog;
 import fir.im.dialog.FirDialog;
 import fir.im.model.Binary;
 import fir.im.swing.CloseButton;
@@ -197,7 +198,8 @@ public class LoginUI extends JPanel implements ActionListener, MouseListener{
                     tokenDisplay.setText(response);
                     KeyManager.getInstance().setToken(response);
                 }else{
-                    JOptionPane.showMessageDialog(null,"请填写正确的api_token");
+//                    JOptionPane.showMessageDialog(null,"请填写正确的api_token");
+                    CustomTipDialog.warnTip("token不正确::>_<::");
                 }
             }
         }
@@ -258,16 +260,17 @@ public class LoginUI extends JPanel implements ActionListener, MouseListener{
             if(response == null){
             }else{
                 if(validate_token(response)){
+                    CustomTipDialog.infoTip("token配置成功^_^");
                     tokenDisplay.setText(response);
                     KeyManager.getInstance().setToken(response);
                 }else{
-                    JOptionPane.showMessageDialog(null,"请填写正确的api_token");
+                    CustomTipDialog.warnTip("token不正确::>_<::");
                 }
             }
         }
         if(mouseEvent.getSource() == selectBtn){
             if(KeyManager.getInstance().getToken() == null || KeyManager.getInstance().getToken().isEmpty()) {
-                JOptionPane.showMessageDialog(null,"请填写api_token");
+                CustomTipDialog.warnTip("请填写api_token ::>_<::");
                 return;
             }
             selectApk();

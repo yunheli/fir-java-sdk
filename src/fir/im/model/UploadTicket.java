@@ -22,9 +22,7 @@ public class UploadTicket {
     public String binaryToken;
 
 
-    public UploadTicket(JSONObject jsonObject){
-
-        try {
+    public UploadTicket(JSONObject jsonObject) throws Exception{
             this.id = jsonObject.getString("id");
             this.type = jsonObject.getString("type");
             this.appShort = jsonObject.getString("short");
@@ -39,9 +37,5 @@ public class UploadTicket {
             this.binaryToken = binaryCert.getString("token");
             this.iconUploadUrl = iconCert.getString("upload_url");
             this.binaryUploadUrl = binaryCert.getString("upload_url");
-
-        } catch (JSONException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        }
     }
 }
