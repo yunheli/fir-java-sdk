@@ -44,12 +44,17 @@ public class FirDialog extends JDialog {
 
         if(KeyManager.getInstance().getApkPath() != null && !KeyManager.getInstance().getApkPath().isEmpty() && FileOperate.getInstance().isExist(KeyManager.getInstance().getApkPath())){
             String path =  KeyManager.getInstance().getApkPath();
-            Binary.getInstance().initPath(path);
-            SearchFile.getInstance().initPath(path);
-            AppInfoUI.getInstance().initBinary(Binary.getInstance());
-            KeyManager.getInstance().setApkPath(path);
-            KeyManager.getInstance().setMd5(OsUtil.getMd5(Binary.getInstance().filePath));
-            KeyManager.getInstance().setAppId(Binary.getInstance().bundleId);
+            try {
+                Binary.getInstance().initPath(path);
+                SearchFile.getInstance().initPath(path);
+                AppInfoUI.getInstance().initBinary(Binary.getInstance());
+                KeyManager.getInstance().setApkPath(path);
+                KeyManager.getInstance().setMd5(OsUtil.getMd5(Binary.getInstance().filePath));
+                KeyManager.getInstance().setAppId(Binary.getInstance().bundleId);
+            } catch (Exception e) {
+                e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+                CustomTipDialog.warnTip("应用解析失败");
+            }
         }else{
             this.setContentPane(new LoginUI());
         }

@@ -172,8 +172,6 @@ public class LoginUI extends JPanel implements ActionListener, MouseListener{
         g.drawImage(img, 0, 0, icon.getIconWidth(),
                 icon.getIconHeight(), icon.getImageObserver());
 
-//        setSize(icon.getIconWidth(), icon.getIconHeight());
-
     }
 
 
@@ -190,15 +188,12 @@ public class LoginUI extends JPanel implements ActionListener, MouseListener{
                     "请输入您的API_TOKEN",
                     JOptionPane.QUESTION_MESSAGE);
 
-//            System.out.println("xxxxxxxxxxx"+response);
             if(response == null || response.isEmpty()){
-//               System.out.println("nnnnnnnnnnnnnnnnn");
             }else{
                 if(validate_token(response)){
                     tokenDisplay.setText(response);
                     KeyManager.getInstance().setToken(response);
                 }else{
-//                    JOptionPane.showMessageDialog(null,"请填写正确的api_token");
                     CustomTipDialog.warnTip("token不正确::>_<::");
                 }
             }
@@ -238,12 +233,17 @@ public class LoginUI extends JPanel implements ActionListener, MouseListener{
     }
 
     public void initPath(String path){
-        Binary.getInstance().initPath(path);
-        SearchFile.getInstance().initPath(path);
-        AppInfoUI.getInstance().initBinary(Binary.getInstance());
-        KeyManager.getInstance().setApkPath(path);
-        KeyManager.getInstance().setMd5(OsUtil.getMd5(Binary.getInstance().filePath));
-        KeyManager.getInstance().setAppId(Binary.getInstance().bundleId);
+        try {
+            Binary.getInstance().initPath(path);
+            SearchFile.getInstance().initPath(path);
+            AppInfoUI.getInstance().initBinary(Binary.getInstance());
+            KeyManager.getInstance().setApkPath(path);
+            KeyManager.getInstance().setMd5(OsUtil.getMd5(Binary.getInstance().filePath));
+            KeyManager.getInstance().setAppId(Binary.getInstance().bundleId);
+        } catch (Exception e) {
+            Notice.postErrorNoticeTOSlack(e);
+            CustomTipDialog.warnTip("应用解析失败::>_<::");
+        }
 
     }
 
