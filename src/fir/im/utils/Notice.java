@@ -51,24 +51,18 @@ public class Notice {
                     ArrayList<BasicNameValuePair> postParameters = new ArrayList<BasicNameValuePair>();
                     JSONObject obj = new JSONObject();
                     obj.append("text",msg) ;
-                    System.out.println("msg"+msg);
-                    postParameters.add(new BasicNameValuePair("payload", obj.toString()));
+                    obj.append("username","webhookbot") ;
+                    obj.append("icon_emoji",":ghost:") ;
+                    postParameters.add(new BasicNameValuePair("payload", obj.toString().replace("[","").replace("]","")));
                     httppost.setEntity(new UrlEncodedFormEntity(postParameters,"UTF-8"));
-                    System.out.println("通知成功");
-                } catch (UnsupportedEncodingException e) {
-                    e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-                } catch (JSONException e) {
-                    Notice.postErrorNoticeTOSlack(e);
-                    e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-                }
-                try {
-                    System.out.println("1");
+
                     response = httpClient.execute(httppost);
                     HttpEntity entity = response.getEntity();
                     String responseString = EntityUtils.toString(entity, "UTF-8");
-                    System.out.println(responseString);
 
                 } catch (IOException e) {
+                    e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+                } catch (JSONException e) {
                     e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
                 }
             }
