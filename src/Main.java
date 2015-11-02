@@ -26,6 +26,7 @@ public class Main {
 //        CustomTipDialog.warnTip("上传失败");
 //        CustomTipDialog.infoTip("提示");
         Provider.getInstance().setProviderIde("eclipse");
+
         //! Sundae x = new Sundae();
         System.out.print("main hello world");
 //        XmlUtil.getInstance().setKey("TTT","哈哈");
