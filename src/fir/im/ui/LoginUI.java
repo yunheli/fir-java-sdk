@@ -226,6 +226,9 @@ public class LoginUI extends JPanel implements ActionListener, MouseListener{
     }
     public void selectApk(){
         String path = FileOperate.getInstance().fileChoose();
+        this.getComponents();
+        FirDialog.getInstance().requestFocus();
+        FirDialog.getInstance().setVisible(true);
         if( path != null && path.endsWith(".apk")){
             initPath(path);
 //            System.out.println(SearchFile.getInstance().queryIcon(Binary.getInstance().icon));
