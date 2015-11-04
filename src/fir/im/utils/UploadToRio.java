@@ -1,5 +1,6 @@
 package fir.im.utils;
 
+import fir.im.config.Constants;
 import fir.im.dialog.CustomTipDialog;
 import fir.im.model.UploadTicket;
 import fir.im.ui.AppInfoUI;
@@ -28,9 +29,7 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 public class UploadToRio {
-    public static final String FIR_UPLOAD_TOKEN_URL = "http://fir.im/api/v2/info/" ;
-    public static final String FIR_UPDATE_APP_INFO = "http://fir.im/api/v2/app/"  ;
-    public static final String FIR_BASE_URL = "http://api.fir.im" ;
+    public static final String FIR_BASE_URL = Constants.FIR_ADMIN;
 
 
     public void setVersionId(String versionId) {
