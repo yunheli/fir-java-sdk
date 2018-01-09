@@ -1,5 +1,13 @@
+import com.sun.javaws.progress.Progress;
+import fir.im.dialog.CustomTipDialog;
 import fir.im.dialog.FirDialog;
+import fir.im.dialog.TipDialog;
+import fir.im.dialog.WarningDialog;
+import fir.im.swing.ProgressPanel;
+import fir.im.utils.Provider;
 import fir.im.utils.XmlUtil;
+
+import java.util.TimerTask;
 
 /**
  * Created with IntelliJ IDEA.
@@ -12,11 +20,16 @@ public class Main {
     public static void main(String[] args) {
         FirDialog firDialog = new FirDialog();
         firDialog.show();
+        firDialog.setIdeEnvironmentEclipse(true);
 
-
+//        CustomTipDialog.successTip("上传成功");
+//        CustomTipDialog.warnTip("上传失败");
+//        CustomTipDialog.infoTip("提示");
+        Provider.getInstance().setProviderIde("eclipse");
         //! Sundae x = new Sundae();
         System.out.print("main hello world");
 //        XmlUtil.getInstance().setKey("TTT","哈哈");
 //        System.out.print("======"+XmlUtil.getInstance().getKey("TTT"));
+
     }
 }

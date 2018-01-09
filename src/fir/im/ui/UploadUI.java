@@ -29,6 +29,7 @@ public class UploadUI extends JPanel implements ActionListener,  UploadService.U
     private LinkLabel shortLabel;
     private JProgressBar progressBar;
     private JButton editBtn ;
+
     public UploadUI() {
         setLayout(null);
         this.setSize(322, 518);
@@ -208,13 +209,17 @@ public class UploadUI extends JPanel implements ActionListener,  UploadService.U
         int option = fileChooser.showOpenDialog(null);
         if(option == JFileChooser.APPROVE_OPTION){
 //获取基本信息
-            System.out.println("路径："+fileChooser.getSelectedFile().getPath());
-            System.out.println("绝对路径："+fileChooser.getSelectedFile().getAbsolutePath());
-            System.out.println("文件名称："+fileChooser.getSelectedFile().getName());
+//            System.out.println("路径："+fileChooser.getSelectedFile().getPath());
+//            System.out.println("绝对路径："+fileChooser.getSelectedFile().getAbsolutePath());
+//            System.out.println("文件名称："+fileChooser.getSelectedFile().getName());
             String path = fileChooser.getSelectedFile().getAbsolutePath();
             if(path.endsWith(".apk")){
                 apkPath = path;
-                binary.initPath(path);
+                try {
+                    binary.initPath(path);
+                } catch (Exception e) {
+                    e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+                }
                 apkPanelShow();
             }
 

@@ -2,6 +2,10 @@ package fir.im.utils;
 
 import com.sun.awt.AWTUtilities;
 
+import java.awt.*;
+import java.io.FileInputStream;
+import java.security.MessageDigest;
+
 /**
  * Created with IntelliJ IDEA.
  * User: will
@@ -32,5 +36,51 @@ public class OsUtil {
             _transparency = false;
         }
         return _transparency;
+    }
+
+    public static Dimension getScreenSize(){
+        Toolkit tk = Toolkit.getDefaultToolkit();
+        Dimension d = tk.getScreenSize();
+        return d;
+    }
+
+    public static void openUrlInBrowser(String url){
+        try {
+            Desktop.getDesktop().browse(
+                    new java.net.URI(url));
+        } catch (Exception ex) {
+        }
+    }
+
+    /**
+     * 获取文件的MD5
+     * @param path
+     * @return
+     */
+    public static String getMd5(String path){
+        String value = null;
+        try {
+            MessageDigest md = MessageDigest.getInstance("MD5");
+            FileInputStream fis = new FileInputStream(path);
+
+            byte[] dataBytes = new byte[1024];
+
+            int nRead = 0;
+            while ((nRead = fis.read(dataBytes)) != -1) {
+                md.update(dataBytes, 0, nRead);
+            };
+            byte[] mBytes = md.digest();
+            StringBuffer sb = new StringBuffer();
+            for (int i = 0; i < mBytes.length; i++) {
+                sb.append(Integer.toString((mBytes[i] & 0xff) + 0x100, 16).substring(1));
+            }
+            value = sb.toString();
+            fis.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+
+        }
+        return value;
     }
 }

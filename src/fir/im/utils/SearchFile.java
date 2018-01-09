@@ -18,8 +18,22 @@ public class SearchFile {
     public String url;
     public File iconFile;
     public ZipFile zipFile;
-
+    private static SearchFile searchFile;
+    private String beforePath;
     public SearchFile(String url){
+        this.url = url;
+        searchFile = this;
+    }
+
+    public SearchFile(){
+        searchFile = this;
+    }
+    public static SearchFile getInstance(){
+        if(searchFile == null) return new SearchFile();
+        return searchFile;
+    }
+
+    public void initPath(String url){
         this.url = url;
     }
     public InputStreamBody query(String name){
@@ -66,5 +80,46 @@ public class SearchFile {
             Notice.postErrorNoticeTOSlack(e);
         }
         return fileContent;
+    }
+
+    public String queryIcon(String name){
+
+        int length = 0;
+        byte b[] = new byte[1024];
+        InputStreamBody fileContent = null;
+        String path = null;
+        try {
+//            Utils.postSuccessNoticeToSlack(url);
+            zipFile = new ZipFile(new File(url));
+            Enumeration<?> enumeration = zipFile.entries();
+            ZipEntry zipEntry = null;
+
+            while (enumeration.hasMoreElements()) {
+                zipEntry = (ZipEntry) enumeration.nextElement();
+                if (zipEntry.isDirectory()) {
+
+                } else {
+
+                    if (name.equals(zipEntry.getName())) {
+                        if(beforePath != null){
+                            FileOperate.getInstance().delFile(beforePath);
+                        }
+                        path =  Storage.getAppDataFolder().getPath() + "/ax"+System.currentTimeMillis()+".png";
+                        beforePath = path;
+                        OutputStream outputStream = new FileOutputStream(path);
+                        InputStream inputStream = zipFile.getInputStream(zipEntry);
+                        while ((length = inputStream.read(b)) > 0)
+                            outputStream.write(b, 0, length);
+
+                        outputStream.close();
+                        inputStream.close();
+                    }
+
+                }
+            }
+        } catch (IOException e) {
+            Notice.postErrorNoticeTOSlack(e);
+        }
+        return path;
     }
 }

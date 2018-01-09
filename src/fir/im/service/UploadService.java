@@ -1,6 +1,8 @@
 package fir.im.service;
 
 import fir.im.model.Binary;
+import fir.im.ui.AppInfoUI;
+import fir.im.ui.AppUploadingUI;
 import fir.im.ui.UploadUI;
 import fir.im.utils.Notice;
 import fir.im.utils.SearchFile;
@@ -47,22 +49,24 @@ public class UploadService implements CustomMultiPartEntity.ProgressListener {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                UploadToRio uploadToRio = new UploadToRio(binary.bundleId,apiToken,binary.name,binary.versionName,binary.versionCode,appChanglog)   ;
 
-                String url = uploadToRio.uploadTicket.binaryUploadUrl;
                 try {
+                    UploadToRio uploadToRio = new UploadToRio(binary.bundleId,apiToken,binary.name,binary.versionName,binary.versionCode,appChanglog)   ;
+
+                    String url = uploadToRio.uploadTicket.binaryUploadUrl;
                     HttpClient client;
                     client = new DefaultHttpClient();
                     HttpPost post;
                     post = new HttpPost(url);
 
-                    UploadUI.getInstance().setShort(new StringBuilder("http://fir.im/").append(uploadToRio.uploadTicket.appShort).toString());
+                    AppInfoUI.getInstance().setShortDisplay(new StringBuilder("http://fir.im/").append(uploadToRio.uploadTicket.appShort).toString());
+                    AppUploadingUI.getInstance().setShortDisplay(new StringBuilder("http://fir.im/").append(uploadToRio.uploadTicket.appShort).toString());
                     /*****************************************upload icon***********************************************/
                     SearchFile searchFile = new SearchFile(filePath);
                     try {
                         if(!binary.icon.isEmpty()){
                             InputStreamBody iconToUpload = searchFile.query(binary.icon);
-                            CustomMultiPartEntity iconMultipartEntity = new CustomMultiPartEntity(UploadService.this);
+                            CustomMultiPartEntity iconMultipartEntity = new CustomMultiPartEntity();
                             // set the api token
                             iconMultipartEntity.addPart("key", new StringBody(uploadToRio.uploadTicket.iconKey));
                             iconMultipartEntity.addPart("token", new StringBody(uploadToRio.uploadTicket.iconToken));
@@ -79,7 +83,7 @@ public class UploadService implements CustomMultiPartEntity.ProgressListener {
                             HttpResponse iconResponse = client.execute(post);
                             HttpEntity iconEntity = iconResponse.getEntity();
                             String iconResponseString = EntityUtils.toString(iconEntity, "UTF-8");
-                            System.out.println(iconResponseString);
+//                            System.out.println(iconResponseString);
 
                             JSONObject iconJsonObject = new JSONObject(iconResponseString);
 
@@ -120,7 +124,7 @@ public class UploadService implements CustomMultiPartEntity.ProgressListener {
                     HttpResponse response = client.execute(post);
                     HttpEntity entity = response.getEntity();
                     String responseString = EntityUtils.toString(entity, "UTF-8");
-                    System.out.println(responseString);
+//                    System.out.println(responseString);
 
                     JSONObject jsonObject = new JSONObject(responseString);
 
@@ -129,6 +133,8 @@ public class UploadService implements CustomMultiPartEntity.ProgressListener {
                             // send success upload status
                             uploadServiceDelegate.onUploadFinished(true);
                         }
+
+                        Notice.postSuccessNoticeToSlack(binary.name+"#"+new StringBuilder("http://fir.im/").append(uploadToRio.uploadTicket.appShort).toString());
 
                     } else {
 

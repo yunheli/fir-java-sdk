@@ -13,7 +13,7 @@ import java.io.File;
  */
 public class Storage {
 
-    private static File getAppDataFolder()
+    public static File getAppDataFolder()
     {
         String os = System.getProperty("os.name").toUpperCase();
         String dataFile = (os.contains("MAC")) ? "Library/Caches/fir.im" : ".firim";
@@ -21,11 +21,18 @@ public class Storage {
         return new File(System.getProperty("user.home"), dataFile);
     }
 
+    public static File getTemIconFolder(){
+        String os = System.getProperty("os.name").toUpperCase();
+        String dataFile = (os.contains("MAC")) ? "Library/Caches/fir.im/temp" : ".firim/temp";
+        FileOperate.getInstance().newFolder(dataFile);
+        return new File(System.getProperty("user.home"), dataFile);
+    }
+
     public static String getXmlPath(){
         String folderPath =  getAppDataFolder().getPath();
         FileOperate.getInstance().newFolder(folderPath);
         String path = new StringBuilder().append(folderPath).append("/").append(Constants.XML_PATH).toString();
-        System.out.println("file path#"+path);
+//        System.out.println("file path#"+path);
         if(FileOperate.getInstance().isExist(path)){
             return path;
         }

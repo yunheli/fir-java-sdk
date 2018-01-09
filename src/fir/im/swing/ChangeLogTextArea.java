@@ -16,6 +16,7 @@ public class ChangeLogTextArea extends JTextArea {
     public ChangeLogTextArea(){
         super();
         this.setMargin(new Insets(10, 10, 10, 10));
+        this.setLineWrap(true);
     }
 
     private static final long serialVersionUID = -8220994963464909915L;
@@ -23,10 +24,10 @@ public class ChangeLogTextArea extends JTextArea {
     {
         setOpaque(false); // 设置透明
     }
-
-    protected void paintComponent(Graphics g) {
-        final ImageIcon imText = new ImageIcon(Resource.getInstance().getResource("jtextarea.png"));
-        g.drawImage(imText.getImage(), 0, 0, this);
-        super.paintComponent(g);
-    }
+//
+//    protected void paintComponent(Graphics g) {
+//        final ImageIcon imText = new ImageIcon(Resource.getInstance().getResource("jtextarea.png"));
+//        g.drawImage(imText.getImage(), 0, 0, this);
+//        super.paintComponent(g);
+//    }
 }
